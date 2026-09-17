@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --primary-blue: #7BBBFF;
+  --dark-navy: #050F2A;
+  --light-bg: #F2FDFF;
+  --lavender: #B8A9FF;
+  
+  --navy: #050F2A;
+  --navy-deep: #030818;
+  --accent: #7BBBFF;
+  --ice: #B8A9FF;
+  --paper: #F2FDFF;
+  --ink: #050F2A;
+  --good: #10B981;
+  --warn: #F59E0B;
+  --risk: #EF4444;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #F2FDFF;
+  color: #050F2A;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E8F7FB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4D9F8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7BBBFF;
+}
+
+/* Bento Card Base & Variants */
+.bento-card {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid rgba(123, 187, 255, 0.22);
+  box-shadow: 0 4px 20px -4px rgba(5, 15, 42, 0.04), 0 1px 3px 0 rgba(5, 15, 42, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: rgba(123, 187, 255, 0.45);
+  box-shadow: 0 12px 30px -8px rgba(123, 187, 255, 0.22), 0 4px 12px -2px rgba(5, 15, 42, 0.04);
+}
+
+.bento-dark {
+  background-color: #050F2A;
+  color: #F2FDFF;
+  border-radius: 24px;
+  border: 1px solid rgba(123, 187, 255, 0.2);
+  box-shadow: 0 10px 30px -6px rgba(5, 15, 42, 0.3);
+}
+
+.bento-gradient {
+  background: linear-gradient(135deg, #7BBBFF 0%, #B8A9FF 100%);
+  color: #050F2A;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px -4px rgba(123, 187, 255, 0.28);
+}
+
+.bento-lavender {
+  background-color: #B8A9FF;
+  color: #050F2A;
+  border-radius: 24px;
+}
+
+.bento-blue {
+  background-color: #7BBBFF;
+  color: #050F2A;
+  border-radius: 24px;
+}
+
+.bento-glass {
+  background-color: rgba(242, 253, 255, 0.82);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(123, 187, 255, 0.25);
+  border-radius: 24px;
+}
+
+/* Palette utility shortcuts */
+.text-bento-navy { color: #050F2A; }
+.bg-bento-navy { background-color: #050F2A; }
+.border-bento-navy { border-color: #050F2A; }
+
+.text-bento-blue { color: #7BBBFF; }
+.bg-bento-blue { background-color: #7BBBFF; }
+.border-bento-blue { border-color: #7BBBFF; }
+
+.text-bento-lavender { color: #B8A9FF; }
+.bg-bento-lavender { background-color: #B8A9FF; }
+.border-bento-lavender { border-color: #B8A9FF; }
+
+.bg-bento-light { background-color: #F2FDFF; }
+.border-bento-light { border-color: #F2FDFF; }
+
+/* Legacy compatibility mapped to new palette */
+.text-navy { color: #050F2A; }
+.bg-navy { background-color: #050F2A; }
+.bg-navy-deep { background-color: #030818; }
+.border-navy { border-color: #050F2A; }
+
+.text-accent { color: #7BBBFF; }
+.bg-accent { background-color: #7BBBFF; }
+
+.bg-ice { background-color: #B8A9FF; }
+.border-ice { border-color: #B8A9FF; }
+
+.bg-paper { background-color: #F2FDFF; }
+
+.text-good { color: #0F9D58; }
+.bg-good { background-color: #0F9D58; }
+.border-good { border-color: #0F9D58; }
+
+.text-warn { color: #C88A0B; }
+.bg-warn { background-color: #C88A0B; }
+.border-warn { border-color: #C88A0B; }
+
+.text-risk { color: #D94848; }
+.bg-risk { background-color: #D94848; }
+.border-risk { border-color: #D94848; }

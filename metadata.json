@@ -1,0 +1,6 @@
+{
+  "name": "RFP Intelligence Studio",
+  "description": "AI-assisted RFP scoring, shortlisting, and proposal drafting platform with 4-signal composite evaluation and full proposal pipeline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
