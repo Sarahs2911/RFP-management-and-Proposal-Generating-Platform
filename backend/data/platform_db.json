@@ -1,0 +1,3757 @@
+{
+  "rfps": [
+    {
+      "rfp_id": "RFP-TTC-2026-001",
+      "title": "Selection of Technical Agency for Institutional Strengthening and Market Linkage of 120 Farmer Producer Organizations (FPOs) across 8 Aspirational Districts",
+      "category": "Development Sector Advisory",
+      "client_name": "National Bank for Agriculture and Rural Development (NABARD)",
+      "client_website": "https://www.nabard.org",
+      "client_email": "tenders.fpo@nabard.org",
+      "estimated_cost": "₹ 3.85 Crore",
+      "deadline": "2026-10-24",
+      "deadline_valid": 1,
+      "deadline_issue_note": "Active tender; 38 days remaining",
+      "budget_range": "High",
+      "location": "Odisha & Madhya Pradesh (Aspirational Districts)",
+      "source": "NABARD Official Portal / CPP Tenders",
+      "composite_score": 84.6,
+      "model_score": 82,
+      "experience_score": 88.5,
+      "keyword_score": 86,
+      "rl_score": 79,
+      "shortlisted": 1,
+      "matched_case_studies": "[{\"id\":\"cs-001\",\"title\":\"Value Chain Optimization and Market Linkages for 100 Farmer Producer Organizations (FPOs)\",\"client\":\"National Bank for Agriculture and Rural Development (NABARD)\",\"similarity\":0.95}]",
+      "matched_keywords": "[\"fpo\",\"farmer producer organization\",\"agriculture\",\"livelihoods\",\"market linkage\",\"rural development\"]",
+      "outcome": "won",
+      "discovered_via": "web_crawl",
+      "summary": "NABARD invites proposals from experienced consulting firms to act as Technical Support Agency for 120 FPOs. Responsibilities include business diagnostic, credit linkage, onboarding on ONDC/e-NAM, and establishment of direct corporate buyer pacts.",
+      "scope_of_work": "1. Conduct institutional baseline and grading for 120 FPOs.\n2. Develop bankable business plans for working capital and term loans under AIF.\n3. Establish 50+ corporate off-take agreements with modern retailers and agribusinesses.\n4. Facilitate digital record keeping and statutory compliance.\n5. Train Board of Directors and CEOs on post-harvest aggregation.",
+      "sow_confidence": "high",
+      "rfp_type": "Agency",
+      "department": "Livelihoods & Rural Agriculture",
+      "tender_number": "NB.HO.DFP/04/2026-27",
+      "emd": "₹ 3,85,000",
+      "tender_fee": "₹ 5,000",
+      "procurement_agency": "NABARD Head Office Mumbai",
+      "tags": "[\"Agency\",\"FPO\",\"Agriculture\",\"NABARD\",\"Livelihoods\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.532Z",
+      "id": 1
+    },
+    {
+      "rfp_id": "RFP-TTC-2026-002",
+      "title": "Consultancy Services for Preparation of State Climate Change Action Plan (SAPCC 2.0) and Sectoral Decarbonization Roadmaps",
+      "category": "Sustainability & Climate Change Advisory",
+      "client_name": "Department of Environment and Climate Change & GIZ India",
+      "client_website": "https://moef.gov.in",
+      "client_email": "climate.cell@state.gov.in",
+      "estimated_cost": "₹ 2.40 Crore",
+      "deadline": "2026-10-15",
+      "deadline_valid": 1,
+      "budget_range": "Medium",
+      "location": "Rajasthan, India",
+      "source": "State e-Procurement Portal",
+      "composite_score": 82.1,
+      "model_score": 79.5,
+      "experience_score": 87,
+      "keyword_score": 83.5,
+      "rl_score": 75,
+      "shortlisted": 1,
+      "matched_case_studies": "[{\"id\":\"cs-013\",\"title\":\"State Climate Change Action Plan (SAPCC 2.0) Formulation and NDC Alignment\",\"client\":\"Ministry of Environment, Forest and Climate Change (MoEFCC) & GIZ\",\"similarity\":0.92}]",
+      "matched_keywords": "[\"climate change\",\"sustainability\",\"esg\",\"adaptation\",\"mitigation\",\"renewable energy\"]",
+      "outcome": "won",
+      "discovered_via": "web_crawl",
+      "summary": "Technical assistance assignment to revise the SAPCC in alignment with India’s updated Nationally Determined Contributions (NDCs) for 2030, covering climate vulnerability modeling and green financing portfolios.",
+      "scope_of_work": "1. District-level downscaled climate vulnerability modeling.\n2. Sectoral decarbonization action plans for energy, agriculture, industry, and urban transport.\n3. Formulation of bankable project proposals for Green Climate Fund (GCF) and adaptation funds.\n4. Inter-departmental steering committee stakeholder workshops.",
+      "sow_confidence": "high",
+      "rfp_type": "Agency",
+      "department": "Climate Change, ESG & Sustainability",
+      "tender_number": "ENV/CC/2026/SAPCC-02",
+      "emd": "₹ 2,40,000",
+      "tender_fee": "₹ 2,500",
+      "procurement_agency": "State Climate Directorate",
+      "tags": "[\"Agency\",\"Climate Change\",\"GIZ\",\"Sustainability\",\"SAPCC\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.533Z",
+      "id": 2
+    },
+    {
+      "rfp_id": "RFP-TTC-2026-003",
+      "title": "Third-Party Monitoring and Quasi-Experimental Impact Assessment of National Rural Livelihood Mission (NRLM) Self-Help Group Interventions",
+      "category": "Development Sector Advisory",
+      "client_name": "Ministry of Rural Development, Government of India",
+      "client_website": "https://rural.gov.in",
+      "client_email": "mande.nrlm@nic.in",
+      "estimated_cost": "₹ 4.20 Crore",
+      "deadline": "2026-11-05",
+      "deadline_valid": 1,
+      "budget_range": "High",
+      "location": "Pan-India (Sample of 12 States)",
+      "source": "Central Public Procurement Portal (CPPP)",
+      "composite_score": 87.8,
+      "model_score": 85,
+      "experience_score": 93,
+      "keyword_score": 89,
+      "rl_score": 81,
+      "shortlisted": 1,
+      "matched_case_studies": "[{\"id\":\"cs-002\",\"title\":\"State-wide Impact Evaluation of Deendayal Antyodaya Yojana - NRLM Community Institutions\",\"client\":\"Ministry of Rural Development, Government of India\",\"similarity\":0.96}]",
+      "matched_keywords": "[\"shg\",\"nrlm\",\"livelihood\",\"women empowerment\",\"impact evaluation\",\"baseline survey\",\"microfinance\"]",
+      "outcome": "won",
+      "discovered_via": "upload",
+      "summary": "Nationwide assessment of economic graduation of 15,000 SHG households. Employs Propensity Score Matching (PSM) and Difference-in-Differences (DiD) methodology to evaluate household income resilience and asset creation.",
+      "scope_of_work": "1. Inception report & sampling design covering 12 states and 15,000 beneficiary households.\n2. CAPI field survey implementation with geo-tagged validation.\n3. Analysis of bank credit linkage, revolving fund utilization, and enterprise income.\n4. Synthesis report, policy briefing notes, and national dissemination seminar.",
+      "sow_confidence": "high",
+      "rfp_type": "Agency",
+      "department": "Monitoring, Evaluation, Research & Learning (MERL)",
+      "tender_number": "MoRD/NRLM/EVAL/2026-09",
+      "emd": "₹ 5,00,000",
+      "tender_fee": "₹ 10,000",
+      "procurement_agency": "MoRD NRLM Division New Delhi",
+      "tags": "[\"Agency\",\"NRLM\",\"Impact Evaluation\",\"MoRD\",\"SHG\",\"Women\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.533Z",
+      "id": 3
+    },
+    {
+      "rfp_id": "RFP-TTC-2026-004",
+      "title": "Process Re-engineering and Implementation of Risk-Based Internal Audit (RBIA) Framework for Direct Benefit Transfer Schemes",
+      "category": "Governance & Risk Advisory",
+      "client_name": "NITI Aayog / State Finance Department",
+      "client_website": "https://niti.gov.in",
+      "client_email": "governance.procure@niti.gov.in",
+      "estimated_cost": "₹ 1.95 Crore",
+      "deadline": "2026-10-18",
+      "deadline_valid": 1,
+      "budget_range": "Medium",
+      "location": "New Delhi & State Capital",
+      "source": "GeM Portal (Government e-Marketplace)",
+      "composite_score": 79.4,
+      "model_score": 78,
+      "experience_score": 83.5,
+      "keyword_score": 81,
+      "rl_score": 72,
+      "shortlisted": 1,
+      "matched_case_studies": "[{\"id\":\"cs-010\",\"title\":\"Direct Benefit Transfer (DBT) Scheme Process Re-engineering and Leakage Prevention\",\"client\":\"NITI Aayog\",\"similarity\":0.94}]",
+      "matched_keywords": "[\"dbt\",\"governance\",\"process re-engineering\",\"internal audit\",\"niti aayog\",\"transparency\"]",
+      "outcome": "won",
+      "discovered_via": "web_crawl",
+      "summary": "Engagement to review workflow bottleneck and ghost beneficiary vulnerabilities in social pension and scholarship welfare transfers. Includes formulation of standard operating procedures and internal audit guidelines.",
+      "scope_of_work": "1. Diagnostic review of 6 DBT schemes totaling ₹8,000 Crore annual payout.\n2. Gap analysis of Aadhaar-payment bridge failures and return handling.\n3. Risk-based audit manual and automated anomaly detection queries.\n4. Capacity building of district treasury auditors.",
+      "sow_confidence": "high",
+      "rfp_type": "Agency",
+      "department": "Governance, Public Policy & Risk",
+      "tender_number": "NITI/GOV/DBT/2026/03",
+      "emd": "₹ 1,50,000",
+      "tender_fee": "₹ 2,000",
+      "procurement_agency": "NITI Aayog Development Monitoring Wing",
+      "tags": "[\"Agency\",\"Governance\",\"DBT\",\"Internal Audit\",\"NITI Aayog\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.533Z",
+      "id": 4
+    },
+    {
+      "rfp_id": "RFP-TTC-2026-005",
+      "title": "Individual Consultant for Designing Training Architecture and Digital Learning Modules for Frontline Health Cadres (ASHA & AWW)",
+      "category": "Human Resource Advisory",
+      "client_name": "World Health Organization (WHO) Country Office for India",
+      "client_website": "https://who.int/india",
+      "client_email": "seindtenders@who.int",
+      "estimated_cost": "₹ 38 Lakh",
+      "deadline": "2026-10-08",
+      "deadline_valid": 1,
+      "budget_range": "Low",
+      "location": "New Delhi (Hybrid)",
+      "source": "UNGM Portal (United Nations Global Marketplace)",
+      "composite_score": 63.8,
+      "model_score": 68,
+      "experience_score": 69,
+      "keyword_score": 62,
+      "rl_score": 55,
+      "shortlisted": 1,
+      "matched_case_studies": "[{\"id\":\"cs-018\",\"title\":\"Institutional Capacity Needs Assessment and Training Architecture for Health Cadre\",\"client\":\"World Health Organization (WHO) Country Office for India\",\"similarity\":0.88}]",
+      "matched_keywords": "[\"capacity building\",\"training\",\"public health\",\"e-learning\",\"human resources\"]",
+      "outcome": "lost",
+      "discovered_via": "web_crawl",
+      "summary": "WHO India seeks an individual senior consultant to support the Health Systems Division in designing micro-learning mobile modules for ASHA community health workers.",
+      "scope_of_work": "1. Conduct training needs analysis across 5 high-priority states.\n2. Curate 12 illustrated micro-learning audio/visual scripts.\n3. Pilot test content with district master trainers.\n4. Finalize pedagogical handbook for state health resource centres.",
+      "sow_confidence": "medium",
+      "rfp_type": "Individual Consultant",
+      "department": "Health, Nutrition & Social Development",
+      "tender_number": "WHO/IND/HR/2026/44",
+      "emd": "Exempt",
+      "tender_fee": "Nil",
+      "procurement_agency": "WHO India Operations",
+      "tags": "[\"Individual Consultant\",\"Health\",\"WHO\",\"Training\",\"Capacity Building\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.533Z",
+      "id": 5
+    },
+    {
+      "rfp_id": "RFP-TTC-2026-006",
+      "title": "Grant Call for Non-Governmental Organizations: Community-Based Solar Water Purification Systems in Fluoride-Affected Blocks",
+      "category": "Sustainability & Climate Change Advisory",
+      "client_name": "Tata Trusts & Clean Water Initiative",
+      "client_website": "https://tatatrusts.org",
+      "client_email": "grants.water@tatatrusts.org",
+      "estimated_cost": "₹ 1.80 Crore",
+      "deadline": "2026-11-12",
+      "deadline_valid": 1,
+      "budget_range": "Medium",
+      "location": "Jharkhand & Bihar",
+      "source": "Tata Trusts Grant Portal",
+      "composite_score": 76.5,
+      "model_score": 74,
+      "experience_score": 81,
+      "keyword_score": 77,
+      "rl_score": 70,
+      "shortlisted": 1,
+      "matched_case_studies": "[{\"id\":\"cs-015\",\"title\":\"Decentralized Solar Minigrids and Agricultural Solarization Feasibility Study\",\"client\":\"Asian Development Bank (ADB)\",\"similarity\":0.86}]",
+      "matched_keywords": "[\"solar\",\"water\",\"wash\",\"sustainability\",\"rural development\",\"clean tech\"]",
+      "outcome": "won",
+      "discovered_via": "manual",
+      "summary": "Grant program for consortiums to install and manage community solar RO/UF water stations across 40 high-fluorosis habitations with women-led community tariff models.",
+      "scope_of_work": "1. Site feasibility and water chemistry testing.\n2. Installation and commissioning of 40 solar-powered water filtration units.\n3. Formation and capacity building of Village Water & Sanitation Committees (VWSC).\n4. 2-year operations and maintenance handover protocol.",
+      "sow_confidence": "high",
+      "rfp_type": "Agency Grant",
+      "department": "Climate Change, ESG & Sustainability",
+      "tender_number": "TT/CW/GRANT/2026-02",
+      "emd": "Nil",
+      "tender_fee": "Nil",
+      "procurement_agency": "Tata Trusts Program Directorate",
+      "tags": "[\"Agency Grant\",\"Solar\",\"WASH\",\"Water\",\"Community\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.533Z",
+      "id": 6
+    },
+    {
+      "rfp_id": "RFP-TTC-2026-007",
+      "title": "Turnkey Supply and Installation of 500 High-Mast LED Lighting Poles for Industrial Development Corridor",
+      "category": "Business Support Services",
+      "client_name": "State Industrial Infrastructure Corporation",
+      "client_website": "https://siic.state.gov.in",
+      "client_email": "procure.works@siic.gov.in",
+      "estimated_cost": "₹ 14.50 Crore",
+      "deadline": "2026-09-30",
+      "deadline_valid": 1,
+      "budget_range": "High",
+      "location": "Gujarat, India",
+      "source": "State Tenders Online",
+      "composite_score": 34.2,
+      "model_score": 41,
+      "experience_score": 22,
+      "keyword_score": 38,
+      "rl_score": 40,
+      "shortlisted": 0,
+      "matched_case_studies": "[]",
+      "matched_keywords": "[\"infrastructure\"]",
+      "outcome": "lost",
+      "discovered_via": "web_crawl",
+      "summary": "Civil and electrical engineering works tender for manufacturing, civil foundation erection, cabling, and 5-year warranty of 500 high-mast lighting towers.",
+      "scope_of_work": "1. Civil foundation excavation and casting.\n2. Supply of galvanized octagonal poles.\n3. Supply and testing of 400W LED fixtures.\n4. Transformer and electrical cable trenching.",
+      "sow_confidence": "high",
+      "rfp_type": "Agency",
+      "department": "Governance, Public Policy & Risk",
+      "tender_number": "SIIC/ELECT/2026/088",
+      "emd": "₹ 25,00,000",
+      "tender_fee": "₹ 25,000",
+      "procurement_agency": "SIIC Civil Works Wing",
+      "tags": "[\"Agency\",\"Civil Works\",\"Electrical\",\"Hardware\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.533Z",
+      "id": 7
+    },
+    {
+      "rfp_id": "RFP-TTC-2026-008",
+      "title": "Project Management Unit (PMU) for Startup Incubation and MSME Cluster Modernization",
+      "category": "Business Support Services",
+      "client_name": "Directorate of MSME & Entrepreneurship Promotion",
+      "client_website": "https://msme.state.gov.in",
+      "client_email": "pmu.recruitment@msme.gov.in",
+      "estimated_cost": "₹ 2.80 Crore",
+      "deadline": "2026-10-30",
+      "deadline_valid": 1,
+      "budget_range": "Medium",
+      "location": "Telangana, India",
+      "source": "e-Procurement Portal",
+      "composite_score": 78.9,
+      "model_score": 76.5,
+      "experience_score": 85,
+      "keyword_score": 80,
+      "rl_score": 72,
+      "shortlisted": 1,
+      "matched_case_studies": "[{\"id\":\"cs-020\",\"title\":\"Project Management Unit (PMU) for Startup Incubation and MSME Cluster Revitalization\",\"client\":\"State Department of Micro, Small and Medium Enterprises (MSME)\",\"similarity\":0.93}]",
+      "matched_keywords": "[\"msme\",\"pmu\",\"project management\",\"cluster\",\"incubation\",\"startup\"]",
+      "outcome": "pending",
+      "discovered_via": "web_crawl",
+      "summary": "Operating a dedicated state-level PMU to support 450 handicraft and agri-food processing MSMEs with technology upgradation, intellectual property filing, and access to bank credit.",
+      "scope_of_work": "1. Establish 6-person full time PMU at Directorate headquarters.\n2. Organize 12 buyer-seller meets and trade delegations.\n3. Facilitate ₹50 Crore bank credit disbursement under CGTMSE.\n4. Design and launch online portal for subsidy processing.",
+      "sow_confidence": "high",
+      "rfp_type": "Agency",
+      "department": "Governance, Public Policy & Risk",
+      "tender_number": "MSME/PMU/2026-01",
+      "emd": "₹ 2,80,000",
+      "tender_fee": "₹ 5,000",
+      "procurement_agency": "MSME Directorate Hyderabad",
+      "tags": "[\"Agency\",\"MSME\",\"PMU\",\"Startups\",\"Cluster\"]",
+      "is_open": 1,
+      "is_uploaded_pdf": 0,
+      "created_at": "2026-09-19T14:31:44.533Z",
+      "id": 8
+    }
+  ],
+  "proposals": [
+    {
+      "id": 1,
+      "rfp_id": 1,
+      "category": "Development Sector Advisory",
+      "title": "Technical Proposal for FPO Institutional Strengthening & Corporate Market Linkages",
+      "content": "# TECHNICAL PROPOSAL: SELECTION OF TECHNICAL AGENCY FOR 120 FPOS\n\n**Submitted to:** National Bank for Agriculture and Rural Development (NABARD)\n**Submitted by:** Think Through Consultancy (TTC)\n\n## 1. Executive Summary\nThink Through Consultancy (TTC) is pleased to submit this comprehensive proposal...",
+      "created_at": "2026-09-19T14:31:44.661Z",
+      "updated_at": "2026-09-19T14:31:44.661Z",
+      "rfp_title": "Selection of Technical Agency for 120 FPOs",
+      "rfp_client": "NABARD"
+    }
+  ],
+  "uploadedProposals": [],
+  "companyProfile": {
+    "id": 1,
+    "org_name": "Think Through Consultancy (TTC)",
+    "website": "https://www.ttcglocal.com",
+    "headquarters": "New Delhi, India",
+    "year_established": "2014",
+    "core_competencies": [
+      "Development Sector Technical Advisory",
+      "Governance, Policy & Public Financial Management",
+      "Climate Change, ESG & Sustainability Roadmaps",
+      "Human Resource & Institutional Restructuring",
+      "Quasi-Experimental Impact Evaluation (MERL)"
+    ],
+    "thematic_expertise": [
+      "Agriculture, FPOs & Smallholder Value Chains",
+      "Rural Livelihoods & Women Self-Help Groups (NRLM)",
+      "Nutrition Systems & Maternal Child Health (Poshan)",
+      "Decarbonization, BRSR Core & Net-Zero Transition",
+      "Direct Benefit Transfer (DBT) & Anti-Leakage Controls"
+    ],
+    "geographic_presence": [
+      "Pan-India footprint across 24 States & UTs",
+      "Regional coordination hubs: New Delhi, Bhubaneswar, Bhopal, Lucknow, Hyderabad"
+    ],
+    "team_size": "120+ Full-Time Specialists and 350+ Empanelled Field Researchers",
+    "key_differentiators": [
+      "Proprietary 4-Signal RFP Intelligence & Bid Qualification Matrix",
+      "In-house CAPI Mobile Survey & Real-time MIS Analytics Engine",
+      "Empanelled with NITI Aayog, NABARD, World Bank, UNDP, UNICEF, and Central Ministries",
+      "Demonstrated delivery track record of 170+ completed assignments with >94% client satisfaction"
+    ],
+    "certifications": [
+      "ISO 9001:2015 (Quality Management Systems)",
+      "ISO 27001:2013 (Information Security Management)",
+      "CVC Compliant Procurement Governance System"
+    ],
+    "annual_revenue_range": "₹ 25 Crore - ₹ 50 Crore",
+    "updated_at": "2026-09-19T14:31:44.533Z"
+  },
+  "rlOutcomes": [
+    {
+      "id": 1,
+      "state": "Development Sector Advisory|High|Tier-2",
+      "action": 1,
+      "outcome": "won",
+      "reward": 1,
+      "q_before": 50,
+      "q_after": 60,
+      "created_at": "2026-09-19T14:31:44.661Z"
+    },
+    {
+      "id": 2,
+      "state": "Sustainability & Climate Change Advisory|Medium|Tier-2",
+      "action": 1,
+      "outcome": "won",
+      "reward": 1,
+      "q_before": 50,
+      "q_after": 60,
+      "created_at": "2026-09-19T14:31:44.661Z"
+    },
+    {
+      "id": 3,
+      "state": "Development Sector Advisory|High|Tier-1",
+      "action": 1,
+      "outcome": "won",
+      "reward": 1,
+      "q_before": 50,
+      "q_after": 60,
+      "created_at": "2026-09-19T14:31:44.661Z"
+    },
+    {
+      "id": 4,
+      "state": "Governance & Risk Advisory|Medium|Tier-1",
+      "action": 1,
+      "outcome": "won",
+      "reward": 1,
+      "q_before": 50,
+      "q_after": 60,
+      "created_at": "2026-09-19T14:31:44.661Z"
+    },
+    {
+      "id": 5,
+      "state": "Human Resource Advisory|Low|Tier-1",
+      "action": 1,
+      "outcome": "lost",
+      "reward": -1,
+      "q_before": 50,
+      "q_after": 40,
+      "created_at": "2026-09-19T14:31:44.661Z"
+    },
+    {
+      "id": 6,
+      "state": "Sustainability & Climate Change Advisory|Medium|Tier-2",
+      "action": 1,
+      "outcome": "won",
+      "reward": 1,
+      "q_before": 50,
+      "q_after": 60,
+      "created_at": "2026-09-19T14:31:44.661Z"
+    },
+    {
+      "id": 7,
+      "state": "Business Support Services|High|Tier-2",
+      "action": 0,
+      "outcome": "lost",
+      "reward": 0.25,
+      "q_before": 50,
+      "q_after": 52.5,
+      "created_at": "2026-09-19T14:31:44.661Z"
+    }
+  ],
+  "crawlSources": [
+    {
+      "id": "src-1",
+      "name": "Central Public Procurement Portal (CPPP)",
+      "url": "https://eprocure.gov.in/cppp",
+      "category": "Government Tenders"
+    },
+    {
+      "id": "src-2",
+      "name": "NABARD Tenders & EOI Portal",
+      "url": "https://www.nabard.org/tenders.aspx",
+      "category": "Agriculture & Rural"
+    },
+    {
+      "id": "src-3",
+      "name": "UNGM (United Nations Global Marketplace)",
+      "url": "https://www.ungm.org/Public/Notice",
+      "category": "Multilateral & UN"
+    },
+    {
+      "id": "src-4",
+      "name": "World Bank Procurement Notices (India)",
+      "url": "https://projects.worldbank.org/en/projects-operations/procurement",
+      "category": "Development Bank"
+    },
+    {
+      "id": "src-5",
+      "name": "NITI Aayog & State Planning Portals",
+      "url": "https://niti.gov.in/tenders",
+      "category": "Public Policy"
+    }
+  ],
+  "pastProjects": [
+    {
+      "id": "WON-RFP-6",
+      "rfpId": 6,
+      "isWonRfp": true,
+      "clientName": "Tata Trusts & Clean Water Initiative",
+      "projectTitle": "Grant Call for Non-Governmental Organizations: Community-Based Solar Water Purification Systems in Fluoride-Affected Blocks",
+      "projectDescription": "Grant program for consortiums to install and manage community solar RO/UF water stations across 40 high-fluorosis habitations with women-led community tariff models.",
+      "industry": "Sustainability & Climate Change Advisory",
+      "sector": "Sustainability & Climate Change Advisory",
+      "consultingDomain": "Sustainability & Climate Change Advisory",
+      "technicalDomain": "Competitive Bid Win & Implementation PMU",
+      "geography": "Jharkhand & Bihar",
+      "country": "India",
+      "duration": "Active Awarded Mandate",
+      "value": "₹₹ 1.80 Crore",
+      "keywords": [
+        "Sustainability & Climate Change Advisory",
+        "Tata Trusts & Clean Water Initiative",
+        "Won RFP",
+        "Contract Awarded",
+        "Medium"
+      ],
+      "technologies": [
+        "CAPI Field Tools",
+        "Executive MIS Dashboard",
+        "Quality Assurance Protocols"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vikramaditya Sen",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Awarded contract to Think Through Consulting (TTC) after competitive bid evaluation (Score: 76.5%)",
+        "Formal contract onboarding and mobilization approved by Tata Trusts & Clean Water Initiative",
+        "Alignment with technical terms of reference and execution governance benchmarks"
+      ],
+      "relevantExpertise": [
+        "Sustainability & Climate Change Advisory",
+        "Public Procurement Win",
+        "Technical Advisory"
+      ],
+      "objective": "Execute high-impact mandate awarded by Tata Trusts & Clean Water Initiative: Grant Call for Non-Governmental Organizations: Community-Based Solar Water Purification Systems in Fluoride-Affected Blocks",
+      "scope": "1. Site feasibility and water chemistry testing.\n2. Installation and commissioning of 40 solar-powered water filtration units.\n3. Formation and capacity building of Village Water & Sanitation Committees (VWSC).\n4. 2-year operations and maintenance handover protocol.",
+      "methodology": "Integrated multi-stage delivery: Diagnostic baseline, stakeholder engagement, CAPI field verification, and milestone handover.",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Quarterly Progress & Governance Review Dossiers",
+        "Technical Assistance Deliverables as per ToR",
+        "Final Handover & Impact Evaluation Package"
+      ],
+      "source": "Won RFP Contract (Tender Ref: RFP-TTC-2026-006)",
+      "sourceCitation": "Tender Ref: RFP-TTC-2026-006 awarded to TTC",
+      "winDate": "2026-09-19T14:43:57.480Z",
+      "created_at": "2026-09-19T14:43:57.480Z",
+      "winScore": 76.5
+    },
+    {
+      "id": "WON-RFP-4",
+      "rfpId": 4,
+      "isWonRfp": true,
+      "clientName": "NITI Aayog / State Finance Department",
+      "projectTitle": "Process Re-engineering and Implementation of Risk-Based Internal Audit (RBIA) Framework for Direct Benefit Transfer Schemes",
+      "projectDescription": "Engagement to review workflow bottleneck and ghost beneficiary vulnerabilities in social pension and scholarship welfare transfers. Includes formulation of standard operating procedures and internal audit guidelines.",
+      "industry": "Governance & Risk Advisory",
+      "sector": "Governance & Risk Advisory",
+      "consultingDomain": "Governance & Risk Advisory",
+      "technicalDomain": "Competitive Bid Win & Implementation PMU",
+      "geography": "New Delhi & State Capital",
+      "country": "India",
+      "duration": "Active Awarded Mandate",
+      "value": "₹₹ 1.95 Crore",
+      "keywords": [
+        "Governance & Risk Advisory",
+        "NITI Aayog / State Finance Department",
+        "Won RFP",
+        "Contract Awarded",
+        "Medium"
+      ],
+      "technologies": [
+        "CAPI Field Tools",
+        "Executive MIS Dashboard",
+        "Quality Assurance Protocols"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vikramaditya Sen",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Awarded contract to Think Through Consulting (TTC) after competitive bid evaluation (Score: 79.4%)",
+        "Formal contract onboarding and mobilization approved by NITI Aayog / State Finance Department",
+        "Alignment with technical terms of reference and execution governance benchmarks"
+      ],
+      "relevantExpertise": [
+        "Governance & Risk Advisory",
+        "Public Procurement Win",
+        "Technical Advisory"
+      ],
+      "objective": "Execute high-impact mandate awarded by NITI Aayog / State Finance Department: Process Re-engineering and Implementation of Risk-Based Internal Audit (RBIA) Framework for Direct Benefit Transfer Schemes",
+      "scope": "1. Diagnostic review of 6 DBT schemes totaling ₹8,000 Crore annual payout.\n2. Gap analysis of Aadhaar-payment bridge failures and return handling.\n3. Risk-based audit manual and automated anomaly detection queries.\n4. Capacity building of district treasury auditors.",
+      "methodology": "Integrated multi-stage delivery: Diagnostic baseline, stakeholder engagement, CAPI field verification, and milestone handover.",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Quarterly Progress & Governance Review Dossiers",
+        "Technical Assistance Deliverables as per ToR",
+        "Final Handover & Impact Evaluation Package"
+      ],
+      "source": "Won RFP Contract (Tender Ref: RFP-TTC-2026-004)",
+      "sourceCitation": "Tender Ref: RFP-TTC-2026-004 awarded to TTC",
+      "winDate": "2026-09-19T14:43:57.480Z",
+      "created_at": "2026-09-19T14:43:57.480Z",
+      "winScore": 79.4
+    },
+    {
+      "id": "WON-RFP-3",
+      "rfpId": 3,
+      "isWonRfp": true,
+      "clientName": "Ministry of Rural Development, Government of India",
+      "projectTitle": "Third-Party Monitoring and Quasi-Experimental Impact Assessment of National Rural Livelihood Mission (NRLM) Self-Help Group Interventions",
+      "projectDescription": "Nationwide assessment of economic graduation of 15,000 SHG households. Employs Propensity Score Matching (PSM) and Difference-in-Differences (DiD) methodology to evaluate household income resilience and asset creation.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "consultingDomain": "Development Sector Advisory",
+      "technicalDomain": "Competitive Bid Win & Implementation PMU",
+      "geography": "Pan-India (Sample of 12 States)",
+      "country": "India",
+      "duration": "Active Awarded Mandate",
+      "value": "₹₹ 4.20 Crore",
+      "keywords": [
+        "Development Sector Advisory",
+        "Ministry of Rural Development, Government of India",
+        "Won RFP",
+        "Contract Awarded",
+        "High"
+      ],
+      "technologies": [
+        "CAPI Field Tools",
+        "Executive MIS Dashboard",
+        "Quality Assurance Protocols"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vikramaditya Sen",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Awarded contract to Think Through Consulting (TTC) after competitive bid evaluation (Score: 87.8%)",
+        "Formal contract onboarding and mobilization approved by Ministry of Rural Development, Government of India",
+        "Alignment with technical terms of reference and execution governance benchmarks"
+      ],
+      "relevantExpertise": [
+        "Development Sector Advisory",
+        "Public Procurement Win",
+        "Technical Advisory"
+      ],
+      "objective": "Execute high-impact mandate awarded by Ministry of Rural Development, Government of India: Third-Party Monitoring and Quasi-Experimental Impact Assessment of National Rural Livelihood Mission (NRLM) Self-Help Group Interventions",
+      "scope": "1. Inception report & sampling design covering 12 states and 15,000 beneficiary households.\n2. CAPI field survey implementation with geo-tagged validation.\n3. Analysis of bank credit linkage, revolving fund utilization, and enterprise income.\n4. Synthesis report, policy briefing notes, and national dissemination seminar.",
+      "methodology": "Integrated multi-stage delivery: Diagnostic baseline, stakeholder engagement, CAPI field verification, and milestone handover.",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Quarterly Progress & Governance Review Dossiers",
+        "Technical Assistance Deliverables as per ToR",
+        "Final Handover & Impact Evaluation Package"
+      ],
+      "source": "Won RFP Contract (Tender Ref: RFP-TTC-2026-003)",
+      "sourceCitation": "Tender Ref: RFP-TTC-2026-003 awarded to TTC",
+      "winDate": "2026-09-19T14:43:57.480Z",
+      "created_at": "2026-09-19T14:43:57.480Z",
+      "winScore": 87.8
+    },
+    {
+      "id": "WON-RFP-2",
+      "rfpId": 2,
+      "isWonRfp": true,
+      "clientName": "Department of Environment and Climate Change & GIZ India",
+      "projectTitle": "Consultancy Services for Preparation of State Climate Change Action Plan (SAPCC 2.0) and Sectoral Decarbonization Roadmaps",
+      "projectDescription": "Technical assistance assignment to revise the SAPCC in alignment with India’s updated Nationally Determined Contributions (NDCs) for 2030, covering climate vulnerability modeling and green financing portfolios.",
+      "industry": "Sustainability & Climate Change Advisory",
+      "sector": "Sustainability & Climate Change Advisory",
+      "consultingDomain": "Sustainability & Climate Change Advisory",
+      "technicalDomain": "Competitive Bid Win & Implementation PMU",
+      "geography": "Rajasthan, India",
+      "country": "India",
+      "duration": "Active Awarded Mandate",
+      "value": "₹₹ 2.40 Crore",
+      "keywords": [
+        "Sustainability & Climate Change Advisory",
+        "Department of Environment and Climate Change & GIZ India",
+        "Won RFP",
+        "Contract Awarded",
+        "Medium"
+      ],
+      "technologies": [
+        "CAPI Field Tools",
+        "Executive MIS Dashboard",
+        "Quality Assurance Protocols"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vikramaditya Sen",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Awarded contract to Think Through Consulting (TTC) after competitive bid evaluation (Score: 82.1%)",
+        "Formal contract onboarding and mobilization approved by Department of Environment and Climate Change & GIZ India",
+        "Alignment with technical terms of reference and execution governance benchmarks"
+      ],
+      "relevantExpertise": [
+        "Sustainability & Climate Change Advisory",
+        "Public Procurement Win",
+        "Technical Advisory"
+      ],
+      "objective": "Execute high-impact mandate awarded by Department of Environment and Climate Change & GIZ India: Consultancy Services for Preparation of State Climate Change Action Plan (SAPCC 2.0) and Sectoral Decarbonization Roadmaps",
+      "scope": "1. District-level downscaled climate vulnerability modeling.\n2. Sectoral decarbonization action plans for energy, agriculture, industry, and urban transport.\n3. Formulation of bankable project proposals for Green Climate Fund (GCF) and adaptation funds.\n4. Inter-departmental steering committee stakeholder workshops.",
+      "methodology": "Integrated multi-stage delivery: Diagnostic baseline, stakeholder engagement, CAPI field verification, and milestone handover.",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Quarterly Progress & Governance Review Dossiers",
+        "Technical Assistance Deliverables as per ToR",
+        "Final Handover & Impact Evaluation Package"
+      ],
+      "source": "Won RFP Contract (Tender Ref: RFP-TTC-2026-002)",
+      "sourceCitation": "Tender Ref: RFP-TTC-2026-002 awarded to TTC",
+      "winDate": "2026-09-19T14:43:57.480Z",
+      "created_at": "2026-09-19T14:43:57.480Z",
+      "winScore": 82.1
+    },
+    {
+      "id": "WON-RFP-1",
+      "rfpId": 1,
+      "isWonRfp": true,
+      "clientName": "National Bank for Agriculture and Rural Development (NABARD)",
+      "projectTitle": "Selection of Technical Agency for Institutional Strengthening and Market Linkage of 120 Farmer Producer Organizations (FPOs) across 8 Aspirational Districts",
+      "projectDescription": "NABARD invites proposals from experienced consulting firms to act as Technical Support Agency for 120 FPOs. Responsibilities include business diagnostic, credit linkage, onboarding on ONDC/e-NAM, and establishment of direct corporate buyer pacts.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "consultingDomain": "Development Sector Advisory",
+      "technicalDomain": "Competitive Bid Win & Implementation PMU",
+      "geography": "Odisha & Madhya Pradesh (Aspirational Districts)",
+      "country": "India",
+      "duration": "Active Awarded Mandate",
+      "value": "₹₹ 3.85 Crore",
+      "keywords": [
+        "Development Sector Advisory",
+        "National Bank for Agriculture and Rural Development (NABARD)",
+        "Won RFP",
+        "Contract Awarded",
+        "High"
+      ],
+      "technologies": [
+        "CAPI Field Tools",
+        "Executive MIS Dashboard",
+        "Quality Assurance Protocols"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vikramaditya Sen",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Awarded contract to Think Through Consulting (TTC) after competitive bid evaluation (Score: 84.6%)",
+        "Formal contract onboarding and mobilization approved by National Bank for Agriculture and Rural Development (NABARD)",
+        "Alignment with technical terms of reference and execution governance benchmarks"
+      ],
+      "relevantExpertise": [
+        "Development Sector Advisory",
+        "Public Procurement Win",
+        "Technical Advisory"
+      ],
+      "objective": "Execute high-impact mandate awarded by National Bank for Agriculture and Rural Development (NABARD): Selection of Technical Agency for Institutional Strengthening and Market Linkage of 120 Farmer Producer Organizations (FPOs) across 8 Aspirational Districts",
+      "scope": "1. Conduct institutional baseline and grading for 120 FPOs.\n2. Develop bankable business plans for working capital and term loans under AIF.\n3. Establish 50+ corporate off-take agreements with modern retailers and agribusinesses.\n4. Facilitate digital record keeping and statutory compliance.\n5. Train Board of Directors and CEOs on post-harvest aggregation.",
+      "methodology": "Integrated multi-stage delivery: Diagnostic baseline, stakeholder engagement, CAPI field verification, and milestone handover.",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Quarterly Progress & Governance Review Dossiers",
+        "Technical Assistance Deliverables as per ToR",
+        "Final Handover & Impact Evaluation Package"
+      ],
+      "source": "Won RFP Contract (Tender Ref: RFP-TTC-2026-001)",
+      "sourceCitation": "Tender Ref: RFP-TTC-2026-001 awarded to TTC",
+      "winDate": "2026-09-19T14:43:57.480Z",
+      "created_at": "2026-09-19T14:43:57.480Z",
+      "winScore": 84.6
+    },
+    {
+      "id": "TTC-PRJ-001",
+      "clientName": "2030 Water Resources Group (The World Bank)",
+      "normalizedClientName": "The World Bank Group",
+      "projectTitle": "Evaluation of Socio-Agronomic Impact for Ramthal Micro-Irrigation Project (Phase I & II)",
+      "projectDescription": "Conducted ex-post and concurrent socio-agronomic impact evaluation of the Ramthal Micro Irrigation (Drip/Sprinkler) project covering ~500,000 hectares in Bagalkote district, Karnataka. Assessed hydrology, agricultural yields, and economic returns for Kharif and Rabi seasons.",
+      "industry": "Agriculture & Water Resources",
+      "sector": "Government & Multilateral",
+      "geography": "Bagalkote, Karnataka",
+      "country": "India",
+      "serviceProvided": "Impact Assessment & Agronomic Evaluation",
+      "consultingDomain": "Micro-Irrigation & Water Resource Management",
+      "technicalDomain": "Hydrology Analysis & Agricultural Productivity",
+      "keywords": [
+        "micro irrigation",
+        "drip irrigation",
+        "sprinkler",
+        "water resources",
+        "socio-agronomic",
+        "hydrology",
+        "karnataka",
+        "ramthal",
+        "agriculture",
+        "yields"
+      ],
+      "technologies": [
+        "Hydrology modeling",
+        "Statistical Survey Sampling",
+        "GIS Mapping"
+      ],
+      "duration": "2 Years (Phase I & Phase II)",
+      "value": "High",
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy",
+        "Ajay Pandey"
+      ],
+      "outcomes": [
+        "Documented agricultural yield improvements across 500,000 hectares",
+        "Enabled GoK to take evidence-backed decisions for state-wide drip scaling",
+        "Established baseline and seasonal monitoring for Kharif & Rabi cycles"
+      ],
+      "relevantExpertise": [
+        "Large-scale agricultural irrigation evaluation",
+        "Water resource efficiency measurement",
+        "Multilateral donor reporting"
+      ],
+      "objective": "Conducted ex-post and concurrent socio-agronomic impact evaluation of the Ramthal Micro Irrigation (Drip/Sprinkler) project covering ~500,000 hectares in Bagalkote district, Karnataka. Assessed hydrology, agricultural yields, and economic returns for Kharif and Rabi seasons.",
+      "scope": "Impact Assessment & Agronomic Evaluation",
+      "methodology": "Hydrology Analysis & Agricultural Productivity",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-002",
+      "clientName": "Amazon",
+      "normalizedClientName": "Amazon",
+      "projectTitle": "SROI and M&E Support for Covid-19 Supply Chain Resilience Program in Vietnam and Bangladesh",
+      "projectDescription": "Evaluated Amazon’s $1.3M worker resilience investment across 26 apparel/manufacturing factories in Bangladesh (31k workers) and Vietnam (23k workers). Developed Theory of Change, ex-ante and ex-post SROI analysis following Social Value International standards.",
+      "industry": "Supply Chain, Garments & Manufacturing",
+      "sector": "Corporate Social Responsibility (CSR)",
+      "geography": "Dhaka, Chittagong, Ho Chi Minh City, Hanoi",
+      "country": "Bangladesh & Vietnam",
+      "serviceProvided": "Social Return on Investment (SROI) & M&E Framework",
+      "consultingDomain": "Worker Welfare & Occupational Health",
+      "technicalDomain": "Social Value International (SVI) SROI Calculation",
+      "keywords": [
+        "amazon",
+        "sroi",
+        "social return on investment",
+        "vietnam",
+        "bangladesh",
+        "factories",
+        "supply chain",
+        "covid-19",
+        "theory of change",
+        "worker health"
+      ],
+      "technologies": [
+        "SVI Impact Map",
+        "Statistically Valid Sampling Framework",
+        "CAPI Field Survey"
+      ],
+      "duration": "2022 - 2023",
+      "value": "$1.3M Program Evaluation",
+      "teamConsultants": [
+        "Md. Foyzul Bari Himel",
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Calculated benchmarked SROI ratio for multi-country worker health interventions",
+        "Delivered factory resilience framework adopted across 26 supplier hubs",
+        "Capacity building for Amazon Social Responsibility Global Team"
+      ],
+      "relevantExpertise": [
+        "Cross-border supply chain assessment",
+        "Social Value International methodology",
+        "Worker welfare diagnostics"
+      ],
+      "objective": "Evaluated Amazon’s $1.3M worker resilience investment across 26 apparel/manufacturing factories in Bangladesh (31k workers) and Vietnam (23k workers). Developed Theory of Change, ex-ante and ex-post SROI analysis following Social Value International standards.",
+      "scope": "Social Return on Investment (SROI) & M&E Framework",
+      "methodology": "Social Value International (SVI) SROI Calculation",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-003",
+      "clientName": "Axis Bank Foundation (ABF)",
+      "normalizedClientName": "Axis Bank",
+      "projectTitle": "Baseline Study & Impact Assessment of AKRSP(I) Sustainable Livelihoods Project in Bihar",
+      "projectDescription": "Evaluated AKRSP(I) livelihoods project aimed at social and economic empowerment of marginalized households through community-based institutions, agricultural extension, and sustainable livelihoods.",
+      "industry": "Rural Development & Livelihoods",
+      "sector": "Banking & CSR Foundations",
+      "geography": "Bihar",
+      "country": "India",
+      "serviceProvided": "Baseline Study & Impact Assessment",
+      "consultingDomain": "Community Institutions & Sustainable Livelihoods",
+      "technicalDomain": "Qualitative & Quantitative Mixed Methods",
+      "keywords": [
+        "axis bank foundation",
+        "livelihoods",
+        "bihar",
+        "baseline study",
+        "impact assessment",
+        "akrsp",
+        "community institutions",
+        "poverty reduction"
+      ],
+      "technologies": [
+        "Household Survey Tool",
+        "SPSS/R Quantitative Analysis"
+      ],
+      "duration": "18 Months",
+      "value": "Medium",
+      "teamConsultants": [
+        "Vijay Ganapathy",
+        "Ajay Pandey"
+      ],
+      "outcomes": [
+        "Established baseline socio-economic database across rural districts of Bihar",
+        "Assessed household income shifts and sustainability of community institutions"
+      ],
+      "relevantExpertise": [
+        "Marginalized community livelihoods",
+        "Grassroots institution assessment"
+      ],
+      "objective": "Evaluated AKRSP(I) livelihoods project aimed at social and economic empowerment of marginalized households through community-based institutions, agricultural extension, and sustainable livelihoods.",
+      "scope": "Baseline Study & Impact Assessment",
+      "methodology": "Qualitative & Quantitative Mixed Methods",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-004",
+      "clientName": "Axis Bank Foundation (ABF)",
+      "normalizedClientName": "Axis Bank",
+      "projectTitle": "Impact Assessment of ‘Antyodaya’ Livelihood Project across MP, Rajasthan & Chhattisgarh",
+      "projectDescription": "Comprehensive end-term impact assessment of the SRIJAN-implemented Antyodaya project targeting 50,000 households across three states. Assessed social, economic, and ecological outcomes, SWOC analysis of community institutions, and household income growth.",
+      "industry": "Agriculture & Livelihoods",
+      "sector": "CSR Foundations",
+      "geography": "Madhya Pradesh, Rajasthan, Chhattisgarh",
+      "country": "India",
+      "serviceProvided": "End-term Impact Evaluation & SWOC Analysis",
+      "consultingDomain": "Natural Resource Management (NRM) & Farmer Institutions",
+      "technicalDomain": "Multi-State Econometric & Household Sampling",
+      "keywords": [
+        "antyodaya",
+        "srijan",
+        "madhya pradesh",
+        "rajasthan",
+        "chhattisgarh",
+        "livelihood",
+        "50000 households",
+        "swoc analysis",
+        "household income"
+      ],
+      "technologies": [
+        "CAPI Survey Mobile Tools",
+        "Econometric Income Attribution"
+      ],
+      "duration": "12 Months",
+      "value": "High",
+      "teamConsultants": [
+        "Vijay Ganapathy",
+        "Ajay Pandey",
+        "Rajiv Nagpal"
+      ],
+      "outcomes": [
+        "Quantified net household income increases across 50,000 agrarian beneficiaries",
+        "Documented SWOC lessons informing subsequent $10M scaling phases"
+      ],
+      "relevantExpertise": [
+        "Multi-state agrarian project evaluation",
+        "SWOC framework for farmer groups"
+      ],
+      "objective": "Comprehensive end-term impact assessment of the SRIJAN-implemented Antyodaya project targeting 50,000 households across three states. Assessed social, economic, and ecological outcomes, SWOC analysis of community institutions, and household income growth.",
+      "scope": "End-term Impact Evaluation & SWOC Analysis",
+      "methodology": "Multi-State Econometric & Household Sampling",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-005",
+      "clientName": "Asian Development Bank (ADB)",
+      "normalizedClientName": "Asian Development Bank (ADB)",
+      "projectTitle": "Technical Assistance to Government of India for ADB CARES Social Protection & COVID Response",
+      "projectDescription": "TTC provided senior technical team (led by Parul Soni as Social Protection Component Team Leader) working with Ministry of Health & Family Welfare (MoHFW) on the $1.5B loan program. Handled technical guidelines, epidemiological data analyses, public health impact, and social assistance distribution.",
+      "industry": "Public Health & Social Protection",
+      "sector": "Multilateral Development Bank",
+      "geography": "Pan-India",
+      "country": "India",
+      "serviceProvided": "Government Advisory & Technical Assistance (TA)",
+      "consultingDomain": "Social Protection, Epidemiology & Public Health Response",
+      "technicalDomain": "Epidemiological Surveillance & Econometric Modeling",
+      "keywords": [
+        "adb",
+        "cares",
+        "social protection",
+        "mohfw",
+        "covid-19",
+        "epidemiology",
+        "health system response",
+        "vulnerable groups",
+        "cash transfers"
+      ],
+      "technologies": [
+        "Epidemiological Forecasting Dashboards",
+        "Social Protection Registries"
+      ],
+      "duration": "2020 - 2022",
+      "value": "$1.5B Program Oversight Support",
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy",
+        "Devashish Banerji",
+        "Gaurav Panday"
+      ],
+      "outcomes": [
+        "Supported technical guidelines and surveillance strategies for MoHFW",
+        "Streamlined social assistance verification reaching millions of informal workers and women"
+      ],
+      "relevantExpertise": [
+        "High-level government policy advisory",
+        "Emergency social protection implementation"
+      ],
+      "objective": "TTC provided senior technical team (led by Parul Soni as Social Protection Component Team Leader) working with Ministry of Health & Family Welfare (MoHFW) on the $1.5B loan program. Handled technical guidelines, epidemiological data analyses, public health impact, and social assistance distribution.",
+      "scope": "Government Advisory & Technical Assistance (TA)",
+      "methodology": "Epidemiological Surveillance & Econometric Modeling",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-006",
+      "clientName": "The World Bank Group",
+      "normalizedClientName": "The World Bank Group",
+      "projectTitle": "Sustainable Financing and Revenue Models for Dam Safety (DRIP Phase 2)",
+      "projectDescription": "Supported Government of India and World Bank under Dam Rehabilitation and Improvement Project (DRIP) Phase 2. Evaluated O&M financing gaps, expenditure efficiency across states, alternate revenue streams (floating solar, fisheries, tourism), and blueprint for National Dam Safety Fund.",
+      "industry": "Water Resources & Infrastructure",
+      "sector": "Multilateral Development Bank",
+      "geography": "Pan-India (Multiple States)",
+      "country": "India",
+      "serviceProvided": "Financial Architecture & Institutional Structuring",
+      "consultingDomain": "Dam Safety & Public Asset Sustainability",
+      "technicalDomain": "Public Expenditure Review & Revenue Structuring",
+      "keywords": [
+        "world bank",
+        "drip",
+        "dam safety",
+        "sustainable financing",
+        "o&m gap",
+        "floating solar",
+        "national dam safety fund",
+        "infrastructure"
+      ],
+      "technologies": [
+        "Financial Feasibility Modeling",
+        "Institutional Flow-of-Funds Matrix"
+      ],
+      "duration": "18 Months",
+      "value": "High",
+      "teamConsultants": [
+        "Amit Phull",
+        "Devashish Banerji",
+        "Shantanu Srivastava"
+      ],
+      "outcomes": [
+        "Designed innovative financing framework bridging multi-state dam O&M gaps",
+        "Formulated guidelines for setting up National Dam Safety Fund"
+      ],
+      "relevantExpertise": [
+        "Public infrastructure financing",
+        "Multilateral loan covenant compliance"
+      ],
+      "objective": "Supported Government of India and World Bank under Dam Rehabilitation and Improvement Project (DRIP) Phase 2. Evaluated O&M financing gaps, expenditure efficiency across states, alternate revenue streams (floating solar, fisheries, tourism), and blueprint for National Dam Safety Fund.",
+      "scope": "Financial Architecture & Institutional Structuring",
+      "methodology": "Public Expenditure Review & Revenue Structuring",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-007",
+      "clientName": "The World Bank Group",
+      "normalizedClientName": "The World Bank Group",
+      "projectTitle": "Increasing Insurance Coverage Under PMFBY: Study of Barriers for Women Farmers",
+      "projectDescription": "Researched institutional, cultural, and procedural barriers faced by women farmers attempting to access Pradhan Mantri Fasal Bima Yojana (PMFBY). Formulated policy recommendations for Ministry of Agriculture on gender inclusion in crop insurance.",
+      "industry": "Agriculture, Insurance & Gender",
+      "sector": "Multilateral Development Bank",
+      "geography": "Uttar Pradesh, Maharashtra, Rajasthan",
+      "country": "India",
+      "serviceProvided": "Policy Research, Gender Diagnostic & Field Survey",
+      "consultingDomain": "Crop Insurance (PMFBY) & Women in Agriculture",
+      "technicalDomain": "Demand-Supply Cycle Assessment & Policy Formulation",
+      "keywords": [
+        "world bank",
+        "pmfby",
+        "crop insurance",
+        "women farmers",
+        "gender barriers",
+        "fasal bima",
+        "ministry of agriculture",
+        "financial inclusion"
+      ],
+      "technologies": [
+        "Ethical Field Research Tools",
+        "Gender-Disaggregated Survey Sampling"
+      ],
+      "duration": "12 Months",
+      "value": "Medium",
+      "teamConsultants": [
+        "Parul Soni",
+        "Ajay Pandey",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Delivered policy brief to Ministry of Agriculture on removing PMFBY systemic friction for women",
+        "Identified key drop-off stages in pre-notification, land record verification, and claims settlement"
+      ],
+      "relevantExpertise": [
+        "Agri-insurance inclusion",
+        "Gender-sensitive policy analysis"
+      ],
+      "objective": "Researched institutional, cultural, and procedural barriers faced by women farmers attempting to access Pradhan Mantri Fasal Bima Yojana (PMFBY). Formulated policy recommendations for Ministry of Agriculture on gender inclusion in crop insurance.",
+      "scope": "Policy Research, Gender Diagnostic & Field Survey",
+      "methodology": "Demand-Supply Cycle Assessment & Policy Formulation",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-008",
+      "clientName": "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)",
+      "normalizedClientName": "GIZ",
+      "projectTitle": "State Action Plan for Climate Change (SAPCC) Prioritization & Investment Plans",
+      "projectDescription": "In consortium with The Celestial Earth, formulated SAPCC prioritization and climate investment plans for Punjab, Telangana, Himachal Pradesh, and Tamil Nadu. Built interactive SAPCC-SDG-NDC linkage tool and developed comprehensive financial models.",
+      "industry": "Climate Change, Energy & Environment",
+      "sector": "Bilateral Development Agency",
+      "geography": "Punjab, Telangana, Himachal Pradesh, Tamil Nadu",
+      "country": "India",
+      "serviceProvided": "Climate Finance & Policy Modeling",
+      "consultingDomain": "State Action Plans for Climate Change (SAPCC)",
+      "technicalDomain": "Marginal Abatement Cost & Expenditure Gap Modeling",
+      "keywords": [
+        "giz",
+        "sapcc",
+        "climate change",
+        "investment plans",
+        "ndc",
+        "sdgs",
+        "green finance",
+        "adaptation",
+        "mitigation",
+        "climate tool"
+      ],
+      "technologies": [
+        "SAPCC-SDG-NDC Sectoral Matrix",
+        "State Expenditure Effectiveness Model"
+      ],
+      "duration": "2 Years",
+      "value": "High",
+      "teamConsultants": [
+        "Ajay Pandey",
+        "Amit Phull",
+        "Vikramaditya Sen"
+      ],
+      "outcomes": [
+        "Prioritized multi-sectoral climate adaptation actions across 4 major Indian states",
+        "Developed state-level investment dockets presented to national and international climate funds"
+      ],
+      "relevantExpertise": [
+        "Climate investment planning",
+        "Sub-national green finance architecture"
+      ],
+      "objective": "In consortium with The Celestial Earth, formulated SAPCC prioritization and climate investment plans for Punjab, Telangana, Himachal Pradesh, and Tamil Nadu. Built interactive SAPCC-SDG-NDC linkage tool and developed comprehensive financial models.",
+      "scope": "Climate Finance & Policy Modeling",
+      "methodology": "Marginal Abatement Cost & Expenditure Gap Modeling",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-009",
+      "clientName": "GIZ & NABARD",
+      "normalizedClientName": "GIZ",
+      "projectTitle": "Documentation and Impact Case Studies of Umbrella Programme for Natural Resource Management (UPNRM)",
+      "projectDescription": "Documented 36 unique projects financed under UPNRM through NABARD loans and grants across sustainable agriculture, micro-irrigation, agro-forestry, NTFP, and organic farming. Conducted field visits and published 36 comprehensive case studies.",
+      "industry": "Natural Resource Management & Agriculture",
+      "sector": "Bilateral & National Development Bank",
+      "geography": "Pan-India across 10 States",
+      "country": "India",
+      "serviceProvided": "Knowledge Management & Impact Case Study Portfolio",
+      "consultingDomain": "NRM Financing, Bankability & Scaling",
+      "technicalDomain": "Field Documentation & Photography Verification",
+      "keywords": [
+        "giz",
+        "nabard",
+        "upnrm",
+        "natural resource management",
+        "case studies",
+        "sustainable agriculture",
+        "bankability",
+        "agroforestry"
+      ],
+      "technologies": [
+        "Case Study Framework",
+        "Replicability & Scaling Metric"
+      ],
+      "duration": "18 Months",
+      "value": "Medium",
+      "teamConsultants": [
+        "Vijay Ganapathy",
+        "Ajay Pandey",
+        "Rajiv Nagpal"
+      ],
+      "outcomes": [
+        "Authored 36 high-impact published case studies on bankable community NRM initiatives",
+        "Showcased Indo-German partnership models for sustainable rural finance"
+      ],
+      "relevantExpertise": [
+        "NRM loan-grant model documentation",
+        "Agricultural case study synthesis"
+      ],
+      "objective": "Documented 36 unique projects financed under UPNRM through NABARD loans and grants across sustainable agriculture, micro-irrigation, agro-forestry, NTFP, and organic farming. Conducted field visits and published 36 comprehensive case studies.",
+      "scope": "Knowledge Management & Impact Case Study Portfolio",
+      "methodology": "Field Documentation & Photography Verification",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-010",
+      "clientName": "World Health Organization (WHO) & MoHFW",
+      "normalizedClientName": "World Health Organization (WHO)",
+      "projectTitle": "IT-Based Dynamic Data Management System & Mobile App for Rashtriya Kishor Swasthya Karyakram (RKSK Phase II)",
+      "projectDescription": "Developed robust agile M&E data management web platform and native Android/iOS mobile application for the Government of India’s adolescent health flagship (RKSK). Included real-time facility tracking and Interactive Voice Response System (IVRS).",
+      "industry": "Public Health & Healthcare Tech",
+      "sector": "Multilateral & National Government",
+      "geography": "Pan-India with pilots in UP, Assam, Chhattisgarh",
+      "country": "India",
+      "serviceProvided": "Digital HMIS Platform Development & Nationwide M&E",
+      "consultingDomain": "Adolescent Healthcare Systems & HMIS",
+      "technicalDomain": "Web Architecture, Native Mobile App & IVRS Engine",
+      "keywords": [
+        "who",
+        "mohfw",
+        "rksk",
+        "adolescent health",
+        "hmis",
+        "mobile app",
+        "dashboard",
+        "data management",
+        "ivrs",
+        "peer educator"
+      ],
+      "technologies": [
+        "Web Portal",
+        "Android & iOS App",
+        "IVRS Call Center System"
+      ],
+      "duration": "3 Years (Phase I & II)",
+      "value": "High",
+      "teamConsultants": [
+        "Gaurav Bhargava",
+        "Devashish Banerji",
+        "Rohan Deshmukh"
+      ],
+      "outcomes": [
+        "Empowered National, State, and District health officials with real-time clinic performance metrics",
+        "Piloted automated mobile data entry across WHO laboratory districts"
+      ],
+      "relevantExpertise": [
+        "National public health informatics",
+        "Adolescent health program M&E"
+      ],
+      "objective": "Developed robust agile M&E data management web platform and native Android/iOS mobile application for the Government of India’s adolescent health flagship (RKSK). Included real-time facility tracking and Interactive Voice Response System (IVRS).",
+      "scope": "Digital HMIS Platform Development & Nationwide M&E",
+      "methodology": "Web Architecture, Native Mobile App & IVRS Engine",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-011",
+      "clientName": "WHO-SEARO & TERI",
+      "normalizedClientName": "World Health Organization (WHO)",
+      "projectTitle": "Regional Guidelines on Climate Resilient & Environmentally Sustainable Healthcare Facilities",
+      "projectDescription": "Adapted WHO global guidelines and CRESHF Assessment Tool across 11 South-East Asian member countries. Developed Climate Risk Assessment Matrix evaluating energy, water, healthcare waste, and infrastructure resilience.",
+      "industry": "Public Health & Climate Resilience",
+      "sector": "Multilateral Regional Office",
+      "geography": "11 SEAR Member Countries (India, Nepal, Bangladesh, Sri Lanka, etc.)",
+      "country": "South-East Asia Region",
+      "serviceProvided": "Regional Framework Formulation & Situational Assessment",
+      "consultingDomain": "Climate Resilient Healthcare Infrastructure",
+      "technicalDomain": "CRESHF Adaptation & Risk Matrix Development",
+      "keywords": [
+        "who-searo",
+        "creshf",
+        "climate resilient healthcare",
+        "sustainable hospitals",
+        "medical waste",
+        "sear countries",
+        "health workforce"
+      ],
+      "technologies": [
+        "CRESHF Assessment Toolkit",
+        "Climate Risk Assessment Matrix"
+      ],
+      "duration": "18 Months",
+      "value": "High",
+      "teamConsultants": [
+        "Devashish Banerji",
+        "Gaurav Bhargava",
+        "Ajay Pandey"
+      ],
+      "outcomes": [
+        "Published regional guidelines adopted by 11 Ministries of Health across SE Asia",
+        "Standardized climate-proofing protocols for secondary and tertiary health facilities"
+      ],
+      "relevantExpertise": [
+        "International public health guidelines",
+        "Hospital environmental sustainability"
+      ],
+      "objective": "Adapted WHO global guidelines and CRESHF Assessment Tool across 11 South-East Asian member countries. Developed Climate Risk Assessment Matrix evaluating energy, water, healthcare waste, and infrastructure resilience.",
+      "scope": "Regional Framework Formulation & Situational Assessment",
+      "methodology": "CRESHF Adaptation & Risk Matrix Development",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-012",
+      "clientName": "Nutrition International (NI)",
+      "normalizedClientName": "Nutrition International",
+      "projectTitle": "Supply Chain Assessment for Maternal & Child Health Commodities in Bangladesh",
+      "projectDescription": "Assessed bottlenecks and facilitators in supply chain management of Ministry of Health and Family Welfare (MOHFW), Government of Bangladesh, for IFA, Vitamin A, micronutrient powder, and Zn/ORS in Thakurgaon District.",
+      "industry": "Public Health & Nutrition Supply Chain",
+      "sector": "International NGO / Multilateral Funding",
+      "geography": "Thakurgaon District & Dhaka",
+      "country": "Bangladesh",
+      "serviceProvided": "Supply Chain Assessment & Health Logistics Strategy",
+      "consultingDomain": "Maternal & Child Nutrition Commodities",
+      "technicalDomain": "Pharmaceutical Logistics & Stock-Out Diagnostics",
+      "keywords": [
+        "nutrition international",
+        "bangladesh",
+        "supply chain",
+        "ifa",
+        "vitamin a",
+        "micronutrient",
+        "mohfw",
+        "mch commodities",
+        "stock out"
+      ],
+      "technologies": [
+        "Logistics Tracking Protocols",
+        "Health Facility Survey Forms"
+      ],
+      "duration": "12 Months",
+      "value": "Medium",
+      "teamConsultants": [
+        "Md. Foyzul Bari Himel",
+        "Devashish Banerji"
+      ],
+      "outcomes": [
+        "Pinpointed root causes of commodity stock-outs at community clinic and upazila levels",
+        "Delivered streamlined distribution roadmap adopted by DGHS/DGFP"
+      ],
+      "relevantExpertise": [
+        "Health commodity logistics",
+        "Bangladesh public healthcare systems"
+      ],
+      "objective": "Assessed bottlenecks and facilitators in supply chain management of Ministry of Health and Family Welfare (MOHFW), Government of Bangladesh, for IFA, Vitamin A, micronutrient powder, and Zn/ORS in Thakurgaon District.",
+      "scope": "Supply Chain Assessment & Health Logistics Strategy",
+      "methodology": "Pharmaceutical Logistics & Stock-Out Diagnostics",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-013",
+      "clientName": "Solidaridad Network Asia & Coca-Cola",
+      "normalizedClientName": "Solidaridad",
+      "projectTitle": "Impact Assessment of Sustainable Sugarcane Initiative (SSI) in Karnataka & UP",
+      "projectDescription": "Multi-year evaluation of Sustainable Sugarcane Initiative reaching 35,000 farmers. Evaluated Good Agricultural Practices (GAP), drip irrigation installation, water use efficiency, cane productivity, and sugar recovery percentage.",
+      "industry": "Agriculture, Water & FMCG Supply Chains",
+      "sector": "INGO & Corporate Partnership",
+      "geography": "Belagavi & Kalaburagi (Karnataka), Meerut (UP)",
+      "country": "India",
+      "serviceProvided": "Impact Evaluation & Water Use Efficiency Validation",
+      "consultingDomain": "Sustainable Cane Farming & Water Efficiency",
+      "technicalDomain": "Agronomic Yield & Percolation Tank Water Recharge Computation",
+      "keywords": [
+        "solidaridad",
+        "coca cola",
+        "sugarcane",
+        "water use efficiency",
+        "drip irrigation",
+        "farmer income",
+        "gap",
+        "karnataka",
+        "sugar recovery"
+      ],
+      "technologies": [
+        "Water Savings Delta Calculation Model",
+        "Field Lysimeter Protocols"
+      ],
+      "duration": "2017 - 2022",
+      "value": "High",
+      "teamConsultants": [
+        "Ajay Pandey",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Validated 15% increase in cane productivity and 0.3% improvement in Pol% sugar recovery",
+        "Demonstrated monthly water savings across 35,000 farming households"
+      ],
+      "relevantExpertise": [
+        "Cash crop sustainability assurance",
+        "Water balance calculation"
+      ],
+      "objective": "Multi-year evaluation of Sustainable Sugarcane Initiative reaching 35,000 farmers. Evaluated Good Agricultural Practices (GAP), drip irrigation installation, water use efficiency, cane productivity, and sugar recovery percentage.",
+      "scope": "Impact Evaluation & Water Use Efficiency Validation",
+      "methodology": "Agronomic Yield & Percolation Tank Water Recharge Computation",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-014",
+      "clientName": "National Stock Exchange (NSE) Foundation",
+      "normalizedClientName": "National Stock Exchange (NSE)",
+      "projectTitle": "Program Monitoring & Evaluation (PME) for 20+ Pan-India CSR Projects",
+      "projectDescription": "Served as official PME agency for NSE Foundation from 2017 to 2023 across 20+ flagship programs covering primary education, elder care, sanitation, safe water, and NRM across 8 states (Rajasthan, MP, Maharashtra, WB, Jharkhand, TN, Nagaland).",
+      "industry": "CSR, Education & Social Development",
+      "sector": "Stock Exchange Foundation",
+      "geography": "Pan-India (8 States)",
+      "country": "India",
+      "serviceProvided": "Multi-Year Program Monitoring & Evaluation (PME)",
+      "consultingDomain": "CSR Portfolio Governance & Partner Due Diligence",
+      "technicalDomain": "Quarterly Financial & Programmatic Verification Protocols",
+      "keywords": [
+        "nse foundation",
+        "pme",
+        "csr monitoring",
+        "education",
+        "elder care",
+        "wash",
+        "nrm",
+        "ngo partners",
+        "due diligence",
+        "quarterly review"
+      ],
+      "technologies": [
+        "PME Tracking Framework",
+        "Standardized Financial Reconciliation Dashboards"
+      ],
+      "duration": "2017 - 2023 (6 Years Continuous)",
+      "value": "Multi-Crore Portfolio Oversight",
+      "teamConsultants": [
+        "Amit Phull",
+        "Vijay Ganapathy",
+        "Parul Soni",
+        "Shalil Mistry"
+      ],
+      "outcomes": [
+        "Monitored 20+ NGO implementing partners ensuring zero financial non-compliance",
+        "Instituted quarterly outcome verification dashboards for Board CSR Committee"
+      ],
+      "relevantExpertise": [
+        "Longitudinal CSR portfolio governance",
+        "Multi-partner financial assurance"
+      ],
+      "objective": "Served as official PME agency for NSE Foundation from 2017 to 2023 across 20+ flagship programs covering primary education, elder care, sanitation, safe water, and NRM across 8 states (Rajasthan, MP, Maharashtra, WB, Jharkhand, TN, Nagaland).",
+      "scope": "Multi-Year Program Monitoring & Evaluation (PME)",
+      "methodology": "Quarterly Financial & Programmatic Verification Protocols",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-015",
+      "clientName": "UN Women",
+      "normalizedClientName": "UN Women",
+      "projectTitle": "Evaluation of Gender Responsive Governance & Entitlements Program",
+      "projectDescription": "Final evaluation of UN Women’s national flagship program strengthening governance institutions to advance gender-responsive planning, budgeting, and legal entitlements for women across state and district levels.",
+      "industry": "Gender, Human Rights & Public Governance",
+      "sector": "United Nations Agency",
+      "geography": "National & Selected States",
+      "country": "India",
+      "serviceProvided": "Programmatic Evaluation & Policy Roadmap",
+      "consultingDomain": "Gender Responsive Governance & Normative Frameworks",
+      "technicalDomain": "Policy Coherence & Institutional Capacity Diagnostics",
+      "keywords": [
+        "un women",
+        "gender responsive governance",
+        "women rights",
+        "entitlements",
+        "institutional capacity",
+        "gender budgeting"
+      ],
+      "technologies": [
+        "OECD-DAC Evaluation Matrix",
+        "Key Informant Qualitative Protocols"
+      ],
+      "duration": "12 Months",
+      "value": "Medium",
+      "teamConsultants": [
+        "Parul Soni",
+        "Komal Malhotra",
+        "Gaurav Bhargava"
+      ],
+      "outcomes": [
+        "Assessed national and sub-national institutional adoption of gender budgeting",
+        "Documented evidence-based policy recommendations presented to UN Women Regional Office"
+      ],
+      "relevantExpertise": [
+        "Gender mainstreaming evaluation",
+        "Governance policy audits"
+      ],
+      "objective": "Final evaluation of UN Women’s national flagship program strengthening governance institutions to advance gender-responsive planning, budgeting, and legal entitlements for women across state and district levels.",
+      "scope": "Programmatic Evaluation & Policy Roadmap",
+      "methodology": "Policy Coherence & Institutional Capacity Diagnostics",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-016",
+      "clientName": "InterGlobe Aviation (IndiGo)",
+      "normalizedClientName": "InterGlobe Aviation (IndiGo)",
+      "projectTitle": "Financial & Programmatic Monitoring for IndiGoReach CSR Portfolio",
+      "projectDescription": "Validated and audited proper utilization of CSR funds across multiple partner NGOs (ADATS, Grameen Sahara, Uththaan, DVNITY) covering clean development mechanism (CDM), afforestation, women farmer empowerment, and community policing.",
+      "industry": "Aviation CSR & Social Audit",
+      "sector": "Corporate CSR Oversight",
+      "geography": "Haryana, Assam, Meghalaya, Karnataka, Andhra Pradesh",
+      "country": "India",
+      "serviceProvided": "Financial Audit, Compliance & On-ground Program Verification",
+      "consultingDomain": "Section 135 Companies Act Compliance & Grant Audit",
+      "technicalDomain": "Voucher Sampling, Bank Reconciliation & Physical Asset Verification",
+      "keywords": [
+        "indigo",
+        "indigoreach",
+        "interglobe",
+        "financial audit",
+        "programmatic review",
+        "grameen sahara",
+        "adats",
+        "csr compliance",
+        "section 135"
+      ],
+      "technologies": [
+        "ISAE 3000 Limited Assurance Audit System",
+        "Tally Reconciliation"
+      ],
+      "duration": "3 Years Continuous",
+      "value": "High",
+      "teamConsultants": [
+        "Amit Phull",
+        "Shalil Mistry"
+      ],
+      "outcomes": [
+        "Assured 100% compliance with Section 135 and MCA statutory mandates",
+        "Conducted physical field verification of assets and vendor transactions"
+      ],
+      "relevantExpertise": [
+        "Corporate CSR audit",
+        "Forensic voucher reconciliation"
+      ],
+      "objective": "Validated and audited proper utilization of CSR funds across multiple partner NGOs (ADATS, Grameen Sahara, Uththaan, DVNITY) covering clean development mechanism (CDM), afforestation, women farmer empowerment, and community policing.",
+      "scope": "Financial Audit, Compliance & On-ground Program Verification",
+      "methodology": "Voucher Sampling, Bank Reconciliation & Physical Asset Verification",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-017",
+      "clientName": "Flipkart & Flipkart Foundation",
+      "normalizedClientName": "Flipkart",
+      "projectTitle": "Scope 1, 2 & 3 GHG Inventorization & CSR Operating Framework",
+      "projectDescription": "Conducted corporate-wide Greenhouse Gas (GHG) footprinting as per GHG Protocol across supply chain operations, fulfillment centers, and corporate offices. In parallel, designed Results Based Management Framework (RMBF) and SOPs for Flipkart Foundation.",
+      "industry": "E-Commerce, Supply Chain & Decarbonization",
+      "sector": "Corporate Technology & Logistics",
+      "geography": "Pan-India",
+      "country": "India",
+      "serviceProvided": "GHG Accounting, Carbon Assurance & CSR Strategy",
+      "consultingDomain": "Decarbonization & Foundation Governance",
+      "technicalDomain": "IPCC Emission Factor Modeling & ISO 14064 Compliance",
+      "keywords": [
+        "flipkart",
+        "ghg inventorization",
+        "scope 1 2 3",
+        "carbon footprint",
+        "rmbf",
+        "monitoring and evaluation",
+        "sops",
+        "e-commerce"
+      ],
+      "technologies": [
+        "Custom Excel GHG Accounting Engine",
+        "RMBF Monitoring Architecture"
+      ],
+      "duration": "2 Years",
+      "value": "High",
+      "teamConsultants": [
+        "Ajay Pandey",
+        "Vikramaditya Sen",
+        "Amit Phull"
+      ],
+      "outcomes": [
+        "Delivered assured GHG Inventory identifying key carbon hotspots across fulfillment network",
+        "Established institutional governance SOPs for Flipkart Foundation grant allocations"
+      ],
+      "relevantExpertise": [
+        "Corporate GHG protocol accounting",
+        "Foundation operational structuring"
+      ],
+      "objective": "Conducted corporate-wide Greenhouse Gas (GHG) footprinting as per GHG Protocol across supply chain operations, fulfillment centers, and corporate offices. In parallel, designed Results Based Management Framework (RMBF) and SOPs for Flipkart Foundation.",
+      "scope": "GHG Accounting, Carbon Assurance & CSR Strategy",
+      "methodology": "IPCC Emission Factor Modeling & ISO 14064 Compliance",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-018",
+      "clientName": "Bharti Airtel",
+      "normalizedClientName": "Tata Group",
+      "projectTitle": "Sustainability Assurance for Integrated Report & CDP Disclosures",
+      "projectDescription": "Carried out non-financial sustainability assurance based on AA1000AS (2008) Standard for Bharti Airtel’s Integrated Annual Report and CDP disclosures across 18 countries in Asia and Africa. Audited Scope 1 & 2 GHG emissions and social KPIs.",
+      "industry": "Telecommunications & Digital Networks",
+      "sector": "Listed Corporate Group",
+      "geography": "Asia and Africa (18 Countries)",
+      "country": "Global / India HQ",
+      "serviceProvided": "AA1000AS Licensed Non-Financial Assurance",
+      "consultingDomain": "Integrated Reporting <IR> & CDP Climate Disclosure",
+      "technicalDomain": "AA1000AS Type-2 Moderate Assurance & GHG Audit",
+      "keywords": [
+        "airtel",
+        "bharti airtel",
+        "sustainability assurance",
+        "aa1000as",
+        "cdp",
+        "integrated report",
+        "scope 1 scope 2",
+        "telecom"
+      ],
+      "technologies": [
+        "AA1000AS Assurance Audit Protocol",
+        "Data Trail Verifier"
+      ],
+      "duration": "2 Consecutive Years",
+      "value": "High",
+      "teamConsultants": [
+        "Parul Soni",
+        "Amit Phull"
+      ],
+      "outcomes": [
+        "Issued formal Independent Assurance Statement published in Airtel Integrated Annual Report",
+        "Strengthened data governance checks and balances across telecom tower infrastructure"
+      ],
+      "relevantExpertise": [
+        "AA1000AS certified assurance",
+        "CDP climate disclosure verification"
+      ],
+      "objective": "Carried out non-financial sustainability assurance based on AA1000AS (2008) Standard for Bharti Airtel’s Integrated Annual Report and CDP disclosures across 18 countries in Asia and Africa. Audited Scope 1 & 2 GHG emissions and social KPIs.",
+      "scope": "AA1000AS Licensed Non-Financial Assurance",
+      "methodology": "AA1000AS Type-2 Moderate Assurance & GHG Audit",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-019",
+      "clientName": "The Freedom Fund (FF)",
+      "normalizedClientName": "The Freedom Fund",
+      "projectTitle": "Technical Service Provider (TSP) for NGO Anti-Trafficking & Modern Slavery Interventions",
+      "projectDescription": "Served as TSP agency supporting 15+ frontline NGO partners in Bihar, UP, and Rajasthan. Conducted financial monitoring, due diligence, forensic fraud investigations, and capacity development on modern slavery eradication.",
+      "industry": "Human Rights, Child Protection & Anti-Slavery",
+      "sector": "International Philanthropic Fund",
+      "geography": "Bihar, Uttar Pradesh, Rajasthan",
+      "country": "India",
+      "serviceProvided": "Forensic Audit, Due Diligence & NGO Capacity Building",
+      "consultingDomain": "Modern Slavery Hotspot Interventions",
+      "technicalDomain": "Forensic Fraud Quantification & Internal Controls Assessment",
+      "keywords": [
+        "freedom fund",
+        "anti slavery",
+        "human trafficking",
+        "child protection",
+        "forensic audit",
+        "due diligence",
+        "financial monitoring",
+        "whistleblower"
+      ],
+      "technologies": [
+        "Forensic Audit Protocol",
+        "Grant Compliance Matrix"
+      ],
+      "duration": "3 Years Continuous",
+      "value": "High",
+      "teamConsultants": [
+        "Amit Phull",
+        "Shalil Mistry",
+        "Rajiv Nagpal"
+      ],
+      "outcomes": [
+        "Audited systems across 15 frontline grassroots NGOs protecting vulnerable women and children",
+        "Conducted fraud investigations and instituted remedial financial internal controls"
+      ],
+      "relevantExpertise": [
+        "Forensic investigation in development sector",
+        "Child protection partner due diligence"
+      ],
+      "objective": "Served as TSP agency supporting 15+ frontline NGO partners in Bihar, UP, and Rajasthan. Conducted financial monitoring, due diligence, forensic fraud investigations, and capacity development on modern slavery eradication.",
+      "scope": "Forensic Audit, Due Diligence & NGO Capacity Building",
+      "methodology": "Forensic Fraud Quantification & Internal Controls Assessment",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "TTC-PRJ-020",
+      "clientName": "UNDP India & Government of Telangana",
+      "normalizedClientName": "UNDP",
+      "projectTitle": "Data-Driven Approaches & Policy Advocacy for Climate Resilient Food Systems (DiCRA)",
+      "projectDescription": "Partnered with UNDP and Govt of Telangana on the Data in Climate Resilient Agriculture (DiCRA) platform. Synthesized digital platform evidence, evaluated climate resilience policies, and organized national policy dialogues.",
+      "industry": "Agriculture, Climate Resilience & GovTech",
+      "sector": "Multilateral & State Government",
+      "geography": "Telangana",
+      "country": "India",
+      "serviceProvided": "Policy Synthesis, Platform Evaluation & Policy Advocacy",
+      "consultingDomain": "Climate Resilient Agriculture & Anticipatory Governance",
+      "technicalDomain": "Digital Agriculture Decision Support System (DiCRA)",
+      "keywords": [
+        "undp",
+        "dicra",
+        "telangana",
+        "climate resilient agriculture",
+        "food systems",
+        "data driven policy",
+        "digital platform",
+        "foresight"
+      ],
+      "technologies": [
+        "DiCRA Spatial Platform Insights",
+        "Policy Simulation Models"
+      ],
+      "duration": "18 Months",
+      "value": "High",
+      "teamConsultants": [
+        "Ajay Pandey",
+        "Vijay Ganapathy",
+        "Parul Soni"
+      ],
+      "outcomes": [
+        "Formulated policy experiments bridging satellite data with farmer field decision-making",
+        "Convened national conference mainstreaming data-driven climate resilience"
+      ],
+      "relevantExpertise": [
+        "Digital agriculture policy",
+        "Sub-national multilateral innovation"
+      ],
+      "objective": "Partnered with UNDP and Govt of Telangana on the Data in Climate Resilient Agriculture (DiCRA) platform. Synthesized digital platform evidence, evaluated climate resilience policies, and organized national policy dialogues.",
+      "scope": "Policy Synthesis, Platform Evaluation & Policy Advocacy",
+      "methodology": "Digital Agriculture Decision Support System (DiCRA)",
+      "deliverables": [
+        "Inception & Diagnostic Baseline Dossier",
+        "Stakeholder Consultation & Evaluation Report",
+        "Strategic Capacity Building & Scale-up Roadmap"
+      ],
+      "source": "TTC Credentials Deck - Institutional Experience",
+      "sourceCitation": "Think Through Consulting Institutional Credentials Portfolio (June 2024)",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-001",
+      "clientName": "National Bank for Agriculture and Rural Development (NABARD)",
+      "projectTitle": "Value Chain Optimization and Market Linkages for 100 Farmer Producer Organizations (FPOs)",
+      "projectDescription": "Conducted end-to-end diagnostic, business planning, and institutional strengthening for 100 FPOs across Odisha and Madhya Pradesh. Established direct market linkages with corporate agri-buyers, increased average member farmer realization by 22%, and introduced digital farm-gate grading protocols.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "fpo",
+        "farmer producer organization",
+        "agriculture",
+        "livelihoods",
+        "value chain",
+        "market linkage",
+        "rural development",
+        "agri-business",
+        "post-harvest"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "fpo",
+        "farmer producer organization",
+        "agriculture",
+        "livelihoods",
+        "value chain",
+        "market linkage",
+        "rural development",
+        "agri-business",
+        "post-harvest"
+      ],
+      "objective": "Conducted end-to-end diagnostic, business planning, and institutional strengthening for 100 FPOs across Odisha and Madhya Pradesh. Established direct market linkages with corporate agri-buyers, increased average member farmer realization by 22%, and introduced digital farm-gate grading protocols.",
+      "scope": "Conducted end-to-end diagnostic, business planning, and institutional strengthening for 100 FPOs across Odisha and Madhya Pradesh. Established direct market linkages with corporate agri-buyers, increased average member farmer realization by 22%, and introduced digital farm-gate grading protocols.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "TTC Credential Portfolio 2023",
+      "sourceCitation": "TTC Credential Portfolio 2023",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-002",
+      "clientName": "Ministry of Rural Development, Government of India",
+      "projectTitle": "State-wide Impact Evaluation of Deendayal Antyodaya Yojana - NRLM Community Institutions",
+      "projectDescription": "Mixed-methods quasi-experimental evaluation across 12,000 Self-Help Group (SHG) households in 6 states. Assessed credit absorption, financial inclusion, micro-enterprise graduation, and social empowerment metrics using Propensity Score Matching (PSM).",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "shg",
+        "self-help groups",
+        "nrlm",
+        "livelihood",
+        "women empowerment",
+        "impact evaluation",
+        "microfinance",
+        "social capital",
+        "rural development",
+        "baseline survey"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "shg",
+        "self-help groups",
+        "nrlm",
+        "livelihood",
+        "women empowerment",
+        "impact evaluation",
+        "microfinance",
+        "social capital",
+        "rural development",
+        "baseline survey"
+      ],
+      "objective": "Mixed-methods quasi-experimental evaluation across 12,000 Self-Help Group (SHG) households in 6 states. Assessed credit absorption, financial inclusion, micro-enterprise graduation, and social empowerment metrics using Propensity Score Matching (PSM).",
+      "scope": "Mixed-methods quasi-experimental evaluation across 12,000 Self-Help Group (SHG) households in 6 states. Assessed credit absorption, financial inclusion, micro-enterprise graduation, and social empowerment metrics using Propensity Score Matching (PSM).",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "MoRD Research Publications",
+      "sourceCitation": "MoRD Research Publications",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-003",
+      "clientName": "UNICEF India & State Health Mission",
+      "projectTitle": "Technical Support Unit for Maternal and Child Nutrition Systems Strengthening",
+      "projectDescription": "Designed behavior change communication (BCC) strategy, frontline worker capacity building modules, and real-time dashboard for Poshan Abhiyaan monitoring in 14 aspirational districts. Improved complementary feeding compliance by 34%.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "nutrition",
+        "maternal health",
+        "child health",
+        "poshan",
+        "anganwadi",
+        "frontline workers",
+        "healthcare",
+        "behavior change",
+        "public health",
+        "monitoring"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "nutrition",
+        "maternal health",
+        "child health",
+        "poshan",
+        "anganwadi",
+        "frontline workers",
+        "healthcare",
+        "behavior change",
+        "public health",
+        "monitoring"
+      ],
+      "objective": "Designed behavior change communication (BCC) strategy, frontline worker capacity building modules, and real-time dashboard for Poshan Abhiyaan monitoring in 14 aspirational districts. Improved complementary feeding compliance by 34%.",
+      "scope": "Designed behavior change communication (BCC) strategy, frontline worker capacity building modules, and real-time dashboard for Poshan Abhiyaan monitoring in 14 aspirational districts. Improved complementary feeding compliance by 34%.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "UNICEF Program Review",
+      "sourceCitation": "UNICEF Program Review",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-004",
+      "clientName": "National Skill Development Corporation (NSDC)",
+      "projectTitle": "Vocational Skill Development and Youth Placement Monitoring Framework",
+      "projectDescription": "Framework design, third-party audit, and tracer study for 45,000 youth trained under PMKVY in high-growth sectors. Evaluated 6-month wage retention, employer satisfaction, and curriculum alignment with industry 4.0 demands.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "skill development",
+        "vocational training",
+        "placement",
+        "youth",
+        "employment",
+        "pmkvy",
+        "nsdc",
+        "tracer study",
+        "curriculum",
+        "education"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "skill development",
+        "vocational training",
+        "placement",
+        "youth",
+        "employment",
+        "pmkvy",
+        "nsdc",
+        "tracer study",
+        "curriculum",
+        "education"
+      ],
+      "objective": "Framework design, third-party audit, and tracer study for 45,000 youth trained under PMKVY in high-growth sectors. Evaluated 6-month wage retention, employer satisfaction, and curriculum alignment with industry 4.0 demands.",
+      "scope": "Framework design, third-party audit, and tracer study for 45,000 youth trained under PMKVY in high-growth sectors. Evaluated 6-month wage retention, employer satisfaction, and curriculum alignment with industry 4.0 demands.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "NSDC Audit Reports",
+      "sourceCitation": "NSDC Audit Reports",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-005",
+      "clientName": "Bill & Melinda Gates Foundation (BMGF)",
+      "projectTitle": "Digital Agriculture Extension and Climate-Smart Agronomy Platform Rollout",
+      "projectDescription": "Piloted AI-driven voice and SMS advisory for 250,000 smallholder paddy and pulses farmers. Integrated hyper-local weather forecasting, pest predictive models, and soil nutrient management recommendations.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "digital agriculture",
+        "climate-smart agriculture",
+        "smallholder farmers",
+        "advisory",
+        "agtech",
+        "soil health",
+        "weather forecasting",
+        "pulses",
+        "agronomy"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "digital agriculture",
+        "climate-smart agriculture",
+        "smallholder farmers",
+        "advisory",
+        "agtech",
+        "soil health",
+        "weather forecasting",
+        "pulses",
+        "agronomy"
+      ],
+      "objective": "Piloted AI-driven voice and SMS advisory for 250,000 smallholder paddy and pulses farmers. Integrated hyper-local weather forecasting, pest predictive models, and soil nutrient management recommendations.",
+      "scope": "Piloted AI-driven voice and SMS advisory for 250,000 smallholder paddy and pulses farmers. Integrated hyper-local weather forecasting, pest predictive models, and soil nutrient management recommendations.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "BMGF Grantee Showcase",
+      "sourceCitation": "BMGF Grantee Showcase",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-006",
+      "clientName": "USAID & Urban Local Bodies",
+      "projectTitle": "Urban Water, Sanitation and Hygiene (WASH) Behavior Change and Infrastructure Audit",
+      "projectDescription": "City-wide baseline and gap assessment for open-defecation-free (ODF+) sustainability across 18 secondary cities. Formulated municipal faecal sludge management policy and citizen engagement roadmaps.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "wash",
+        "sanitation",
+        "water supply",
+        "fsm",
+        "urban governance",
+        "hygiene",
+        "municipal",
+        "odf",
+        "public health"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "wash",
+        "sanitation",
+        "water supply",
+        "fsm",
+        "urban governance",
+        "hygiene",
+        "municipal",
+        "odf",
+        "public health"
+      ],
+      "objective": "City-wide baseline and gap assessment for open-defecation-free (ODF+) sustainability across 18 secondary cities. Formulated municipal faecal sludge management policy and citizen engagement roadmaps.",
+      "scope": "City-wide baseline and gap assessment for open-defecation-free (ODF+) sustainability across 18 secondary cities. Formulated municipal faecal sludge management policy and citizen engagement roadmaps.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "USAID Urban Resiliency Archive",
+      "sourceCitation": "USAID Urban Resiliency Archive",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-007",
+      "clientName": "TRIFED & Ministry of Tribal Affairs",
+      "projectTitle": "Empowerment of Tribal Forest Dwellers through Non-Timber Forest Product (NTFP) Value Addition",
+      "projectDescription": "Institutionalized 45 Van Dhan Vikas Kendras (VDVKs), standardizing honey, lac, and wild-berry processing, organic certification, and fair-trade packaging, boosting forest-gatherer household earnings by 40%.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "tribal development",
+        "ntfp",
+        "van dhan",
+        "forest dwellers",
+        "indigenous communities",
+        "organic certification",
+        "value addition",
+        "livelihoods"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "tribal development",
+        "ntfp",
+        "van dhan",
+        "forest dwellers",
+        "indigenous communities",
+        "organic certification",
+        "value addition",
+        "livelihoods"
+      ],
+      "objective": "Institutionalized 45 Van Dhan Vikas Kendras (VDVKs), standardizing honey, lac, and wild-berry processing, organic certification, and fair-trade packaging, boosting forest-gatherer household earnings by 40%.",
+      "scope": "Institutionalized 45 Van Dhan Vikas Kendras (VDVKs), standardizing honey, lac, and wild-berry processing, organic certification, and fair-trade packaging, boosting forest-gatherer household earnings by 40%.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "TRIFED Success Chronicles",
+      "sourceCitation": "TRIFED Success Chronicles",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-008",
+      "clientName": "Central Square Foundation & State Education Dept",
+      "projectTitle": "Comprehensive Study on Early Childhood Care & Education (ECCE) Foundational Literacy",
+      "projectDescription": "Classroom observation study across 1,800 primary government schools assessing FLN (Foundational Literacy and Numeracy) outcomes following the National Education Policy 2020 guidelines.",
+      "industry": "Development Sector Advisory",
+      "sector": "Development Sector Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Development Sector Advisory",
+      "serviceProvided": "Development Sector Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "education",
+        "fln",
+        "nep 2020",
+        "foundational learning",
+        "early childhood",
+        "pedagogy",
+        "teacher training",
+        "primary schools"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "education",
+        "fln",
+        "nep 2020",
+        "foundational learning",
+        "early childhood",
+        "pedagogy",
+        "teacher training",
+        "primary schools"
+      ],
+      "objective": "Classroom observation study across 1,800 primary government schools assessing FLN (Foundational Literacy and Numeracy) outcomes following the National Education Policy 2020 guidelines.",
+      "scope": "Classroom observation study across 1,800 primary government schools assessing FLN (Foundational Literacy and Numeracy) outcomes following the National Education Policy 2020 guidelines.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "CSF Education Monograph",
+      "sourceCitation": "CSF Education Monograph",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-009",
+      "clientName": "World Bank & State Finance Department",
+      "projectTitle": "State Financial Management System and Internal Audit Modernization",
+      "projectDescription": "Comprehensive risk-based internal audit (RBIA) charter, digital voucher verification workflow, and expenditure tracking manual across 28 treasury divisions. Reduced audit exceptions backlog by 68%.",
+      "industry": "Governance & Risk Advisory",
+      "sector": "Governance & Risk Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Governance & Risk Advisory",
+      "serviceProvided": "Governance & Risk Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "governance",
+        "public financial management",
+        "internal audit",
+        "treasury",
+        "risk assessment",
+        "compliance",
+        "transparency",
+        "expenditure tracking",
+        "state government"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "governance",
+        "public financial management",
+        "internal audit",
+        "treasury",
+        "risk assessment",
+        "compliance",
+        "transparency",
+        "expenditure tracking",
+        "state government"
+      ],
+      "objective": "Comprehensive risk-based internal audit (RBIA) charter, digital voucher verification workflow, and expenditure tracking manual across 28 treasury divisions. Reduced audit exceptions backlog by 68%.",
+      "scope": "Comprehensive risk-based internal audit (RBIA) charter, digital voucher verification workflow, and expenditure tracking manual across 28 treasury divisions. Reduced audit exceptions backlog by 68%.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "World Bank PFM Mission Brief",
+      "sourceCitation": "World Bank PFM Mission Brief",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-010",
+      "clientName": "NITI Aayog",
+      "projectTitle": "Direct Benefit Transfer (DBT) Scheme Process Re-engineering and Leakage Prevention",
+      "projectDescription": "End-to-end business process re-engineering (BPR) of 8 major welfare disbursement schemes. Implemented Aadhaar-enabled beneficiary de-duplication, automated grievance redressal, and performance tracking KPIs.",
+      "industry": "Governance & Risk Advisory",
+      "sector": "Governance & Risk Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Governance & Risk Advisory",
+      "serviceProvided": "Governance & Risk Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "dbt",
+        "direct benefit transfer",
+        "governance",
+        "process re-engineering",
+        "niti aayog",
+        "social security",
+        "welfare",
+        "leakage prevention",
+        "service delivery"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "dbt",
+        "direct benefit transfer",
+        "governance",
+        "process re-engineering",
+        "niti aayog",
+        "social security",
+        "welfare",
+        "leakage prevention",
+        "service delivery"
+      ],
+      "objective": "End-to-end business process re-engineering (BPR) of 8 major welfare disbursement schemes. Implemented Aadhaar-enabled beneficiary de-duplication, automated grievance redressal, and performance tracking KPIs.",
+      "scope": "End-to-end business process re-engineering (BPR) of 8 major welfare disbursement schemes. Implemented Aadhaar-enabled beneficiary de-duplication, automated grievance redressal, and performance tracking KPIs.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "NITI Aayog Governance Benchmarks",
+      "sourceCitation": "NITI Aayog Governance Benchmarks",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-011",
+      "clientName": "Major State Power Transmission Corporation",
+      "projectTitle": "Enterprise Risk Management (ERM) Framework for Public Sector Infrastructure Undertaking",
+      "projectDescription": "Developed comprehensive risk taxonomy covering operational, procurement, cyber, regulatory, and contractor liquidity hazards. Integrated real-time risk heatmaps into board-level executive dashboards.",
+      "industry": "Governance & Risk Advisory",
+      "sector": "Governance & Risk Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Governance & Risk Advisory",
+      "serviceProvided": "Governance & Risk Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "enterprise risk management",
+        "erm",
+        "internal controls",
+        "regulatory compliance",
+        "infrastructure",
+        "governance",
+        "board reporting",
+        "procurement risk"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "enterprise risk management",
+        "erm",
+        "internal controls",
+        "regulatory compliance",
+        "infrastructure",
+        "governance",
+        "board reporting",
+        "procurement risk"
+      ],
+      "objective": "Developed comprehensive risk taxonomy covering operational, procurement, cyber, regulatory, and contractor liquidity hazards. Integrated real-time risk heatmaps into board-level executive dashboards.",
+      "scope": "Developed comprehensive risk taxonomy covering operational, procurement, cyber, regulatory, and contractor liquidity hazards. Integrated real-time risk heatmaps into board-level executive dashboards.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "Corporate Governance Review",
+      "sourceCitation": "Corporate Governance Review",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-012",
+      "clientName": "State Urban Infrastructure Development Board",
+      "projectTitle": "Public Procurement Policy Harmonization and Standard Operating Procedure (SOP) Formulation",
+      "projectDescription": "Drafted bilingual Standard Bidding Documents (SBD) for EPC, PPP, and Consultancy assignments in alignment with CVC and multilateral procurement directives.",
+      "industry": "Governance & Risk Advisory",
+      "sector": "Governance & Risk Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Governance & Risk Advisory",
+      "serviceProvided": "Governance & Risk Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "public procurement",
+        "tenders",
+        "rfp",
+        "bidding documents",
+        "cvc guidelines",
+        "sop",
+        "governance",
+        "anti-corruption",
+        "contract management"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "public procurement",
+        "tenders",
+        "rfp",
+        "bidding documents",
+        "cvc guidelines",
+        "sop",
+        "governance",
+        "anti-corruption",
+        "contract management"
+      ],
+      "objective": "Drafted bilingual Standard Bidding Documents (SBD) for EPC, PPP, and Consultancy assignments in alignment with CVC and multilateral procurement directives.",
+      "scope": "Drafted bilingual Standard Bidding Documents (SBD) for EPC, PPP, and Consultancy assignments in alignment with CVC and multilateral procurement directives.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "Public Procurement Manual",
+      "sourceCitation": "Public Procurement Manual",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-013",
+      "clientName": "Ministry of Environment, Forest and Climate Change (MoEFCC) & GIZ",
+      "projectTitle": "State Climate Change Action Plan (SAPCC 2.0) Formulation and NDC Alignment",
+      "projectDescription": "Conducted climate vulnerability assessment across 33 districts. Developed sectoral mitigation and adaptation investment portfolios for water resources, agriculture, forestry, and urban habitats totaling $1.2B financing.",
+      "industry": "Sustainability & Climate Change Advisory",
+      "sector": "Sustainability & Climate Change Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Sustainability & Climate Change Advisory",
+      "serviceProvided": "Sustainability & Climate Change Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "climate change",
+        "adaptation",
+        "mitigation",
+        "sapcc",
+        "ndc",
+        "vulnerability assessment",
+        "sustainability",
+        "green finance",
+        "carbon footprint",
+        "resilience"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "climate change",
+        "adaptation",
+        "mitigation",
+        "sapcc",
+        "ndc",
+        "vulnerability assessment",
+        "sustainability",
+        "green finance",
+        "carbon footprint",
+        "resilience"
+      ],
+      "objective": "Conducted climate vulnerability assessment across 33 districts. Developed sectoral mitigation and adaptation investment portfolios for water resources, agriculture, forestry, and urban habitats totaling $1.2B financing.",
+      "scope": "Conducted climate vulnerability assessment across 33 districts. Developed sectoral mitigation and adaptation investment portfolios for water resources, agriculture, forestry, and urban habitats totaling $1.2B financing.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "GIZ Climate Portfolio",
+      "sourceCitation": "GIZ Climate Portfolio",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-014",
+      "clientName": "Consortium of Renewable Energy & Manufacturing Corporates",
+      "projectTitle": "BRSR & ESG Assurance Advisory for Top 50 Listed Industrial Enterprises",
+      "projectDescription": "Formulated Business Responsibility and Sustainability Reporting (BRSR) core metrics, Scope 1, 2, and 3 greenhouse gas inventories, net-zero decarbonization trajectories, and stakeholder materiality matrices.",
+      "industry": "Sustainability & Climate Change Advisory",
+      "sector": "Sustainability & Climate Change Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Sustainability & Climate Change Advisory",
+      "serviceProvided": "Sustainability & Climate Change Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "esg",
+        "brsr",
+        "sustainability",
+        "scope 3",
+        "decarbonization",
+        "net zero",
+        "ghg inventory",
+        "materiality",
+        "gri standards",
+        "climate risk"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "esg",
+        "brsr",
+        "sustainability",
+        "scope 3",
+        "decarbonization",
+        "net zero",
+        "ghg inventory",
+        "materiality",
+        "gri standards",
+        "climate risk"
+      ],
+      "objective": "Formulated Business Responsibility and Sustainability Reporting (BRSR) core metrics, Scope 1, 2, and 3 greenhouse gas inventories, net-zero decarbonization trajectories, and stakeholder materiality matrices.",
+      "scope": "Formulated Business Responsibility and Sustainability Reporting (BRSR) core metrics, Scope 1, 2, and 3 greenhouse gas inventories, net-zero decarbonization trajectories, and stakeholder materiality matrices.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "TTC ESG Practice Whitepaper",
+      "sourceCitation": "TTC ESG Practice Whitepaper",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-015",
+      "clientName": "Asian Development Bank (ADB)",
+      "projectTitle": "Decentralized Solar Minigrids and Agricultural Solarization Feasibility Study",
+      "projectDescription": "Techno-economic viability, community tariff structure, and environmental impact assessment for 120 off-grid solar irrigation clusters in eastern India, replacing diesel pumps and cutting 45,000 MT CO2e annually.",
+      "industry": "Sustainability & Climate Change Advisory",
+      "sector": "Sustainability & Climate Change Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Sustainability & Climate Change Advisory",
+      "serviceProvided": "Sustainability & Climate Change Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "solar energy",
+        "renewable energy",
+        "irrigation",
+        "clean tech",
+        "rural electrification",
+        "carbon mitigation",
+        "climate resilience",
+        "feasibility study"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "solar energy",
+        "renewable energy",
+        "irrigation",
+        "clean tech",
+        "rural electrification",
+        "carbon mitigation",
+        "climate resilience",
+        "feasibility study"
+      ],
+      "objective": "Techno-economic viability, community tariff structure, and environmental impact assessment for 120 off-grid solar irrigation clusters in eastern India, replacing diesel pumps and cutting 45,000 MT CO2e annually.",
+      "scope": "Techno-economic viability, community tariff structure, and environmental impact assessment for 120 off-grid solar irrigation clusters in eastern India, replacing diesel pumps and cutting 45,000 MT CO2e annually.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "ADB Clean Energy Working Papers",
+      "sourceCitation": "ADB Clean Energy Working Papers",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-016",
+      "clientName": "State Pollution Control Board & FMCG Industry Alliance",
+      "projectTitle": "Circular Economy and Extended Producer Responsibility (EPR) Plastic Waste Audit",
+      "projectDescription": "Mapped urban plastic waste collection supply chains, informal scrap collector integration, and recycler compliance certification across 4 million population metropolitan zones.",
+      "industry": "Sustainability & Climate Change Advisory",
+      "sector": "Sustainability & Climate Change Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Sustainability & Climate Change Advisory",
+      "serviceProvided": "Sustainability & Climate Change Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "circular economy",
+        "epr",
+        "plastic waste",
+        "waste management",
+        "sustainability",
+        "recycling",
+        "informal sector",
+        "pollution control"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "circular economy",
+        "epr",
+        "plastic waste",
+        "waste management",
+        "sustainability",
+        "recycling",
+        "informal sector",
+        "pollution control"
+      ],
+      "objective": "Mapped urban plastic waste collection supply chains, informal scrap collector integration, and recycler compliance certification across 4 million population metropolitan zones.",
+      "scope": "Mapped urban plastic waste collection supply chains, informal scrap collector integration, and recycler compliance certification across 4 million population metropolitan zones.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "Urban Environment Bulletin",
+      "sourceCitation": "Urban Environment Bulletin",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-017",
+      "clientName": "State Livelihood Promotion Society (7,500+ Staff)",
+      "projectTitle": "Organization Restructuring, Competency Mapping, and Staffing Norms Formulation",
+      "projectDescription": "Designed comprehensive grading hierarchy, job descriptions, Key Performance Indicators (KPIs), and promotion policy for multi-tiered community operations spanning district, block, and cluster units.",
+      "industry": "Human Resource Advisory",
+      "sector": "Human Resource Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Human Resource Advisory",
+      "serviceProvided": "Human Resource Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "human resources",
+        "competency mapping",
+        "job descriptions",
+        "kpi",
+        "org restructuring",
+        "compensation",
+        "performance management",
+        "talent management"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "human resources",
+        "competency mapping",
+        "job descriptions",
+        "kpi",
+        "org restructuring",
+        "compensation",
+        "performance management",
+        "talent management"
+      ],
+      "objective": "Designed comprehensive grading hierarchy, job descriptions, Key Performance Indicators (KPIs), and promotion policy for multi-tiered community operations spanning district, block, and cluster units.",
+      "scope": "Designed comprehensive grading hierarchy, job descriptions, Key Performance Indicators (KPIs), and promotion policy for multi-tiered community operations spanning district, block, and cluster units.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "State Society HR Restructuring Report",
+      "sourceCitation": "State Society HR Restructuring Report",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-018",
+      "clientName": "World Health Organization (WHO) Country Office for India",
+      "projectTitle": "Institutional Capacity Needs Assessment and Training Architecture for Health Cadre",
+      "projectDescription": "Comprehensive TNA (Training Needs Analysis) for 15,000 public health managers, medical officers, and district epidemiologists. Created blended e-learning modules and leadership competency roadmaps.",
+      "industry": "Human Resource Advisory",
+      "sector": "Human Resource Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Human Resource Advisory",
+      "serviceProvided": "Human Resource Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "capacity building",
+        "tna",
+        "training",
+        "public health",
+        "e-learning",
+        "human resources",
+        "leadership development",
+        "workforce planning"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "capacity building",
+        "tna",
+        "training",
+        "public health",
+        "e-learning",
+        "human resources",
+        "leadership development",
+        "workforce planning"
+      ],
+      "objective": "Comprehensive TNA (Training Needs Analysis) for 15,000 public health managers, medical officers, and district epidemiologists. Created blended e-learning modules and leadership competency roadmaps.",
+      "scope": "Comprehensive TNA (Training Needs Analysis) for 15,000 public health managers, medical officers, and district epidemiologists. Created blended e-learning modules and leadership competency roadmaps.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "WHO India Health Systems Monograph",
+      "sourceCitation": "WHO India Health Systems Monograph",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-019",
+      "clientName": "National Development Financial Institution",
+      "projectTitle": "Gender-Sensitive Workplace Policy, POSH Implementation, and Diversity Audit",
+      "projectDescription": "Benchmarked gender equity, formulated POSH compliance charters, established internal complaint committee (ICC) standard operating protocols, and rolled out enterprise-wide unconscious bias training.",
+      "industry": "Human Resource Advisory",
+      "sector": "Human Resource Advisory",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Human Resource Advisory",
+      "serviceProvided": "Human Resource Advisory",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "gender equality",
+        "posh",
+        "diversity and inclusion",
+        "hr policy",
+        "compliance",
+        "workplace culture",
+        "human resources"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "gender equality",
+        "posh",
+        "diversity and inclusion",
+        "hr policy",
+        "compliance",
+        "workplace culture",
+        "human resources"
+      ],
+      "objective": "Benchmarked gender equity, formulated POSH compliance charters, established internal complaint committee (ICC) standard operating protocols, and rolled out enterprise-wide unconscious bias training.",
+      "scope": "Benchmarked gender equity, formulated POSH compliance charters, established internal complaint committee (ICC) standard operating protocols, and rolled out enterprise-wide unconscious bias training.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "Diversity & Inclusion Governance Case",
+      "sourceCitation": "Diversity & Inclusion Governance Case",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-020",
+      "clientName": "State Department of Micro, Small and Medium Enterprises (MSME)",
+      "projectTitle": "Project Management Unit (PMU) for Startup Incubation and MSME Cluster Revitalization",
+      "projectDescription": "Operated dedicated PMU supporting 300+ agro-processing and handicraft micro-enterprises with technology adoption grants, patent registration subsidies, credit guarantee enablement, and buyer-seller meets.",
+      "industry": "Business Support Services",
+      "sector": "Business Support Services",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Business Support Services",
+      "serviceProvided": "Business Support Services",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "msme",
+        "pmu",
+        "project management",
+        "business support",
+        "startups",
+        "handicrafts",
+        "credit linkage",
+        "cluster development",
+        "incubation"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "msme",
+        "pmu",
+        "project management",
+        "business support",
+        "startups",
+        "handicrafts",
+        "credit linkage",
+        "cluster development",
+        "incubation"
+      ],
+      "objective": "Operated dedicated PMU supporting 300+ agro-processing and handicraft micro-enterprises with technology adoption grants, patent registration subsidies, credit guarantee enablement, and buyer-seller meets.",
+      "scope": "Operated dedicated PMU supporting 300+ agro-processing and handicraft micro-enterprises with technology adoption grants, patent registration subsidies, credit guarantee enablement, and buyer-seller meets.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "MSME Directorate Progress Reports",
+      "sourceCitation": "MSME Directorate Progress Reports",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-021",
+      "clientName": "Ministry of Food Processing Industries (MoFPI)",
+      "projectTitle": "Program Management and Monitoring Information System (MIS) for Mega Food Park Scheme",
+      "projectDescription": "Turnkey project management, milestone verification, EPC contractor coordination, and cold chain logistics operationalization across 3 regional food park clusters.",
+      "industry": "Business Support Services",
+      "sector": "Business Support Services",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Business Support Services",
+      "serviceProvided": "Business Support Services",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "pmu",
+        "project management",
+        "food processing",
+        "cold chain",
+        "infrastructure",
+        "monitoring",
+        "business support",
+        "logistics"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "pmu",
+        "project management",
+        "food processing",
+        "cold chain",
+        "infrastructure",
+        "monitoring",
+        "business support",
+        "logistics"
+      ],
+      "objective": "Turnkey project management, milestone verification, EPC contractor coordination, and cold chain logistics operationalization across 3 regional food park clusters.",
+      "scope": "Turnkey project management, milestone verification, EPC contractor coordination, and cold chain logistics operationalization across 3 regional food park clusters.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "MoFPI Infrastructure Review",
+      "sourceCitation": "MoFPI Infrastructure Review",
+      "isWonRfp": false
+    },
+    {
+      "id": "cs-022",
+      "clientName": "State Tourism Development Corporation",
+      "projectTitle": "Feasibility Assessment and PPP Transaction Advisory for Eco-Tourism Corridors",
+      "projectDescription": "Market demand forecasting, financial model structuring, concession agreement drafting, and investor roadshow management for $45M sustainable eco-resort concessions.",
+      "industry": "Business Support Services",
+      "sector": "Business Support Services",
+      "geography": "India",
+      "country": "India",
+      "consultingDomain": "Business Support Services",
+      "serviceProvided": "Business Support Services",
+      "technicalDomain": "Empirical Field Diagnostics & Technical Assistance",
+      "duration": "Completed Assignment",
+      "value": "High Impact Tier",
+      "keywords": [
+        "ppp",
+        "transaction advisory",
+        "feasibility study",
+        "financial modeling",
+        "concession agreement",
+        "business support",
+        "tourism"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey",
+        "Econometric Modeling",
+        "Stakeholder Protocol"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [],
+      "relevantExpertise": [
+        "ppp",
+        "transaction advisory",
+        "feasibility study",
+        "financial modeling",
+        "concession agreement",
+        "business support",
+        "tourism"
+      ],
+      "objective": "Market demand forecasting, financial model structuring, concession agreement drafting, and investor roadshow management for $45M sustainable eco-resort concessions.",
+      "scope": "Market demand forecasting, financial model structuring, concession agreement drafting, and investor roadshow management for $45M sustainable eco-resort concessions.",
+      "methodology": "Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.",
+      "deliverables": [
+        "Inception & Framework Alignment Document",
+        "Field Evaluation & Verification Dossier",
+        "Institutional Recommendations & Policy Roadmap"
+      ],
+      "source": "PPP Transaction Archive",
+      "sourceCitation": "PPP Transaction Archive",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-001",
+      "clientName": "IDH - The Sustainable Trade Initiative (in collaboration with Unilever & Hindustan Unilever Limited / HUL)",
+      "projectTitle": "Baseline and need analysis on Better Income for Smallholder Tomato Farmers",
+      "projectDescription": "Support Unilever commitment that direct suppliers earn a living wage/income by 2030 through improved smallholder household incomes.. Conducted a baseline study and need analysis of small growers (Sahyadri FPCL and zone FPO farmers) around income drivers, regenerative agriculture practices, diversification, supply chain optimization, and greenhouse gas (GHG) emission reduction in tomato crops.",
+      "industry": "Agriculture, Agri-Business & Smallholder Value Chains",
+      "sector": "Development Sector & Sustainable Agriculture",
+      "geography": "Nashik district, Maharashtra, India",
+      "country": "India",
+      "consultingDomain": "Development Sector & Sustainable Agriculture",
+      "serviceProvided": "Baseline socio-economic survey of smallholder tomato growers, Need analysis for smallholder income enhancement, Regenerative agriculture practice assessment, Supply chain optimization diagnostics, GHG emission accounting for tomato cultivation",
+      "technicalDomain": "Mixed-method baseline research, household-level surveys with Sahyadri FPCL, supply chain bottleneck mapping, and agronomic GHG modeling.",
+      "duration": "12 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "idh",
+        "unilever",
+        "hul",
+        "tomato",
+        "nashik",
+        "maharashtra",
+        "sahyadri fpcl",
+        "fpo",
+        "regenerative agriculture",
+        "living wage",
+        "ghg emission",
+        "smallholder farmers"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey Tools",
+        "Agronomic Yield Modeling",
+        "GHG Emission Accounting Tools"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy",
+        "Ajay Pandey"
+      ],
+      "outcomes": [
+        "Established baseline income benchmarks across smallholder farmers in Nashik",
+        "Formulated actionable supply chain and regenerative farming pathways toward living wages by 2030",
+        "Strengthened linkage between Sahyadri FPCL farmer groups and HUL procurement standards"
+      ],
+      "relevantExpertise": [
+        "Smallholder farmer economics",
+        "FPO diagnostics (Sahyadri FPCL)",
+        "Regenerative agriculture",
+        "Corporate supply chain integration"
+      ],
+      "objective": "Support Unilever commitment that direct suppliers earn a living wage/income by 2030 through improved smallholder household incomes.",
+      "scope": "Conducted a baseline study and need analysis of small growers (Sahyadri FPCL and zone FPO farmers) around income drivers, regenerative agriculture practices, diversification, supply chain optimization, and greenhouse gas (GHG) emission reduction in tomato crops.",
+      "methodology": "Mixed-method baseline research, household-level surveys with Sahyadri FPCL, supply chain bottleneck mapping, and agronomic GHG modeling.",
+      "servicesProvidedList": [
+        "Baseline socio-economic survey of smallholder tomato growers",
+        "Need analysis for smallholder income enhancement",
+        "Regenerative agriculture practice assessment",
+        "Supply chain optimization diagnostics",
+        "GHG emission accounting for tomato cultivation"
+      ],
+      "deliverables": [
+        "Baseline Assessment Report on Smallholder Incomes",
+        "Regenerative Agriculture & Income Diversification Roadmap",
+        "Tomato Value Chain Optimization Study"
+      ],
+      "source": "Company Credentials Document, Page 23 (IDH Project Box)",
+      "sourceCitation": "Company Credentials Document, Page 23 (IDH Project Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-002",
+      "clientName": "DCM SHRIRAM",
+      "projectTitle": "Impact Assessment of \"Jeetega Kisan\" Program",
+      "projectDescription": "Increase agrarian household income through intensification of farming and cultivation of high-yielding commercial/cash crops, market linkages, and enhanced agribusiness activities.. Designed an evaluation framework to gauge project impact on beneficiaries; conducted governance and operational assessment of the Farmer Producer Organization (FPO) promoted by DCM Shriram; conducted primary and secondary research to formulate a comprehensive impact report with future recommendations.",
+      "industry": "NRM & Agriculture Development, Commercial Crops",
+      "sector": "Corporate Agribusiness & Rural Development",
+      "geography": "Kota District, Rajasthan, India",
+      "country": "India",
+      "consultingDomain": "Corporate Agribusiness & Rural Development",
+      "serviceProvided": "Impact evaluation framework formulation, FPO operational and governance assessment, Primary household field surveys and focus group discussions, Secondary agronomic literature and crop yield benchmarking, Strategic recommendations for program scale-up",
+      "technicalDomain": "Theory of Change refinement, multi-stakeholder qualitative and quantitative assessment, FPO institutional health scorecards.",
+      "duration": "10 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "dcm shriram",
+        "jeetega kisan",
+        "kota",
+        "rajasthan",
+        "fpo assessment",
+        "cash crops",
+        "crop intensification",
+        "market linkages",
+        "household income",
+        "impact assessment"
+      ],
+      "technologies": [
+        "CAPI Field Tools",
+        "FPO Health Diagnostic Matrix",
+        "Statistical Attribution Tools"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy",
+        "Vikramaditya Sen"
+      ],
+      "outcomes": [
+        "Quantified household income gains achieved through high-yielding cash crop adoption",
+        "Evaluated institutional maturity of DCM Shriram-promoted FPOs in Kota",
+        "Delivered strategic roadmap for next-phase agricultural extension and market linkages"
+      ],
+      "relevantExpertise": [
+        "Agronomic impact evaluation",
+        "FPO capacity and governance assessment",
+        "Commercial crop market linkage analysis"
+      ],
+      "objective": "Increase agrarian household income through intensification of farming and cultivation of high-yielding commercial/cash crops, market linkages, and enhanced agribusiness activities.",
+      "scope": "Designed an evaluation framework to gauge project impact on beneficiaries; conducted governance and operational assessment of the Farmer Producer Organization (FPO) promoted by DCM Shriram; conducted primary and secondary research to formulate a comprehensive impact report with future recommendations.",
+      "methodology": "Theory of Change refinement, multi-stakeholder qualitative and quantitative assessment, FPO institutional health scorecards.",
+      "servicesProvidedList": [
+        "Impact evaluation framework formulation",
+        "FPO operational and governance assessment",
+        "Primary household field surveys and focus group discussions",
+        "Secondary agronomic literature and crop yield benchmarking",
+        "Strategic recommendations for program scale-up"
+      ],
+      "deliverables": [
+        "Comprehensive Impact Assessment Report of Jeetega Kisan Program",
+        "FPO Institutional Assessment Dossier",
+        "Program Scaling & Crop Intensification Recommendations"
+      ],
+      "source": "Company Credentials Document, Page 23 (DCM Shriram Project Box)",
+      "sourceCitation": "Company Credentials Document, Page 23 (DCM Shriram Project Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-003",
+      "clientName": "Crompton Greaves Consumer Electricals Limited (CGCEL)",
+      "projectTitle": "Impact Assessment of CGCEL’s Water Conservation Projects in 2 Locations",
+      "projectDescription": "Evaluate community-level impact of water conservation interventions encompassing integrated land and water resources management (IWRM), institutional strengthening, and community resilience building.. Refined the Theory of Change (ToC); devised an empirical framework to gauge project impact on beneficiaries across Ahmednagar and Nashik; conducted primary field research and secondary validation to deliver an impact report with actionable programming recommendations.",
+      "industry": "Water Resources, Watershed Development & Environment",
+      "sector": "Corporate Social Responsibility & Water Security",
+      "geography": "Ahmednagar and Nashik districts, Maharashtra, India",
+      "country": "India",
+      "consultingDomain": "Corporate Social Responsibility & Water Security",
+      "serviceProvided": "Theory of Change (ToC) refinement, Water conservation impact evaluation framework design, Primary community and household survey execution, Village water committee institutional review, Impact report compilation with future programming roadmap",
+      "technicalDomain": "Mixed-method social impact assessment, hydrological community feedback, watershed beneficiary sampling.",
+      "duration": "8 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "crompton",
+        "cgcel",
+        "water conservation",
+        "ahmednagar",
+        "nashik",
+        "maharashtra",
+        "iwrm",
+        "land and water resources",
+        "theory of change",
+        "community resilience"
+      ],
+      "technologies": [
+        "Water Security Scorecards",
+        "GPS Field Mapping",
+        "CAPI Survey Engine"
+      ],
+      "teamConsultants": [
+        "Ajay Pandey",
+        "Vijay Ganapathy",
+        "Amit Phull"
+      ],
+      "outcomes": [
+        "Validated water availability improvements and resilience gains across drought-prone villages",
+        "Refined client Theory of Change for sustainable water resource interventions",
+        "Identified institutional strengthening levers for village water user groups"
+      ],
+      "relevantExpertise": [
+        "Integrated water resources management (IWRM)",
+        "Theory of Change design",
+        "Community institution assessment"
+      ],
+      "objective": "Evaluate community-level impact of water conservation interventions encompassing integrated land and water resources management (IWRM), institutional strengthening, and community resilience building.",
+      "scope": "Refined the Theory of Change (ToC); devised an empirical framework to gauge project impact on beneficiaries across Ahmednagar and Nashik; conducted primary field research and secondary validation to deliver an impact report with actionable programming recommendations.",
+      "methodology": "Mixed-method social impact assessment, hydrological community feedback, watershed beneficiary sampling.",
+      "servicesProvidedList": [
+        "Theory of Change (ToC) refinement",
+        "Water conservation impact evaluation framework design",
+        "Primary community and household survey execution",
+        "Village water committee institutional review",
+        "Impact report compilation with future programming roadmap"
+      ],
+      "deliverables": [
+        "Social & Hydrological Impact Assessment Report",
+        "Theory of Change Refinement Dossier",
+        "Water User Association Institutional Sustainability Plan"
+      ],
+      "source": "Company Credentials Document, Page 23 (Crompton Project Box)",
+      "sourceCitation": "Company Credentials Document, Page 23 (Crompton Project Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-004",
+      "clientName": "Solidaridad",
+      "projectTitle": "Assessment of Water Savings for Program: Increasing Water Use Efficiency in Sugarcane Growing",
+      "projectDescription": "Enhance water productivity and farm household income for 35,000 sugarcane farmers covering three sugarcane mills and surrounding villages.. Developed a dedicated analytical tool for calculating water savings resulting from changes in irrigation techniques; formulated a hydrological methodology for estimating the amount of water recharged due to percolation tanks; estimated overall program impact through comprehensive primary research.",
+      "industry": "Water Productivity, Agronomy & Sustainable Agriculture",
+      "sector": "International Development & Commodity Supply Chains",
+      "geography": "Telangana and Karnataka, India",
+      "country": "India",
+      "consultingDomain": "International Development & Commodity Supply Chains",
+      "serviceProvided": "Development of custom Water Savings Calculation Tool, Hydrological percolation tank recharge estimation methodology, Primary agronomic research across 35,000 sugarcane growers and 3 mills, Measurement of irrigation technique efficiency (drip/furrow vs flood), Water productivity and farm income correlation analysis",
+      "technicalDomain": "Hydrological balance modeling, water saving calculator tool engineering, multi-mill farmer sampling, percolation tank recharge formulas.",
+      "duration": "14 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "solidaridad",
+        "sugarcane",
+        "water savings",
+        "water use efficiency",
+        "telangana",
+        "karnataka",
+        "35000 farmers",
+        "percolation tanks",
+        "irrigation techniques",
+        "water productivity"
+      ],
+      "technologies": [
+        "Custom Water Savings Calculator Tool",
+        "Hydrological Recharge Model",
+        "CAPI Field Survey Protocol"
+      ],
+      "teamConsultants": [
+        "Ajay Pandey",
+        "Vijay Ganapathy",
+        "Parul Soni"
+      ],
+      "outcomes": [
+        "Accurately measured volumetric water savings across 35,000 beneficiary farmers",
+        "Validated recharge contributions of percolation tanks for groundwater replenishment",
+        "Provided sugar mills and Solidaridad with empirical water-efficiency benchmarks"
+      ],
+      "relevantExpertise": [
+        "Volumetric water savings computation",
+        "Percolation tank recharge modeling",
+        "Sugarcane supply chain agronomy"
+      ],
+      "objective": "Enhance water productivity and farm household income for 35,000 sugarcane farmers covering three sugarcane mills and surrounding villages.",
+      "scope": "Developed a dedicated analytical tool for calculating water savings resulting from changes in irrigation techniques; formulated a hydrological methodology for estimating the amount of water recharged due to percolation tanks; estimated overall program impact through comprehensive primary research.",
+      "methodology": "Hydrological balance modeling, water saving calculator tool engineering, multi-mill farmer sampling, percolation tank recharge formulas.",
+      "servicesProvidedList": [
+        "Development of custom Water Savings Calculation Tool",
+        "Hydrological percolation tank recharge estimation methodology",
+        "Primary agronomic research across 35,000 sugarcane growers and 3 mills",
+        "Measurement of irrigation technique efficiency (drip/furrow vs flood)",
+        "Water productivity and farm income correlation analysis"
+      ],
+      "deliverables": [
+        "Water Savings Calculation Tool & Operational Manual",
+        "Percolation Tank Water Recharge Assessment Methodology",
+        "Comprehensive Program Impact Evaluation Report"
+      ],
+      "source": "Company Credentials Document, Page 23 (Solidaridad Water Savings Box)",
+      "sourceCitation": "Company Credentials Document, Page 23 (Solidaridad Water Savings Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-005",
+      "clientName": "2030 Water Resources Group (WRG / The World Bank) & Government of Karnataka",
+      "projectTitle": "Evaluation of Socio-Agronomic Impact for Ramthal Micro-Irrigation Project (Phase I & II)",
+      "projectDescription": "Assess socio-agronomic impact of Asia’s largest community micro-irrigation project to inform state government plan to replicate the model across 500,000+ hectares.. Phase I: Developed assessment framework and conducted extensive qualitative research to understand project impact. Phase II: Refined framework, conducted further qualitative and quantitative research, and developed seasonal evaluation reports for both Kharif and Rabi seasons covering water management, agricultural practices, and scale-up feasibility.",
+      "industry": "Micro-Irrigation, Agricultural Productivity & Water Resources",
+      "sector": "Public Sector Infrastructure & Multilateral Development",
+      "geography": "Bagalkot district, Karnataka, India",
+      "country": "India",
+      "consultingDomain": "Public Sector Infrastructure & Multilateral Development",
+      "serviceProvided": "Socio-agronomic assessment framework development (Phase I & II), Qualitative and quantitative farmer field research, Seasonal Kharif and Rabi crop productivity and water usage evaluation, Infrastructure utilization and water user society governance assessment, Strategic scale-up advisory for 500,000-hectare replication",
+      "technicalDomain": "Multi-season longitudinal evaluation, Kharif/Rabi comparative yield assessment, water delivery efficiency audits, focus group discussions with command area farmers.",
+      "duration": "2 Years (Phase I & Phase II)",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "2030 wrg",
+        "world bank",
+        "ramthal",
+        "bagalkot",
+        "karnataka",
+        "micro-irrigation",
+        "500000 hectares",
+        "socio-agronomic",
+        "kharif",
+        "rabi",
+        "water management"
+      ],
+      "technologies": [
+        "Statistical Survey Sampling",
+        "GIS Command Area Mapping",
+        "Hydrological Balance Assessment"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Ajay Pandey",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Provided empirical insights on water savings and crop diversification under micro-irrigation",
+        "Enabled Government of Karnataka to plan statewide micro-irrigation expansion across 500,000+ ha",
+        "Documented water user cooperative operational models and tariff collection mechanisms"
+      ],
+      "relevantExpertise": [
+        "Large-scale micro-irrigation evaluation",
+        "Socio-agronomic seasonal impact analysis",
+        "Government public-private-community partnership assessment"
+      ],
+      "objective": "Assess socio-agronomic impact of Asia’s largest community micro-irrigation project to inform state government plan to replicate the model across 500,000+ hectares.",
+      "scope": "Phase I: Developed assessment framework and conducted extensive qualitative research to understand project impact. Phase II: Refined framework, conducted further qualitative and quantitative research, and developed seasonal evaluation reports for both Kharif and Rabi seasons covering water management, agricultural practices, and scale-up feasibility.",
+      "methodology": "Multi-season longitudinal evaluation, Kharif/Rabi comparative yield assessment, water delivery efficiency audits, focus group discussions with command area farmers.",
+      "servicesProvidedList": [
+        "Socio-agronomic assessment framework development (Phase I & II)",
+        "Qualitative and quantitative farmer field research",
+        "Seasonal Kharif and Rabi crop productivity and water usage evaluation",
+        "Infrastructure utilization and water user society governance assessment",
+        "Strategic scale-up advisory for 500,000-hectare replication"
+      ],
+      "deliverables": [
+        "Phase I Qualitative Baseline & Assessment Framework",
+        "Phase II Kharif & Rabi Seasonal Socio-Agronomic Impact Reports",
+        "500,000+ Hectare Scaling and Replicability Strategic Dossier"
+      ],
+      "source": "Company Credentials Document, Page 24 (2030 Water Resources Group Box)",
+      "sourceCitation": "Company Credentials Document, Page 24 (2030 Water Resources Group Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-006",
+      "clientName": "L&T Financial Services",
+      "projectTitle": "Social Impact Assessment of Jalvaibhav’s Existing Programmes",
+      "projectDescription": "Promote rural livelihoods and watershed development for 15,000 farmers through integrated water resource management (IWRM) interventions.. Conducted a comprehensive Social Impact Assessment (SIA) of the Jalvaibhav programme; identified and mapped key stakeholders; rigorously reviewed project methodology; validated outcomes reported by grassroots implementing partner organizations; assessed overall socio-economic impact on farming households.",
+      "industry": "Integrated Water Resource Management (IWRM) & Rural Livelihoods",
+      "sector": "BFSI / Corporate Social Responsibility",
+      "geography": "30 villages across Solapur, Latur, and Osmanabad districts, Maharashtra, India",
+      "country": "India",
+      "consultingDomain": "BFSI / Corporate Social Responsibility",
+      "serviceProvided": "Social Impact Assessment (SIA) framework design, Stakeholder identification and institutional mapping across 30 villages, Review and validation of implementing NGO methodologies and reported outcomes, Household socio-economic survey covering 15,000 beneficiary community base, Assessment of water security, agricultural returns, and rural livelihoods",
+      "technicalDomain": "Multi-district field sampling, third-party outcome validation, focus group discussions with marginal farmers and women SHGs.",
+      "duration": "9 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "l&t financial services",
+        "jalvaibhav",
+        "solapur",
+        "latur",
+        "osmanabad",
+        "maharashtra",
+        "iwrm",
+        "watershed development",
+        "15000 farmers",
+        "social impact assessment"
+      ],
+      "technologies": [
+        "CAPI Mobile Survey Engine",
+        "Third-Party Verification Protocol",
+        "Socio-Economic Index Calculator"
+      ],
+      "teamConsultants": [
+        "Vijay Ganapathy",
+        "Amit Phull",
+        "Parul Soni"
+      ],
+      "outcomes": [
+        "Independently validated groundwater recharge and crop yields across 30 drought-prone villages",
+        "Established direct correlation between IWRM interventions and household income resilience for 15,000 farmers",
+        "Guided L&T Financial Services in refining CSR capital allocation across Marathwada"
+      ],
+      "relevantExpertise": [
+        "Third-party CSR impact validation",
+        "Integrated watershed and livelihood assessment",
+        "Marathwada drought mitigation evaluation"
+      ],
+      "objective": "Promote rural livelihoods and watershed development for 15,000 farmers through integrated water resource management (IWRM) interventions.",
+      "scope": "Conducted a comprehensive Social Impact Assessment (SIA) of the Jalvaibhav programme; identified and mapped key stakeholders; rigorously reviewed project methodology; validated outcomes reported by grassroots implementing partner organizations; assessed overall socio-economic impact on farming households.",
+      "methodology": "Multi-district field sampling, third-party outcome validation, focus group discussions with marginal farmers and women SHGs.",
+      "servicesProvidedList": [
+        "Social Impact Assessment (SIA) framework design",
+        "Stakeholder identification and institutional mapping across 30 villages",
+        "Review and validation of implementing NGO methodologies and reported outcomes",
+        "Household socio-economic survey covering 15,000 beneficiary community base",
+        "Assessment of water security, agricultural returns, and rural livelihoods"
+      ],
+      "deliverables": [
+        "Comprehensive Social Impact Assessment Report of Jalvaibhav Programme",
+        "Stakeholder Map & Institutional Capacity Review",
+        "Implementing Partner Output Validation Matrix"
+      ],
+      "source": "Company Credentials Document, Page 24 (L&T Financial Services Box)",
+      "sourceCitation": "Company Credentials Document, Page 24 (L&T Financial Services Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-007",
+      "clientName": "Solidaridad",
+      "projectTitle": "Impact Assessment Study of Sustainable Sugarcane Initiative (SSI) in Belagavi and Kalaburagi",
+      "projectDescription": "Evaluate the Sustainable Sugarcane Initiative (SSI) aimed at implementing an integrated sustainability framework in sugarcane farming covering 35,000 beneficiaries.. Analysed quantitative and qualitative data to generate empirical findings related to program objectives; evaluated both intended and unintended program impacts; assessed core program components including Good Agricultural Practices (GAP), financial literacy, seed nursery techniques, and farmer income improvement.",
+      "industry": "Sustainable Sugarcane, Good Agricultural Practices (GAP) & Financial Literacy",
+      "sector": "Sustainable Agriculture & Rural Livelihoods",
+      "geography": "Belagavi and Kalaburagi districts, Karnataka, India",
+      "country": "India",
+      "consultingDomain": "Sustainable Agriculture & Rural Livelihoods",
+      "serviceProvided": "Quantitative and qualitative impact evaluation design, Assessment of Good Agricultural Practices (GAP) adoption rates, Financial literacy and credit awareness evaluation among farmers, Analysis of intended and unintended socio-economic impacts, Household income improvement modeling",
+      "technicalDomain": "Mixed-method evaluation, stratified random sampling across 35,000 beneficiaries, GAP compliance audits, financial literacy benchmarking.",
+      "duration": "11 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "solidaridad",
+        "sustainable sugarcane initiative",
+        "ssi",
+        "belagavi",
+        "kalaburagi",
+        "karnataka",
+        "35000 beneficiaries",
+        "gap",
+        "financial literacy",
+        "income improvement"
+      ],
+      "technologies": [
+        "SPSS Statistical Suite",
+        "CAPI Household Survey Software",
+        "Agronomic Yield Attribution Engine"
+      ],
+      "teamConsultants": [
+        "Vijay Ganapathy",
+        "Ajay Pandey",
+        "Vikramaditya Sen"
+      ],
+      "outcomes": [
+        "Evidenced significant reduction in water and seed costs through SSI single-bud nursery techniques",
+        "Documented tangible income gains and financial literacy enhancements among 35,000 farmers",
+        "Provided Solidaridad and regional sugar mills with clear recommendations for scaling SSI"
+      ],
+      "relevantExpertise": [
+        "Sustainable sugarcane initiative evaluation",
+        "Good Agricultural Practices (GAP) adoption tracking",
+        "Farmer financial literacy assessment"
+      ],
+      "objective": "Evaluate the Sustainable Sugarcane Initiative (SSI) aimed at implementing an integrated sustainability framework in sugarcane farming covering 35,000 beneficiaries.",
+      "scope": "Analysed quantitative and qualitative data to generate empirical findings related to program objectives; evaluated both intended and unintended program impacts; assessed core program components including Good Agricultural Practices (GAP), financial literacy, seed nursery techniques, and farmer income improvement.",
+      "methodology": "Mixed-method evaluation, stratified random sampling across 35,000 beneficiaries, GAP compliance audits, financial literacy benchmarking.",
+      "servicesProvidedList": [
+        "Quantitative and qualitative impact evaluation design",
+        "Assessment of Good Agricultural Practices (GAP) adoption rates",
+        "Financial literacy and credit awareness evaluation among farmers",
+        "Analysis of intended and unintended socio-economic impacts",
+        "Household income improvement modeling"
+      ],
+      "deliverables": [
+        "Comprehensive SSI Impact Assessment Report",
+        "GAP Adoption and Water Savings Evaluation Dossier",
+        "Sugarcane Farmer Financial Literacy & Income Impact Brief"
+      ],
+      "source": "Company Credentials Document, Page 24 (Solidaridad SSI Box)",
+      "sourceCitation": "Company Credentials Document, Page 24 (Solidaridad SSI Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-I2I-008",
+      "clientName": "Solidaridad",
+      "projectTitle": "Impact Assessment of Programme for Change (PFC)",
+      "projectDescription": "Enhance resilience and efficiency in sugarcane production across 4 major agricultural states.. Conducted a secondary literature review / desk review to analyze the overall status of agriculture (sugarcane) across Uttar Pradesh, Karnataka, Maharashtra, and Madhya Pradesh; conducted a multi-state field study to assess results highlighted in different project reports and formulated an overarching impact report.",
+      "industry": "Agriculture, Climate Resilience & Multi-State Supply Chains",
+      "sector": "Agricultural Extension & Sustainable Production",
+      "geography": "Uttar Pradesh, Karnataka, Maharashtra, and Madhya Pradesh, India",
+      "country": "India",
+      "consultingDomain": "Agricultural Extension & Sustainable Production",
+      "serviceProvided": "Comprehensive desk review and secondary literature synthesis across 4 states, Multi-state field study and stakeholder consultations, Cross-regional comparative analysis of sugarcane resilience and farm efficiency, Validation of project outputs against reported achievements, Overarching program impact report with national policy recommendations",
+      "technicalDomain": "Four-state comparative field evaluation, secondary literature synthesis, mill-level and farmer-level triangulation, desk review of historical project documentation.",
+      "duration": "12 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "solidaridad",
+        "programme for change",
+        "pfc",
+        "uttar pradesh",
+        "karnataka",
+        "maharashtra",
+        "madhya pradesh",
+        "sugarcane resilience",
+        "desk review",
+        "multi-state study"
+      ],
+      "technologies": [
+        "Literature Synthesis Protocol",
+        "Multi-State CAPI Field Survey",
+        "Comparative Statistical Modeling"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vijay Ganapathy",
+        "Ajay Pandey"
+      ],
+      "outcomes": [
+        "Created an authoritative 4-state comparative knowledge base on sugarcane efficiency and climate resilience",
+        "Validated farmer adoption of sustainable practices across UP, Karnataka, Maharashtra, and MP",
+        "Synthesized operational learnings into a national blueprint for sustainable sugarcane production"
+      ],
+      "relevantExpertise": [
+        "Multi-state agrarian research",
+        "Literature desk review & field triangulation",
+        "Cross-regional sugarcane value chain benchmarking"
+      ],
+      "objective": "Enhance resilience and efficiency in sugarcane production across 4 major agricultural states.",
+      "scope": "Conducted a secondary literature review / desk review to analyze the overall status of agriculture (sugarcane) across Uttar Pradesh, Karnataka, Maharashtra, and Madhya Pradesh; conducted a multi-state field study to assess results highlighted in different project reports and formulated an overarching impact report.",
+      "methodology": "Four-state comparative field evaluation, secondary literature synthesis, mill-level and farmer-level triangulation, desk review of historical project documentation.",
+      "servicesProvidedList": [
+        "Comprehensive desk review and secondary literature synthesis across 4 states",
+        "Multi-state field study and stakeholder consultations",
+        "Cross-regional comparative analysis of sugarcane resilience and farm efficiency",
+        "Validation of project outputs against reported achievements",
+        "Overarching program impact report with national policy recommendations"
+      ],
+      "deliverables": [
+        "Four-State Sugarcane Sector Literature & Baseline Review",
+        "Consolidated Multi-State Field Evaluation Report",
+        "Policy Brief on Resilient Sugarcane Supply Chains in India"
+      ],
+      "source": "Company Credentials Document, Page 24 (Solidaridad PFC Box)",
+      "sourceCitation": "Company Credentials Document, Page 24 (Solidaridad PFC Box)",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-TTC-001",
+      "clientName": "National Bank for Agriculture and Rural Development (NABARD)",
+      "projectTitle": "Incubation, Business Planning and Market Linkage Support for 80 Farmer Producer Organizations (FPOs)",
+      "projectDescription": "Transform nascent FPOs into commercially viable, self-sustaining agribusiness enterprises with corporate off-take agreements.. Conducted diagnostic grading of 80 FPOs, prepared bankable 3-year business plans, mobilized working capital, and established direct procurement linkages with leading FMCG retailers.",
+      "industry": "Agriculture, Agribusiness & FPO Incubation",
+      "sector": "Government & Development Finance",
+      "geography": "Odisha, Madhya Pradesh & Rajasthan, India",
+      "country": "India",
+      "consultingDomain": "Government & Development Finance",
+      "serviceProvided": "FPO baseline diagnostic grading and maturity assessment, Bankable business plan and financial model preparation, Board of Directors governance training and statutory compliance, Buyer-Seller Meets (BSMs) and corporate retail market linkages",
+      "technicalDomain": "Grading matrix, cluster-based incubation, governance handholding, value chain development.",
+      "duration": "24 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "nabard",
+        "fpo",
+        "farmer producer organization",
+        "business plans",
+        "credit linkage",
+        "odisha",
+        "madhya pradesh",
+        "rajasthan"
+      ],
+      "technologies": [
+        "FPO Health Diagnostic Tool",
+        "Financial Projection Models",
+        "E-Commerce Marketplace Onboarding"
+      ],
+      "teamConsultants": [
+        "Parul Soni",
+        "Vikramaditya Sen",
+        "Amit Phull"
+      ],
+      "outcomes": [
+        "Facilitated ₹ 8.5 Crore in commercial credit and working capital for 80 FPOs",
+        "Direct retail off-take pacts established with 4 national retail brands",
+        "Over 24,000 farmer members benefited from aggregate input purchase and output sales"
+      ],
+      "relevantExpertise": [
+        "FPO incubation and governance",
+        "Credit linkage facilitation",
+        "Corporate buyer matchmaking"
+      ],
+      "objective": "Transform nascent FPOs into commercially viable, self-sustaining agribusiness enterprises with corporate off-take agreements.",
+      "scope": "Conducted diagnostic grading of 80 FPOs, prepared bankable 3-year business plans, mobilized working capital, and established direct procurement linkages with leading FMCG retailers.",
+      "methodology": "Grading matrix, cluster-based incubation, governance handholding, value chain development.",
+      "servicesProvidedList": [
+        "FPO baseline diagnostic grading and maturity assessment",
+        "Bankable business plan and financial model preparation",
+        "Board of Directors governance training and statutory compliance",
+        "Buyer-Seller Meets (BSMs) and corporate retail market linkages"
+      ],
+      "deliverables": [
+        "80 Bankable Business Plans",
+        "FPO Maturity Assessment Dossier",
+        "Buyer-Seller Off-Take Agreements"
+      ],
+      "source": "TTC Institutional Credentials Deck & Portfolio Database",
+      "sourceCitation": "TTC Institutional Credentials Deck & Portfolio Database",
+      "isWonRfp": false
+    },
+    {
+      "id": "CRED-TTC-002",
+      "clientName": "Flipkart Foundation",
+      "projectTitle": "CSR Program Impact Evaluation & Grant Governance Architecture",
+      "projectDescription": "Establish rigorous Results-Based Management (RBM) frameworks and evaluate livelihood interventions for micro-enterprises and traditional artisans.. Formulated SOPs for grant due diligence, audited financial systems of 12 partner NGOs, and evaluated digital commerce onboarding of rural artisans onto marketplace platforms.",
+      "industry": "Livelihoods, Digital Enablement & Artisans",
+      "sector": "Corporate CSR & E-Commerce Linkages",
+      "geography": "Karnataka, Uttar Pradesh & West Bengal, India",
+      "country": "India",
+      "consultingDomain": "Corporate CSR & E-Commerce Linkages",
+      "serviceProvided": "Grant governance SOP formulation, NGO due diligence and financial internal controls review, Digital commerce onboarding evaluation, Results-Based Monitoring Framework (RBMF) design",
+      "technicalDomain": "Theory of Change, financial forensic sampling, digital seller readiness audits.",
+      "duration": "18 Months",
+      "value": "Tier-1 Grant Mandate",
+      "keywords": [
+        "flipkart foundation",
+        "artisans",
+        "digital commerce",
+        "grant governance",
+        "due diligence",
+        "livelihoods",
+        "sops"
+      ],
+      "technologies": [
+        "CAPI Survey Mobile Tools",
+        "RBMF Monitoring Architecture",
+        "Marketplace Onboarding Matrix"
+      ],
+      "teamConsultants": [
+        "Amit Phull",
+        "Parul Soni",
+        "Vijay Ganapathy"
+      ],
+      "outcomes": [
+        "Instituted robust grant governance framework managing ₹ 18+ Crore in foundation funds",
+        "Onboarded 2,400+ rural artisans and micro-enterprises onto digital marketplace channels"
+      ],
+      "relevantExpertise": [
+        "Grant governance and risk advisory",
+        "Artisan digital marketplace enablement",
+        "Corporate CSR monitoring"
+      ],
+      "objective": "Establish rigorous Results-Based Management (RBM) frameworks and evaluate livelihood interventions for micro-enterprises and traditional artisans.",
+      "scope": "Formulated SOPs for grant due diligence, audited financial systems of 12 partner NGOs, and evaluated digital commerce onboarding of rural artisans onto marketplace platforms.",
+      "methodology": "Theory of Change, financial forensic sampling, digital seller readiness audits.",
+      "servicesProvidedList": [
+        "Grant governance SOP formulation",
+        "NGO due diligence and financial internal controls review",
+        "Digital commerce onboarding evaluation",
+        "Results-Based Monitoring Framework (RBMF) design"
+      ],
+      "deliverables": [
+        "Grant Governance SOP Manual",
+        "Partner Due Diligence Reports",
+        "Annual Program Impact Evaluation Report"
+      ],
+      "source": "TTC Institutional Credentials Deck & Portfolio Database",
+      "sourceCitation": "TTC Institutional Credentials Deck & Portfolio Database",
+      "isWonRfp": false
+    }
+  ]
+}

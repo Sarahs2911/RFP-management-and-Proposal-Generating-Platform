@@ -263,14 +263,47 @@ export const ProposalLibraryView: React.FC<ProposalLibraryViewProps> = ({ onDraf
 
                 {/* Export Buttons */}
                 <div className="flex items-center flex-wrap gap-2">
-                  <a
-                    href={`/api/proposal/${selectedProposal.id}/export`}
-                    className="px-4 py-1.5 bg-[#050F2A] hover:bg-[#030818] text-white text-xs font-extrabold rounded-full flex items-center gap-1.5 shadow-xs transition-all hover:scale-105"
-                    title="Download complete technical proposal as formatted Microsoft Word document"
-                  >
-                    <Download className="w-3.5 h-3.5 text-[#7BBBFF]" />
-                    <span>Technical (.docx)</span>
-                  </a>
+                  {selectedProposal.output_format === 'pptx' ? (
+                    <>
+                      <a
+                        href={`/api/proposal/${selectedProposal.id}/export?format=pptx`}
+                        className="px-4 py-1.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-amber-950 text-xs font-extrabold rounded-full flex items-center gap-1.5 shadow-xs transition-all hover:scale-105"
+                        title="Download executive presentation deck as PowerPoint (.pptx)"
+                      >
+                        <Presentation className="w-3.5 h-3.5 text-amber-950" />
+                        <span>Deck (.pptx)</span>
+                      </a>
+
+                      <a
+                        href={`/api/proposal/${selectedProposal.id}/export?format=docx`}
+                        className="px-3 py-1.5 bg-[#050F2A] hover:bg-[#030818] text-white text-xs font-bold rounded-full flex items-center gap-1.5 shadow-xs transition-all hover:scale-105"
+                        title="Download technical document as Word (.docx)"
+                      >
+                        <Download className="w-3.5 h-3.5 text-[#7BBBFF]" />
+                        <span>Word (.docx)</span>
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        href={`/api/proposal/${selectedProposal.id}/export?format=docx`}
+                        className="px-4 py-1.5 bg-[#050F2A] hover:bg-[#030818] text-white text-xs font-extrabold rounded-full flex items-center gap-1.5 shadow-xs transition-all hover:scale-105"
+                        title="Download complete technical proposal as formatted Microsoft Word document"
+                      >
+                        <Download className="w-3.5 h-3.5 text-[#7BBBFF]" />
+                        <span>Technical (.docx)</span>
+                      </a>
+
+                      <a
+                        href={`/api/proposal/${selectedProposal.id}/export?format=pptx`}
+                        className="px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold rounded-full flex items-center gap-1.5 transition-all hover:scale-105"
+                        title="Download executive pitch deck as PowerPoint (.pptx)"
+                      >
+                        <Presentation className="w-3.5 h-3.5 text-amber-600" />
+                        <span>Deck (.pptx)</span>
+                      </a>
+                    </>
+                  )}
 
                   <a
                     href={`/api/proposal/${selectedProposal.id}/download-financial`}

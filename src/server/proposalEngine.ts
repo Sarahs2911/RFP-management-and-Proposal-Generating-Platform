@@ -23,6 +23,7 @@ export interface GenerateProposalInput {
   objectives?: string;
   categoryAnswers?: Record<string, any>;
   companyProfile: CompanyProfile;
+  output_format?: 'docx' | 'pptx';
   streamCallback?: (stage: ProposalPipelineStage, partialText?: string) => void;
 }
 

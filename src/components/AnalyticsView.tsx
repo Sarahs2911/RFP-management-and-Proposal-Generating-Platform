@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { RLStats } from '../types/rfp.js';
+import React, { useState, useEffect, useCallback } from 'react';
+import { RFP, RLStats } from '../types/rfp.js';
 import { CASE_STUDIES } from '../server/caseStudies.js';
+import { WinRateCard } from './WinRateCard.js';
 import {
   Brain,
   Award,
@@ -16,21 +17,65 @@ import {
   Sparkles
 } from 'lucide-react';
 
-export const AnalyticsView: React.FC = () => {
+interface AnalyticsViewProps {
+  rfps?: RFP[];
+  onOutcomeUpdated?: () => void;
+  onOpenRfpDetail?: (rfp: RFP) => void;
+}
+
+export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
+  rfps,
+  onOutcomeUpdated,
+  onOpenRfpDetail
+}) => {
+  const [internalRfps, setInternalRfps] = useState<RFP[]>(rfps || []);
   const [rlStats, setRlStats] = useState<RLStats | null>(null);
   const [retraining, setRetraining] = useState(false);
   const [retrainSuccess, setRetrainSuccess] = useState<any | null>(null);
   const [caseStudyFilter, setCaseStudyFilter] = useState('all');
   const [caseStudySearch, setCaseStudySearch] = useState('');
 
-  useEffect(() => {
-    fetch('/api/rl/stats')
-      .then(res => res.json())
-      .then(data => {
-        if (data.stats) setRlStats(data.stats);
-      })
-      .catch(() => {});
+  const loadRfps = useCallback(async () => {
+    try {
+      const res = await fetch('/api/rfps');
+      const data = await res.json();
+      if (data.rfps) {
+        setInternalRfps(data.rfps);
+      }
+    } catch (e) {
+      console.error('Failed to load RFPs in AnalyticsView:', e);
+    }
   }, []);
+
+  const loadRlStats = useCallback(async () => {
+    try {
+      const res = await fetch('/api/rl/stats');
+      const data = await res.json();
+      if (data.stats) setRlStats(data.stats);
+    } catch (e) {
+      console.error('Failed to load RL stats:', e);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (rfps && rfps.length > 0) {
+      setInternalRfps(rfps);
+    } else {
+      loadRfps();
+    }
+  }, [rfps, loadRfps]);
+
+  useEffect(() => {
+    loadRlStats();
+  }, [loadRlStats]);
+
+  const handleOutcomeChange = async () => {
+    await loadRfps();
+    await loadRlStats();
+    if (onOutcomeUpdated) {
+      onOutcomeUpdated();
+    }
+  };
 
   const handleRetrainModel = async () => {
     setRetraining(true);
@@ -40,9 +85,7 @@ export const AnalyticsView: React.FC = () => {
       const data = await res.json();
       setRetrainSuccess(data);
       // reload stats
-      const statsRes = await fetch('/api/rl/stats');
-      const statsData = await statsRes.json();
-      if (statsData.stats) setRlStats(statsData.stats);
+      await loadRlStats();
     } catch (e) {
       console.error(e);
     } finally {
@@ -100,6 +143,13 @@ export const AnalyticsView: React.FC = () => {
           </span>
         </div>
       )}
+
+      {/* Tender Win Rate & Bid Outcomes Intelligence Card */}
+      <WinRateCard
+        rfps={internalRfps}
+        onOutcomeUpdated={handleOutcomeChange}
+        onOpenRfpDetail={onOpenRfpDetail}
+      />
 
       {/* 4 Signals Architecture Visualizer */}
       <div className="bg-white p-6 sm:p-8 rounded-[28px] border border-[#7BBBFF]/25 shadow-xs space-y-4">

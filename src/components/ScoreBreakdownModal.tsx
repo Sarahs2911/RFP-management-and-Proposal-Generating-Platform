@@ -102,6 +102,13 @@ export const ScoreBreakdownModal: React.FC<ScoreBreakdownModalProps> = ({
     }
   }, [rfp.id, companyMatch]);
 
+  // Auto-fetch strategy when switching to strategy tab
+  useEffect(() => {
+    if (activeTab === 'strategy' && !strategyMemo && !loadingStrategy) {
+      fetchStrategy();
+    }
+  }, [activeTab, strategyMemo, loadingStrategy]);
+
   if (!breakdown) return null;
 
   const getScoreColor = (score: number) => {

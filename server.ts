@@ -28,7 +28,9 @@ import {
   getRlStats,
   generateRfpsExcelBuffer,
   addMatchFeedback,
-  getMatchFeedbacks
+  getMatchFeedbacks,
+  getAllPastProjects,
+  getPastProjectById
 } from './src/server/db.js';
 import { RFP } from './src/types/rfp.js';
 import { calculateCompositeScore } from './src/server/scoringEngine.js';
@@ -36,6 +38,7 @@ import { CATEGORY_TEMPLATES } from './src/server/sampleProposals.js';
 import { CASE_STUDIES } from './src/server/caseStudies.js';
 import { runEightStageProposalPipeline } from './src/server/proposalEngine.js';
 import { generateProposalDocx, generateFinancialDocx } from './src/server/docxExporter.js';
+import { generateProposalPptx } from './src/server/pptxExporter.js';
 import { matchDepartmentAndCVs } from './src/server/credentialDeck.js';
 import { TTC_COMPANY_INFO, TTC_CAPABILITY_KEYWORDS } from './src/server/ttcCompanyInfo.js';
 import { TTC_PROJECT_EXPERIENCE } from './src/server/ttcProjects.js';
@@ -524,18 +527,32 @@ function handleGetConsultants(req: express.Request, res: express.Response) {
 app.get('/api/consultants', handleGetConsultants);
 app.get('/consultants', handleGetConsultants);
 
-// Company credentials knowledge base
+// Company credentials knowledge base (all case studies from TTC credentials deck + won RFPs)
 function handleGetCredentials(req: express.Request, res: express.Response) {
+  const allProjects = getAllPastProjects();
   res.json({
     success: true,
     companyInfo: TTC_COMPANY_INFO,
-    projectExperience: TTC_PROJECT_EXPERIENCE,
+    projectExperience: allProjects,
     capabilityKeywords: TTC_CAPABILITY_KEYWORDS
   });
 }
 
 app.get('/api/company/credentials', handleGetCredentials);
 app.get('/company/credentials', handleGetCredentials);
+
+app.get('/api/company/past-projects', (req, res) => {
+  const projects = getAllPastProjects();
+  res.json({ success: true, count: projects.length, pastProjects: projects });
+});
+
+app.get('/api/company/past-projects/:id', (req, res) => {
+  const project = getPastProjectById(req.params.id);
+  if (!project) {
+    return res.status(404).json({ error: 'Past project not found' });
+  }
+  res.json({ success: true, project });
+});
 
 // Feedback and learning loop
 function handleMatchFeedback(req: express.Request, res: express.Response) {
@@ -673,7 +690,8 @@ app.post('/api/proposal/generate', async (req, res) => {
       duration,
       beneficiaries,
       objectives,
-      categoryAnswers
+      categoryAnswers,
+      output_format
     } = req.body;
 
     let rfpData: Partial<RFP> | undefined;
@@ -682,6 +700,7 @@ app.post('/api/proposal/generate', async (req, res) => {
     }
 
     const companyProfile = getCompanyProfile();
+    const chosenFormat: 'docx' | 'pptx' = output_format === 'pptx' ? 'pptx' : 'docx';
 
     const result = await runEightStageProposalPipeline({
       rfp: rfpData,
@@ -694,7 +713,8 @@ app.post('/api/proposal/generate', async (req, res) => {
       beneficiaries,
       objectives,
       categoryAnswers,
-      companyProfile
+      companyProfile,
+      output_format: chosenFormat
     });
 
     const saved = saveProposal({
@@ -705,6 +725,7 @@ app.post('/api/proposal/generate', async (req, res) => {
       answers: categoryAnswers,
       rfp_title: rfpData?.title,
       rfp_client: rfpData?.client_name,
+      output_format: chosenFormat,
       sections: result.sections,
       requirements: result.requirements,
       compliance_matrix: result.compliance_matrix,
@@ -730,13 +751,14 @@ app.post('/api/proposal/generate', async (req, res) => {
 
 app.post('/api/proposal/generate-for-rfp', async (req, res) => {
   try {
-    const { rfpId } = req.body;
+    const { rfpId, output_format } = req.body;
     const rfp = getRfpById(parseInt(rfpId, 10));
     if (!rfp) {
       return res.status(404).json({ error: 'RFP not found' });
     }
 
     const companyProfile = getCompanyProfile();
+    const chosenFormat: 'docx' | 'pptx' = output_format === 'pptx' ? 'pptx' : 'docx';
 
     const result = await runEightStageProposalPipeline({
       rfp,
@@ -746,7 +768,8 @@ app.post('/api/proposal/generate-for-rfp', async (req, res) => {
       geography: rfp.location,
       budget: rfp.estimated_cost,
       objectives: rfp.summary,
-      companyProfile
+      companyProfile,
+      output_format: chosenFormat
     });
 
     const saved = saveProposal({
@@ -756,6 +779,7 @@ app.post('/api/proposal/generate-for-rfp', async (req, res) => {
       content: result.content,
       rfp_title: rfp.title,
       rfp_client: rfp.client_name,
+      output_format: chosenFormat,
       sections: result.sections,
       requirements: result.requirements,
       compliance_matrix: result.compliance_matrix,
@@ -948,7 +972,7 @@ app.delete('/api/proposal/:id', (req, res) => {
   res.json({ success: true });
 });
 
-// Real DOCX Export Endpoint
+// Real DOCX and PPTX Export Endpoint
 app.get('/api/proposal/:id/export', async (req, res) => {
   try {
     const id = parseInt(req.params.id, 10);
@@ -957,12 +981,58 @@ app.get('/api/proposal/:id/export', async (req, res) => {
       return res.status(404).json({ error: 'Proposal not found' });
     }
 
-    const docxBuffer = await generateProposalDocx(p.title, p.content, p.rfp_client);
+    const format = (req.query.format as string)?.toLowerCase() || p.output_format || 'docx';
 
+    if (format === 'pptx') {
+      const pptxBuffer = await generateProposalPptx({
+        title: p.title,
+        markdownContent: p.content,
+        clientName: p.rfp_client,
+        category: p.category,
+        sections: p.sections,
+        budget: p.answers?.budget,
+        duration: p.answers?.duration,
+        geography: p.answers?.geography
+      });
+      const safeFilename = p.title.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 40);
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.presentationml.presentation');
+      res.setHeader('Content-Disposition', `attachment; filename="${safeFilename}.pptx"`);
+      return res.send(pptxBuffer);
+    }
+
+    const docxBuffer = await generateProposalDocx(p.title, p.content, p.rfp_client);
     const safeFilename = p.title.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 40);
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
     res.setHeader('Content-Disposition', `attachment; filename="${safeFilename}.docx"`);
     res.send(docxBuffer);
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Dedicated Real PPTX Export Endpoint
+app.get('/api/proposal/:id/export-pptx', async (req, res) => {
+  try {
+    const id = parseInt(req.params.id, 10);
+    const p = getProposalById(id);
+    if (!p) {
+      return res.status(404).json({ error: 'Proposal not found' });
+    }
+
+    const pptxBuffer = await generateProposalPptx({
+      title: p.title,
+      markdownContent: p.content,
+      clientName: p.rfp_client,
+      category: p.category,
+      sections: p.sections,
+      budget: p.answers?.budget,
+      duration: p.answers?.duration,
+      geography: p.answers?.geography
+    });
+    const safeFilename = p.title.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 40);
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.presentationml.presentation');
+    res.setHeader('Content-Disposition', `attachment; filename="${safeFilename}.pptx"`);
+    res.send(pptxBuffer);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
@@ -981,31 +1051,6 @@ app.get('/api/proposal/:id/download-financial', async (req, res) => {
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
-});
-
-// PPTX Presentation Outline Export
-app.get('/api/proposal/:id/export-pptx', (req, res) => {
-  const id = parseInt(req.params.id, 10);
-  const p = getProposalById(id);
-  if (!p) {
-    return res.status(404).json({ error: 'Proposal not found' });
-  }
-
-  // Generate structured pitch presentation payload
-  const pitchSlides = [
-    { slide: 1, title: 'Title & Firm Identity', bullets: [`Opportunity: ${p.title}`, `Bidder: Think Through Consultancy (TTC)`, 'Headquarters: New Delhi, India'] },
-    { slide: 2, title: 'Understanding of Client ToR', bullets: ['Key Strategic Challenges in Target Geography', 'Institutional Constraints & Convergence Bottlenecks', 'Alignment with Sustainable Development Goals'] },
-    { slide: 3, title: 'Proposed Solution Architecture', bullets: ['4-Phase Implementation Framework', 'Digital CAPI Survey Protocols & Data Assurance', 'Community Mobilization & Institutional Capacity Building'] },
-    { slide: 4, title: 'Governance & Milestone Roadmap', bullets: ['Project Steering Committee Structure', 'Weekly Review Gates and Deliverable Milestones', 'Quality Control & CVC Standard Operating Compliance'] },
-    { slide: 5, title: 'Key Personnel & Team Credentials', bullets: ['Lead Partner & Practice Director', 'Sectoral Subject Matter Specialists', 'Field Operations & Monitoring Leads'] },
-    { slide: 6, title: 'Why Think Through Consultancy (TTC)?', bullets: ['170+ successfully delivered technical advisory mandates', 'Empanelled with NITI Aayog, NABARD, World Bank & central ministries', 'Proven field footprint across 24 Indian states'] }
-  ];
-
-  res.json({
-    proposalId: id,
-    presentationTitle: `Executive Pitch Deck - ${p.title}`,
-    slides: pitchSlides
-  });
 });
 
 // Upload Historical Proposals & Linking

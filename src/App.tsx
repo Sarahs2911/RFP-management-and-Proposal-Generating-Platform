@@ -154,6 +154,9 @@ export default function App() {
       if (data.consultantMatches) {
         setConsultantMatchesData(data.consultantMatches);
       }
+      if (data.scoreBreakdown) {
+        setScoreBreakdownData(data.scoreBreakdown);
+      }
     } catch (e) {
       console.error(e);
     }
@@ -332,7 +335,11 @@ export default function App() {
               )}
 
               {currentView === 'analytics' && (
-                <AnalyticsView />
+                <AnalyticsView
+                  rfps={rfps}
+                  onOutcomeUpdated={fetchRfps}
+                  onOpenRfpDetail={handleOpenDetailModal}
+                />
               )}
             </motion.div>
           </AnimatePresence>
@@ -367,12 +374,14 @@ export default function App() {
             matchedDepartment={detailDepartment}
             companyMatch={companyMatchData}
             consultantMatches={consultantMatchesData}
+            scoreBreakdown={scoreBreakdownData}
             onClose={() => {
               setDetailModalRfp(null);
               setDetailTeam([]);
               setDetailDepartment(undefined);
               setCompanyMatchData(null);
               setConsultantMatchesData([]);
+              setScoreBreakdownData(null);
             }}
             onToggleShortlist={handleToggleShortlist}
             onRecordOutcome={handleRecordOutcome}

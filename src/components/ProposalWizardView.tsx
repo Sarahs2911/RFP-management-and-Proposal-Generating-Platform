@@ -86,6 +86,7 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
   const [objectives, setObjectives] = useState('Provide technical advisory, institutional restructuring, business planning, and corporate retail market linkages.');
   const [categoryAnswers, setCategoryAnswers] = useState<Record<string, string>>({});
   const [categoryQuestions, setCategoryQuestions] = useState<any[]>([]);
+  const [outputFormat, setOutputFormat] = useState<'docx' | 'pptx'>('docx');
 
   // 8 Pipeline Stages labels
   const PIPELINE_STAGES = [
@@ -186,12 +187,12 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
           duration,
           beneficiaries,
           objectives,
-          categoryAnswers
+          categoryAnswers,
+          output_format: outputFormat
         })
       });
 
       const data = await res.json();
-      clearInterval(interval);
       setGenerationStageIndex(8);
 
       if (data.proposal) {
@@ -200,8 +201,8 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
       }
     } catch (err) {
       console.error(err);
-      clearInterval(interval);
     } finally {
+      clearInterval(interval);
       setGenerating(false);
     }
   };
@@ -361,6 +362,20 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                       <Clock className="w-3.5 h-3.5" /> Under Review
                     </span>
                   )}
+
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-white bg-white/15 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    {generatedProposal.output_format === 'pptx' ? (
+                      <>
+                        <Presentation className="w-3.5 h-3.5 text-amber-300" />
+                        <span>Format: PowerPoint (.pptx)</span>
+                      </>
+                    ) : (
+                      <>
+                        <FileText className="w-3.5 h-3.5 text-[#7BBBFF]" />
+                        <span>Format: Word (.docx)</span>
+                      </>
+                    )}
+                  </span>
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-extrabold mt-2 text-white">{generatedProposal.title}</h3>
@@ -378,17 +393,52 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                     className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-extrabold rounded-full flex items-center gap-1.5 shadow-xs transition-all hover:scale-105 cursor-pointer disabled:opacity-50"
                   >
                     <FileCheck className="w-3.5 h-3.5" />
-                    <span>{approving ? 'Approving...' : 'Approve for Submission'}</span>
+                    <span>{approving ? 'Approving...' : 'Approve'}</span>
                   </button>
                 )}
 
-                <a
-                  href={`/api/proposal/${generatedProposal.id}/export`}
-                  className="px-4 py-2 bg-white text-[#050F2A] hover:bg-gray-100 text-xs font-extrabold rounded-full flex items-center gap-1.5 shadow-xs transition-all hover:scale-105"
-                >
-                  <Download className="w-3.5 h-3.5 text-[#7BBBFF]" />
-                  <span>Technical (.docx)</span>
-                </a>
+                {/* Primary Download Button for the respected output format */}
+                {generatedProposal.output_format === 'pptx' ? (
+                  <>
+                    <a
+                      href={`/api/proposal/${generatedProposal.id}/export?format=pptx`}
+                      className="px-4 py-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-amber-950 text-xs font-extrabold rounded-full flex items-center gap-1.5 shadow-md transition-all hover:scale-105"
+                      title="Download concise, executive-ready presentation deck (.pptx)"
+                    >
+                      <Presentation className="w-4 h-4 text-amber-950" />
+                      <span>Download Deck (.pptx)</span>
+                    </a>
+
+                    <a
+                      href={`/api/proposal/${generatedProposal.id}/export?format=docx`}
+                      className="px-3.5 py-2 bg-white/10 hover:bg-white/20 text-white text-xs font-bold rounded-full flex items-center gap-1.5 transition-all border border-white/20"
+                      title="Also download as detailed Word document"
+                    >
+                      <FileText className="w-3.5 h-3.5 text-[#7BBBFF]" />
+                      <span>Word (.docx)</span>
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    <a
+                      href={`/api/proposal/${generatedProposal.id}/export?format=docx`}
+                      className="px-4 py-2 bg-white text-[#050F2A] hover:bg-gray-100 text-xs font-extrabold rounded-full flex items-center gap-1.5 shadow-md transition-all hover:scale-105"
+                      title="Download complete technical proposal as formatted Microsoft Word document (.docx)"
+                    >
+                      <Download className="w-4 h-4 text-[#7BBBFF]" />
+                      <span>Download Word (.docx)</span>
+                    </a>
+
+                    <a
+                      href={`/api/proposal/${generatedProposal.id}/export?format=pptx`}
+                      className="px-3.5 py-2 bg-white/10 hover:bg-white/20 text-amber-300 text-xs font-bold rounded-full flex items-center gap-1.5 transition-all border border-white/20"
+                      title="Also download executive presentation deck (.pptx)"
+                    >
+                      <Presentation className="w-3.5 h-3.5 text-amber-300" />
+                      <span>Deck (.pptx)</span>
+                    </a>
+                  </>
+                )}
 
                 <a
                   href={`/api/proposal/${generatedProposal.id}/download-financial`}
@@ -498,13 +548,42 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
             </div>
           </div>
 
-          {/* TAB 1: TECHNICAL NARRATIVE */}
+          {/* TAB 1: TECHNICAL NARRATIVE / PRESENTATION SLIDES */}
           {activeResultTab === 'narrative' && (
             <div className="p-6 sm:p-8 space-y-6">
+              {generatedProposal.output_format === 'pptx' && (
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-50 to-blue-50 border border-amber-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-[#050F2A] to-[#1E3A8A] text-amber-300">
+                      <Presentation className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="font-extrabold text-[#050F2A] text-xs sm:text-sm flex items-center gap-2">
+                        <span>Executive Presentation Deck (.pptx)</span>
+                        <span className="text-[10px] bg-amber-200/80 text-amber-950 font-mono font-bold px-2 py-0.5 rounded-full">8 Corporate Slides</span>
+                      </div>
+                      <p className="text-[11px] text-[#050F2A]/70 mt-0.5">
+                        Concise, visually structured slide layouts matching TTC brand standards. Click "Download Deck (.pptx)" above to open in PowerPoint.
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    href={`/api/proposal/${generatedProposal.id}/export?format=pptx`}
+                    className="px-4 py-2 bg-[#050F2A] hover:bg-[#030818] text-amber-300 text-xs font-extrabold rounded-full flex items-center gap-1.5 shrink-0 shadow-xs transition-all hover:scale-105"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Download (.pptx)</span>
+                  </a>
+                </div>
+              )}
+
               {/* Quick chapter chips */}
               {generatedProposal.sections && generatedProposal.sections.length > 0 && (
                 <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-                  <span className="text-[11px] font-bold text-[#050F2A]/60 shrink-0">Chapters:</span>
+                  <span className="text-[11px] font-bold text-[#050F2A]/60 shrink-0">
+                    {generatedProposal.output_format === 'pptx' ? 'Slides:' : 'Chapters:'}
+                  </span>
                   {generatedProposal.sections.map((sec, idx) => (
                     <button
                       key={sec.id}
@@ -514,7 +593,7 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                       }}
                       className="px-3 py-1 bg-white border border-[#7BBBFF]/30 rounded-full text-[11px] font-medium text-[#050F2A] whitespace-nowrap hover:bg-[#F2FDFF] hover:border-[#7BBBFF] transition-all flex items-center gap-1"
                     >
-                      <span>{sec.title}</span>
+                      <span>{generatedProposal.output_format === 'pptx' ? `Slide ${idx + 1}: ${sec.title}` : sec.title}</span>
                       <span className="text-[9px] font-mono text-[#050F2A]/50">({sec.wordCount || 0}w)</span>
                     </button>
                   ))}
@@ -1173,6 +1252,91 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                 </div>
               </div>
 
+              {/* Step 5: Output Format Selection (.docx vs .pptx) */}
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-extrabold text-[#050F2A] text-sm">
+                      Proposal Output Format
+                    </h4>
+                    <p className="text-xs text-[#050F2A]/60 mt-0.5">
+                      Select whether to generate an institutional Word document or a concise, visual PowerPoint presentation.
+                    </p>
+                  </div>
+                  <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#F2FDFF] text-[#050F2A] border border-[#7BBBFF]/25">
+                    {outputFormat.toUpperCase()}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  {/* Option 1: DOCX */}
+                  <div
+                    onClick={() => setOutputFormat('docx')}
+                    className={`p-5 rounded-2xl border cursor-pointer transition-all ${
+                      outputFormat === 'docx'
+                        ? 'border-[#7BBBFF] bg-[#F2FDFF] shadow-xs scale-[1.01] ring-2 ring-[#7BBBFF]/50'
+                        : 'border-[#7BBBFF]/20 hover:border-[#7BBBFF]/50 bg-white'
+                    }`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 rounded-xl bg-[#050F2A] text-white">
+                          <FileText className="w-5 h-5 text-[#7BBBFF]" />
+                        </div>
+                        <div>
+                          <div className="font-extrabold text-[#050F2A] text-sm flex items-center gap-1.5">
+                            Word Document (.docx)
+                            <span className="text-[10px] bg-blue-100 text-blue-900 font-mono px-2 py-0.5 rounded-full font-bold">Standard</span>
+                          </div>
+                          <div className="text-[11px] text-[#050F2A]/60 font-mono">Full Technical Bid Dossier</div>
+                        </div>
+                      </div>
+                      {outputFormat === 'docx' ? (
+                        <CheckCircle2 className="w-5 h-5 text-[#7BBBFF]" />
+                      ) : (
+                        <span className="w-5 h-5 rounded-full border border-gray-300" />
+                      )}
+                    </div>
+                    <p className="text-xs text-[#050F2A]/80 leading-relaxed mt-3">
+                      Comprehensive technical chapters, 4-phase institutional methodology, compliance matrix, CV matrices, and complete advisory annexures ready for formal tender submission.
+                    </p>
+                  </div>
+
+                  {/* Option 2: PPTX */}
+                  <div
+                    onClick={() => setOutputFormat('pptx')}
+                    className={`p-5 rounded-2xl border cursor-pointer transition-all ${
+                      outputFormat === 'pptx'
+                        ? 'border-amber-400 bg-amber-50/50 shadow-xs scale-[1.01] ring-2 ring-amber-400/50'
+                        : 'border-[#7BBBFF]/20 hover:border-[#7BBBFF]/50 bg-white'
+                    }`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 rounded-xl bg-gradient-to-br from-[#050F2A] to-[#1E3A8A] text-white">
+                          <Presentation className="w-5 h-5 text-amber-300" />
+                        </div>
+                        <div>
+                          <div className="font-extrabold text-[#050F2A] text-sm flex items-center gap-1.5">
+                            PowerPoint Presentation (.pptx)
+                            <span className="text-[10px] bg-amber-100 text-amber-900 font-mono px-2 py-0.5 rounded-full font-bold">Executive Pitch</span>
+                          </div>
+                          <div className="text-[11px] text-[#050F2A]/60 font-mono">Concise &amp; Visually Appealing</div>
+                        </div>
+                      </div>
+                      {outputFormat === 'pptx' ? (
+                        <CheckCircle2 className="w-5 h-5 text-amber-600" />
+                      ) : (
+                        <span className="w-5 h-5 rounded-full border border-gray-300" />
+                      )}
+                    </div>
+                    <p className="text-xs text-[#050F2A]/80 leading-relaxed mt-3">
+                      Executive-ready pitch presentation: high-impact slide structure, crisp bullet points, 4-phase methodology flow, team allocation grids, and commercial breakdown.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               {/* Generating Animation & Progress */}
               {generating && (
                 <div className="bg-[#050F2A] text-[#F2FDFF] p-6 rounded-2xl space-y-3 font-mono text-xs shadow-xl border border-[#7BBBFF]/20 relative overflow-hidden">
@@ -1181,7 +1345,7 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                   <div className="flex items-center justify-between text-[#7BBBFF] pb-3 border-b border-white/10 relative z-10">
                     <span className="flex items-center gap-2 font-bold">
                       <RefreshCw className="w-4 h-4 animate-spin text-[#7BBBFF]" />
-                      Synthesizing 8-Stage Proposal
+                      Synthesizing 8-Stage {outputFormat === 'pptx' ? 'PowerPoint Presentation' : 'Technical Word Proposal'}
                     </span>
                     <span className="bg-white/10 px-2.5 py-0.5 rounded-full text-white font-bold">Stage {Math.min(generationStageIndex + 1, 8)} of 8</span>
                   </div>
@@ -1210,10 +1374,23 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                 <div className="pt-2 flex justify-center">
                   <button
                     onClick={handleGenerateProposal}
-                    className="px-8 py-3.5 bg-[#050F2A] hover:bg-[#030818] text-[#F2FDFF] font-extrabold rounded-full flex items-center gap-2.5 shadow-xl shadow-[#050F2A]/15 transition-all hover:scale-105 cursor-pointer"
+                    className={`px-8 py-3.5 text-[#F2FDFF] font-extrabold rounded-full flex items-center gap-2.5 shadow-xl transition-all hover:scale-105 cursor-pointer ${
+                      outputFormat === 'pptx'
+                        ? 'bg-gradient-to-r from-[#050F2A] via-[#1E3A8A] to-[#050F2A] hover:brightness-110 shadow-blue-950/20'
+                        : 'bg-[#050F2A] hover:bg-[#030818] shadow-[#050F2A]/15'
+                    }`}
                   >
-                    <Sparkles className="w-5 h-5 text-[#7BBBFF]" />
-                    <span>Run 8-Stage AI Generation Pipeline</span>
+                    {outputFormat === 'pptx' ? (
+                      <>
+                        <Presentation className="w-5 h-5 text-amber-300" />
+                        <span>Generate Proposal as Pitch Deck (.pptx)</span>
+                      </>
+                    ) : (
+                      <>
+                        <Sparkles className="w-5 h-5 text-[#7BBBFF]" />
+                        <span>Generate Proposal as Word Document (.docx)</span>
+                      </>
+                    )}
                   </button>
                 </div>
               )}

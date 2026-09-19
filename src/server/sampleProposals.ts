@@ -251,7 +251,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
       }
     ]),
     matched_keywords: JSON.stringify(['fpo', 'farmer producer organization', 'agriculture', 'livelihoods', 'market linkage', 'rural development']),
-    outcome: null,
+    outcome: 'won',
     discovered_via: 'web_crawl',
     summary: 'NABARD invites proposals from experienced consulting firms to act as Technical Support Agency for 120 FPOs. Responsibilities include business diagnostic, credit linkage, onboarding on ONDC/e-NAM, and establishment of direct corporate buyer pacts.',
     scope_of_work: '1. Conduct institutional baseline and grading for 120 FPOs.\n2. Develop bankable business plans for working capital and term loans under AIF.\n3. Establish 50+ corporate off-take agreements with modern retailers and agribusinesses.\n4. Facilitate digital record keeping and statutory compliance.\n5. Train Board of Directors and CEOs on post-harvest aggregation.',
@@ -295,7 +295,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
       }
     ]),
     matched_keywords: JSON.stringify(['climate change', 'sustainability', 'esg', 'adaptation', 'mitigation', 'renewable energy']),
-    outcome: null,
+    outcome: 'won',
     discovered_via: 'web_crawl',
     summary: 'Technical assistance assignment to revise the SAPCC in alignment with India’s updated Nationally Determined Contributions (NDCs) for 2030, covering climate vulnerability modeling and green financing portfolios.',
     scope_of_work: '1. District-level downscaled climate vulnerability modeling.\n2. Sectoral decarbonization action plans for energy, agriculture, industry, and urban transport.\n3. Formulation of bankable project proposals for Green Climate Fund (GCF) and adaptation funds.\n4. Inter-departmental steering committee stakeholder workshops.',
@@ -339,7 +339,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
       }
     ]),
     matched_keywords: JSON.stringify(['shg', 'nrlm', 'livelihood', 'women empowerment', 'impact evaluation', 'baseline survey', 'microfinance']),
-    outcome: null,
+    outcome: 'won',
     discovered_via: 'upload',
     summary: 'Nationwide assessment of economic graduation of 15,000 SHG households. Employs Propensity Score Matching (PSM) and Difference-in-Differences (DiD) methodology to evaluate household income resilience and asset creation.',
     scope_of_work: '1. Inception report & sampling design covering 12 states and 15,000 beneficiary households.\n2. CAPI field survey implementation with geo-tagged validation.\n3. Analysis of bank credit linkage, revolving fund utilization, and enterprise income.\n4. Synthesis report, policy briefing notes, and national dissemination seminar.',
@@ -383,7 +383,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
       }
     ]),
     matched_keywords: JSON.stringify(['dbt', 'governance', 'process re-engineering', 'internal audit', 'niti aayog', 'transparency']),
-    outcome: null,
+    outcome: 'won',
     discovered_via: 'web_crawl',
     summary: 'Engagement to review workflow bottleneck and ghost beneficiary vulnerabilities in social pension and scholarship welfare transfers. Includes formulation of standard operating procedures and internal audit guidelines.',
     scope_of_work: '1. Diagnostic review of 6 DBT schemes totaling ₹8,000 Crore annual payout.\n2. Gap analysis of Aadhaar-payment bridge failures and return handling.\n3. Risk-based audit manual and automated anomaly detection queries.\n4. Capacity building of district treasury auditors.',
@@ -427,7 +427,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
       }
     ]),
     matched_keywords: JSON.stringify(['capacity building', 'training', 'public health', 'e-learning', 'human resources']),
-    outcome: null,
+    outcome: 'lost',
     discovered_via: 'web_crawl',
     summary: 'WHO India seeks an individual senior consultant to support the Health Systems Division in designing micro-learning mobile modules for ASHA community health workers.',
     scope_of_work: '1. Conduct training needs analysis across 5 high-priority states.\n2. Curate 12 illustrated micro-learning audio/visual scripts.\n3. Pilot test content with district master trainers.\n4. Finalize pedagogical handbook for state health resource centres.',
@@ -471,7 +471,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
       }
     ]),
     matched_keywords: JSON.stringify(['solar', 'water', 'wash', 'sustainability', 'rural development', 'clean tech']),
-    outcome: null,
+    outcome: 'won',
     discovered_via: 'manual',
     summary: 'Grant program for consortiums to install and manage community solar RO/UF water stations across 40 high-fluorosis habitations with women-led community tariff models.',
     scope_of_work: '1. Site feasibility and water chemistry testing.\n2. Installation and commissioning of 40 solar-powered water filtration units.\n3. Formation and capacity building of Village Water & Sanitation Committees (VWSC).\n4. 2-year operations and maintenance handover protocol.',
@@ -508,7 +508,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
     shortlisted: 0,
     matched_case_studies: JSON.stringify([]),
     matched_keywords: JSON.stringify(['infrastructure']),
-    outcome: null,
+    outcome: 'lost',
     discovered_via: 'web_crawl',
     summary: 'Civil and electrical engineering works tender for manufacturing, civil foundation erection, cabling, and 5-year warranty of 500 high-mast lighting towers.',
     scope_of_work: '1. Civil foundation excavation and casting.\n2. Supply of galvanized octagonal poles.\n3. Supply and testing of 400W LED fixtures.\n4. Transformer and electrical cable trenching.',
@@ -552,7 +552,7 @@ export const SEED_RFPS: Omit<RFP, 'id'>[] = [
       }
     ]),
     matched_keywords: JSON.stringify(['msme', 'pmu', 'project management', 'cluster', 'incubation', 'startup']),
-    outcome: null,
+    outcome: 'pending',
     discovered_via: 'web_crawl',
     summary: 'Operating a dedicated state-level PMU to support 450 handicraft and agri-food processing MSMEs with technology upgradation, intellectual property filing, and access to bank credit.',
     scope_of_work: '1. Establish 6-person full time PMU at Directorate headquarters.\n2. Organize 12 buyer-seller meets and trade delegations.\n3. Facilitate ₹50 Crore bank credit disbursement under CGTMSE.\n4. Design and launch online portal for subsidy processing.',

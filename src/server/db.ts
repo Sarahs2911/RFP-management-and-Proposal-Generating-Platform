@@ -1,9 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import * as XLSX from 'xlsx';
-import { RFP, Proposal, UploadedProposal, CompanyProfile, RLOutcome, RLStats, MatchFeedback } from '../types/rfp.js';
+import { RFP, Proposal, UploadedProposal, CompanyProfile, RLOutcome, RLStats, MatchFeedback, PastProject } from '../types/rfp.js';
 import { SEED_RFPS } from './sampleProposals.js';
 import { calculateCompositeScore, recordRlOutcome, RL_STATE_TABLE } from './scoringEngine.js';
+import { TTC_PROJECT_EXPERIENCE } from './ttcProjects.js';
+import { CASE_STUDIES } from './caseStudies.js';
+import { VERIFIED_COMPANY_PROJECTS } from './credentialsKnowledgeBase.js';
 
 const DATA_DIR = path.join(process.cwd(), 'backend', 'data');
 const DB_FILE = path.join(DATA_DIR, 'platform_db.json');
@@ -16,6 +19,7 @@ export interface PlatformDbData {
   rlOutcomes: RLOutcome[];
   matchFeedbacks?: MatchFeedback[];
   crawlSources: Array<{ id: string; name: string; url: string; category: string; lastCrawled?: string }>;
+  pastProjects?: PastProject[];
 }
 
 const DEFAULT_COMPANY_PROFILE: CompanyProfile = {
@@ -105,8 +109,24 @@ export function initDb() {
         }
       ];
 
-      saveDb();
+      // Seed initial RL outcomes matching Won and Lost bids
+      dbData.rlOutcomes = [
+        { id: 1, state: 'Development Sector Advisory|High|Tier-2', action: 1, outcome: 'won', reward: 1.0, q_before: 50.0, q_after: 60.0, created_at: new Date().toISOString() },
+        { id: 2, state: 'Sustainability & Climate Change Advisory|Medium|Tier-2', action: 1, outcome: 'won', reward: 1.0, q_before: 50.0, q_after: 60.0, created_at: new Date().toISOString() },
+        { id: 3, state: 'Development Sector Advisory|High|Tier-1', action: 1, outcome: 'won', reward: 1.0, q_before: 50.0, q_after: 60.0, created_at: new Date().toISOString() },
+        { id: 4, state: 'Governance & Risk Advisory|Medium|Tier-1', action: 1, outcome: 'won', reward: 1.0, q_before: 50.0, q_after: 60.0, created_at: new Date().toISOString() },
+        { id: 5, state: 'Human Resource Advisory|Low|Tier-1', action: 1, outcome: 'lost', reward: -1.0, q_before: 50.0, q_after: 40.0, created_at: new Date().toISOString() },
+        { id: 6, state: 'Sustainability & Climate Change Advisory|Medium|Tier-2', action: 1, outcome: 'won', reward: 1.0, q_before: 50.0, q_after: 60.0, created_at: new Date().toISOString() },
+        { id: 7, state: 'Business Support Services|High|Tier-2', action: 0, outcome: 'lost', reward: 0.25, q_before: 50.0, q_after: 52.5, created_at: new Date().toISOString() }
+      ];
     }
+
+    // Ensure pastProjects is populated with all case studies and synced with won RFPs
+    if (!dbData.pastProjects || dbData.pastProjects.length === 0) {
+      dbData.pastProjects = buildDefaultPastProjects();
+    }
+    syncWonRfpsToPastProjects();
+    saveDb();
   } catch (err) {
     console.error('Failed to load database file, using in-memory state:', err);
   }
@@ -277,6 +297,10 @@ export function recordOutcome(id: number, outcome: 'won' | 'lost' | 'pending'): 
       created_at: new Date().toISOString()
     };
     dbData.rlOutcomes.unshift(outcomeRecord);
+  }
+
+  if (outcome === 'won') {
+    syncWonRfpsToPastProjects();
   }
 
   saveDb();
@@ -575,3 +599,216 @@ export function addMatchFeedback(feedback: MatchFeedback): MatchFeedback {
 export function getMatchFeedbacks(): MatchFeedback[] {
   return dbData.matchFeedbacks || [];
 }
+
+// -------------------------------------------------------------
+// Past Projects & Case Studies Repository (TTC Credentials Deck + Won RFPs)
+// -------------------------------------------------------------
+
+export function buildDefaultPastProjects(): PastProject[] {
+  const list: PastProject[] = [];
+  const seenIds = new Set<string>();
+
+  // 1. All Projects from TTC Credentials Document (TTC_PROJECT_EXPERIENCE)
+  for (const prj of TTC_PROJECT_EXPERIENCE) {
+    if (!seenIds.has(prj.id)) {
+      seenIds.add(prj.id);
+      list.push({
+        id: prj.id,
+        clientName: prj.clientName,
+        normalizedClientName: prj.normalizedClientName,
+        projectTitle: prj.projectTitle,
+        projectDescription: prj.projectDescription,
+        industry: prj.industry,
+        sector: prj.sector,
+        geography: prj.geography,
+        country: prj.country,
+        serviceProvided: prj.serviceProvided,
+        consultingDomain: prj.consultingDomain,
+        technicalDomain: prj.technicalDomain,
+        keywords: prj.keywords,
+        technologies: prj.technologies,
+        duration: prj.duration || 'Completed',
+        value: prj.value || 'High Impact',
+        teamConsultants: prj.teamConsultants,
+        outcomes: prj.outcomes,
+        relevantExpertise: prj.relevantExpertise,
+        objective: prj.projectDescription,
+        scope: prj.serviceProvided,
+        methodology: prj.technicalDomain,
+        deliverables: [
+          'Inception & Diagnostic Baseline Dossier',
+          'Stakeholder Consultation & Evaluation Report',
+          'Strategic Capacity Building & Scale-up Roadmap'
+        ],
+        source: 'TTC Credentials Deck - Institutional Experience',
+        sourceCitation: 'Think Through Consulting Institutional Credentials Portfolio (June 2024)',
+        isWonRfp: false
+      });
+    }
+  }
+
+  // 2. Practice Case Studies from CASE_STUDIES
+  for (const cs of CASE_STUDIES) {
+    if (!seenIds.has(cs.id)) {
+      seenIds.add(cs.id);
+      list.push({
+        id: cs.id,
+        clientName: cs.client,
+        projectTitle: cs.title,
+        projectDescription: cs.description,
+        industry: cs.category,
+        sector: cs.category,
+        geography: cs.geography || cs.country || 'India',
+        country: cs.country || 'India',
+        consultingDomain: cs.category,
+        serviceProvided: cs.category,
+        technicalDomain: 'Empirical Field Diagnostics & Technical Assistance',
+        duration: cs.duration || 'Completed Assignment',
+        value: cs.value || 'High Impact Tier',
+        keywords: cs.keywords || [],
+        technologies: ['CAPI Mobile Survey', 'Econometric Modeling', 'Stakeholder Protocol'],
+        teamConsultants: cs.teamInvolvement || ['Parul Soni', 'Vijay Ganapathy'],
+        outcomes: cs.outcomes || [],
+        relevantExpertise: cs.keywords || [],
+        objective: cs.description,
+        scope: cs.description,
+        methodology: 'Multi-tiered consulting architecture: Inception diagnostic, baseline evaluation, stakeholder validation, and institutional handover.',
+        deliverables: [
+          'Inception & Framework Alignment Document',
+          'Field Evaluation & Verification Dossier',
+          'Institutional Recommendations & Policy Roadmap'
+        ],
+        source: cs.source || 'TTC Credentials Deck - Specialized Practice Case Studies',
+        sourceCitation: cs.source || 'Think Through Consulting Practice Case Studies Archive',
+        isWonRfp: false
+      });
+    }
+  }
+
+  // 3. Landmark Verified Projects from VERIFIED_COMPANY_PROJECTS
+  for (const vp of VERIFIED_COMPANY_PROJECTS) {
+    if (!seenIds.has(vp.id)) {
+      seenIds.add(vp.id);
+      list.push({
+        id: vp.id,
+        clientName: vp.client,
+        projectTitle: vp.project_name,
+        projectDescription: `${vp.objective}. ${vp.scope}`,
+        industry: vp.industry,
+        sector: vp.sector,
+        geography: vp.geography,
+        country: 'India',
+        consultingDomain: vp.sector,
+        serviceProvided: vp.services_provided ? vp.services_provided.join(', ') : vp.sector,
+        technicalDomain: vp.methodology,
+        duration: vp.duration,
+        value: 'Tier-1 Grant Mandate',
+        keywords: vp.keywords,
+        technologies: vp.technologies,
+        teamConsultants: vp.consultants_involved,
+        outcomes: vp.outcomes,
+        relevantExpertise: vp.expertise_demonstrated,
+        objective: vp.objective,
+        scope: vp.scope,
+        methodology: vp.methodology,
+        servicesProvidedList: vp.services_provided,
+        deliverables: vp.deliverables,
+        source: vp.source_citation || 'TTC Verified Knowledge Base',
+        sourceCitation: vp.source_citation,
+        isWonRfp: false
+      });
+    }
+  }
+
+  return list;
+}
+
+export function syncWonRfpsToPastProjects(): void {
+  if (!dbData.pastProjects) {
+    dbData.pastProjects = buildDefaultPastProjects();
+  }
+
+  const wonRfps = dbData.rfps.filter(r => r.outcome === 'won');
+  for (const rfp of wonRfps) {
+    const wonId = `WON-RFP-${rfp.id}`;
+    const existingIndex = dbData.pastProjects.findIndex(
+      p => p.rfpId === rfp.id || p.id === wonId
+    );
+
+    const wonProject: PastProject = {
+      id: wonId,
+      rfpId: rfp.id,
+      isWonRfp: true,
+      clientName: rfp.client_name,
+      projectTitle: rfp.title,
+      projectDescription: rfp.summary || rfp.scope_of_work || `Awarded tender engagement for ${rfp.client_name}`,
+      industry: rfp.category || 'Development Sector Advisory',
+      sector: rfp.category || 'Development Sector Advisory',
+      consultingDomain: rfp.category || 'Development Sector Advisory',
+      technicalDomain: 'Competitive Bid Win & Implementation PMU',
+      geography: rfp.location || 'Pan-India',
+      country: 'India',
+      duration: 'Active Awarded Mandate',
+      value: rfp.estimated_cost ? `₹${rfp.estimated_cost.toLocaleString()}` : `${rfp.budget_range} Budget Tier`,
+      keywords: [rfp.category, rfp.client_name, 'Won RFP', 'Contract Awarded', rfp.budget_range].filter(Boolean),
+      technologies: ['CAPI Field Tools', 'Executive MIS Dashboard', 'Quality Assurance Protocols'],
+      teamConsultants: (rfp as any).matchedCVs && (rfp as any).matchedCVs.length > 0
+        ? (rfp as any).matchedCVs.map((c: any) => c.name)
+        : Array.isArray(rfp.team) && rfp.team.length > 0
+        ? (rfp.team as any[]).map((c: any) => typeof c === 'string' ? c : c.name)
+        : ['Parul Soni', 'Vikramaditya Sen', 'Vijay Ganapathy'],
+      outcomes: [
+        `Awarded contract to Think Through Consulting (TTC) after competitive bid evaluation (Score: ${(rfp as any).score ?? rfp.composite_score ?? 85}%)`,
+        `Formal contract onboarding and mobilization approved by ${rfp.client_name}`,
+        'Alignment with technical terms of reference and execution governance benchmarks'
+      ],
+      relevantExpertise: [rfp.category, 'Public Procurement Win', 'Technical Advisory'],
+      objective: `Execute high-impact mandate awarded by ${rfp.client_name}: ${rfp.title}`,
+      scope: rfp.scope_of_work || rfp.summary,
+      methodology: 'Integrated multi-stage delivery: Diagnostic baseline, stakeholder engagement, CAPI field verification, and milestone handover.',
+      deliverables: [
+        'Inception & Diagnostic Baseline Dossier',
+        'Quarterly Progress & Governance Review Dossiers',
+        'Technical Assistance Deliverables as per ToR',
+        'Final Handover & Impact Evaluation Package'
+      ],
+      source: `Won RFP Contract (Tender Ref: ${rfp.rfp_id || 'RFP-' + rfp.id})`,
+      sourceCitation: `Tender Ref: ${rfp.rfp_id || 'RFP-' + rfp.id} awarded to TTC`,
+      winDate: rfp.outcome_recorded_at || new Date().toISOString(),
+      winScore: (rfp as any).score ?? rfp.composite_score ?? 85,
+      created_at: rfp.outcome_recorded_at || new Date().toISOString()
+    };
+
+    if (existingIndex >= 0) {
+      dbData.pastProjects[existingIndex] = { ...dbData.pastProjects[existingIndex], ...wonProject };
+    } else {
+      // Put newly won projects at the front
+      dbData.pastProjects.unshift(wonProject);
+    }
+  }
+}
+
+export function getAllPastProjects(): PastProject[] {
+  syncWonRfpsToPastProjects();
+  return dbData.pastProjects || [];
+}
+
+export function getPastProjectById(id: string): PastProject | undefined {
+  syncWonRfpsToPastProjects();
+  return dbData.pastProjects?.find(p => p.id === id || p.id === `WON-RFP-${id}`);
+}
+
+export function addPastProject(project: PastProject): PastProject {
+  if (!dbData.pastProjects) {
+    dbData.pastProjects = buildDefaultPastProjects();
+  }
+  const existingIdx = dbData.pastProjects.findIndex(p => p.id === project.id);
+  if (existingIdx >= 0) {
+    dbData.pastProjects[existingIdx] = { ...dbData.pastProjects[existingIdx], ...project };
+  } else {
+    dbData.pastProjects.unshift(project);
+  }
+  saveDb();
+  return project;
+}
+

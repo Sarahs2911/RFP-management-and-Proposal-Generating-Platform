@@ -123,6 +123,7 @@ export interface Proposal {
   updated_at: string;
   rfp_title?: string;
   rfp_client?: string;
+  output_format?: 'docx' | 'pptx';
   sections?: ProposalSection[];
   requirements?: RFPRequirement[];
   compliance_matrix?: ComplianceMatrixItem[];
@@ -563,3 +564,38 @@ export interface MatchFeedback {
   proposalOutcome?: 'won' | 'lost' | 'pending';
   timestamp: string;
 }
+
+export interface PastProject {
+  id: string;
+  clientName: string;
+  normalizedClientName?: string;
+  projectTitle: string;
+  projectDescription: string;
+  industry: string;
+  sector: string;
+  geography: string;
+  country?: string;
+  serviceProvided?: string;
+  consultingDomain: string;
+  technicalDomain?: string;
+  keywords: string[];
+  technologies: string[];
+  duration?: string;
+  value?: string;
+  teamConsultants: string[];
+  outcomes: string[];
+  relevantExpertise?: string[];
+  objective?: string;
+  scope?: string;
+  methodology?: string;
+  servicesProvidedList?: string[];
+  deliverables?: string[];
+  source?: string;
+  sourceCitation?: string;
+  isWonRfp?: boolean;
+  rfpId?: number;
+  winDate?: string;
+  winScore?: number;
+  created_at?: string;
+}
+

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { RFP, ScoreBreakdown, MatchedCV } from '../types/rfp.js';
+import { RfpDeadlineCountdown } from './RfpDeadlineCountdown.js';
 import {
   Search,
   Filter,
@@ -23,7 +24,8 @@ import {
   UserCheck,
   BookmarkCheck,
   CalendarDays,
-  Briefcase
+  CalendarPlus,
+  X
 } from 'lucide-react';
 
 interface DashboardViewProps {
@@ -51,11 +53,13 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedClient, setSelectedClient] = useState('all');
+  const [selectedStatus, setSelectedStatus] = useState('all');
   const [selectedBudget, setSelectedBudget] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [shortlistOnly, setShortlistOnly] = useState(false);
   const [quickFilter, setQuickFilter] = useState<'all' | 'shortlist' | 'urgent' | 'prime' | 'worldbank'>('all');
-  const [sortBy, setSortBy] = useState<'score' | 'deadline' | 'title'>('score');
+  const [sortBy, setSortBy] = useState<'recent' | 'score' | 'deadline' | 'title' | 'client'>('recent');
   const [viewMode, setViewMode] = useState<'table' | 'cards'>('cards');
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const [emailTo, setEmailTo] = useState('');
@@ -66,7 +70,42 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   const categories = useMemo(() => {
     const set = new Set<string>();
     rfps.forEach(r => { if (r.category) set.add(r.category); });
-    return Array.from(set);
+    return Array.from(set).sort((a, b) => a.localeCompare(b));
+  }, [rfps]);
+
+  // Unique clients and counts for the client filter dropdown
+  const { clients, clientCounts } = useMemo(() => {
+    const counts: Record<string, number> = {};
+    rfps.forEach(r => {
+      const c = (r.client_name || '').trim();
+      if (c) counts[c] = (counts[c] || 0) + 1;
+    });
+    const unique = Object.keys(counts).sort((a, b) => a.localeCompare(b));
+    return { clients: unique, clientCounts: counts };
+  }, [rfps]);
+
+  // Status counts for filtering
+  const statusCounts = useMemo(() => {
+    const nowStr = new Date().toISOString().split('T')[0];
+    let open = 0;
+    let closed = 0;
+    let shortlisted = 0;
+    let won = 0;
+    let lost = 0;
+    let pending = 0;
+
+    rfps.forEach(r => {
+      const isClosed = (r.is_open === 0) || Boolean(r.deadline && r.deadline < nowStr);
+      if (isClosed) closed++;
+      else open++;
+
+      if (r.shortlisted === 1) shortlisted++;
+      if (r.outcome === 'won') won++;
+      else if (r.outcome === 'lost') lost++;
+      else if (r.outcome === 'pending') pending++;
+    });
+
+    return { open, closed, shortlisted, won, lost, pending };
   }, [rfps]);
 
   // Helper to map realistic TTC consultant leads from June 2024 credentials deck
@@ -111,25 +150,85 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
         if (shortlistOnly && r.shortlisted !== 1) return false;
         if (selectedCategory !== 'all' && r.category !== selectedCategory) return false;
+        
+        // Filter by Client Name
+        if (selectedClient !== 'all' && (r.client_name || '').trim() !== selectedClient) return false;
+
+        // Filter by Status
+        if (selectedStatus !== 'all') {
+          const nowStr = new Date().toISOString().split('T')[0];
+          const isClosed = (r.is_open === 0) || Boolean(r.deadline && r.deadline < nowStr);
+
+          if (selectedStatus === 'open' && isClosed) return false;
+          if (selectedStatus === 'closed' && !isClosed) return false;
+          if (selectedStatus === 'shortlisted' && r.shortlisted !== 1) return false;
+          if (selectedStatus === 'won' && r.outcome !== 'won') return false;
+          if (selectedStatus === 'lost' && r.outcome !== 'lost') return false;
+          if (selectedStatus === 'pending' && r.outcome !== 'pending') return false;
+        }
+
         if (selectedBudget !== 'all' && r.budget_range !== selectedBudget) return false;
         if (selectedType !== 'all' && !r.rfp_type?.includes(selectedType)) return false;
 
+        // Deep Search matching across title, client, ID, tender number, category, location, summary, scope
         if (searchTerm.trim()) {
           const q = searchTerm.toLowerCase();
           const matchTitle = r.title.toLowerCase().includes(q);
           const matchClient = (r.client_name || '').toLowerCase().includes(q);
           const matchId = (r.rfp_id || '').toLowerCase().includes(q);
+          const matchTenderNum = (r.tender_number || '').toLowerCase().includes(q);
           const matchLoc = (r.location || '').toLowerCase().includes(q);
-          return matchTitle || matchClient || matchId || matchLoc;
+          const matchCat = (r.category || '').toLowerCase().includes(q);
+          const matchSummary = (r.summary || '').toLowerCase().includes(q);
+          const matchScope = (r.scope_of_work || '').toLowerCase().includes(q);
+          return matchTitle || matchClient || matchId || matchTenderNum || matchLoc || matchCat || matchSummary || matchScope;
         }
         return true;
       })
       .sort((a, b) => {
+        if (sortBy === 'recent') {
+          const dateA = a.created_at ? new Date(a.created_at).getTime() : 0;
+          const dateB = b.created_at ? new Date(b.created_at).getTime() : 0;
+          if (dateA !== dateB && !isNaN(dateA) && !isNaN(dateB)) {
+            return dateB - dateA;
+          }
+          return b.id - a.id;
+        }
         if (sortBy === 'score') return b.composite_score - a.composite_score;
-        if (sortBy === 'deadline') return new Date(a.deadline).getTime() - new Date(b.deadline).getTime();
+        if (sortBy === 'deadline') {
+          const timeA = a.deadline ? new Date(a.deadline).getTime() : Infinity;
+          const timeB = b.deadline ? new Date(b.deadline).getTime() : Infinity;
+          const validA = isNaN(timeA) ? Infinity : timeA;
+          const validB = isNaN(timeB) ? Infinity : timeB;
+          return validA - validB;
+        }
+        if (sortBy === 'client') return (a.client_name || '').localeCompare(b.client_name || '');
         return a.title.localeCompare(b.title);
       });
-  }, [rfps, searchTerm, selectedCategory, selectedBudget, selectedType, shortlistOnly, quickFilter, sortBy]);
+  }, [rfps, searchTerm, selectedCategory, selectedClient, selectedStatus, selectedBudget, selectedType, shortlistOnly, quickFilter, sortBy]);
+
+  // Check if any filters are actively set
+  const hasActiveFilters = Boolean(
+    searchTerm.trim() ||
+    selectedClient !== 'all' ||
+    selectedStatus !== 'all' ||
+    selectedCategory !== 'all' ||
+    selectedBudget !== 'all' ||
+    selectedType !== 'all' ||
+    quickFilter !== 'all' ||
+    shortlistOnly
+  );
+
+  const handleClearAllFilters = () => {
+    setSearchTerm('');
+    setSelectedClient('all');
+    setSelectedStatus('all');
+    setSelectedCategory('all');
+    setSelectedBudget('all');
+    setSelectedType('all');
+    setQuickFilter('all');
+    setShortlistOnly(false);
+  };
 
   // High-level statistics
   const stats = useMemo(() => {
@@ -207,97 +306,43 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   return (
     <div className="space-y-6 max-w-7xl mx-auto">
 
-      {/* Warm Personal Advisory Briefing Banner */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="rounded-[28px] bg-gradient-to-r from-white via-[#F2FDFF] to-white p-5 sm:p-6 border border-[#7BBBFF]/30 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-      >
-        <div className="flex items-start gap-3.5">
-          <div className="w-11 h-11 rounded-2xl bg-[#050F2A] text-[#7BBBFF] flex items-center justify-center shrink-0 shadow-md">
-            <Briefcase className="w-5 h-5 text-[#7BBBFF]" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h2 className="text-base font-extrabold text-[#050F2A]">
-                Think Through Consulting &bull; Partner Advisory Briefing
-              </h2>
-              <span className="text-[10px] font-bold bg-[#7BBBFF]/20 text-[#050F2A] px-2.5 py-0.5 rounded-full border border-[#7BBBFF]/30">
-                Today&apos;s Focus
-              </span>
-            </div>
-            <p className="text-xs text-[#050F2A]/75 mt-1 leading-relaxed max-w-3xl">
-              Hello Sarah, our bid desk currently tracks <strong className="text-[#050F2A] font-extrabold">{stats.total} public notices</strong>. 
-              <span className="font-semibold text-[#050F2A]"> {stats.prime} opportunities</span> show a &gt;75% past credential match with TTC&apos;s previous work for World Bank, NABARD, and State Missions.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2 shrink-0 self-end md:self-center">
-          <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            onClick={() => {
-              setQuickFilter('urgent');
-            }}
-            className="px-3.5 py-1.5 rounded-full bg-[#050F2A] text-[#F2FDFF] text-xs font-extrabold flex items-center gap-1.5 shadow-xs cursor-pointer"
-          >
-            <Clock className="w-3.5 h-3.5 text-[#7BBBFF]" />
-            <span>Review Urgent Bids</span>
-          </motion.button>
-        </div>
-      </motion.div>
-
-      {/* Asymmetrical Bento Grid Header & KPIs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      {/* KPI Overview Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         
-        {/* Large Feature Bento Card: 2 columns */}
+        {/* Active Opportunities (replacing high win probability box) */}
         <motion.div
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
-          className="md:col-span-2 rounded-[28px] bg-[#050F2A] text-[#F2FDFF] p-6 sm:p-7 border border-[#7BBBFF]/25 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[190px]"
+          className="rounded-[28px] bg-[#050F2A] text-[#F2FDFF] p-6 border border-[#7BBBFF]/25 shadow-xl relative overflow-hidden flex flex-col justify-between"
         >
-          {/* Subtle ambient lighting */}
-          <div className="absolute -top-10 -right-10 w-48 h-48 bg-gradient-to-br from-[#7BBBFF]/20 to-[#B8A9FF]/20 rounded-full blur-2xl pointer-events-none" />
-          <div className="absolute -bottom-10 left-10 w-40 h-40 bg-[#7BBBFF]/10 rounded-full blur-2xl pointer-events-none" />
-
-          <div className="relative z-10">
-            <div className="flex items-center justify-between gap-2 mb-3">
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#7BBBFF] flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#B8A9FF]" />
-                Win-Probability Scoring Engine
+          <div className="absolute -top-10 -right-10 w-36 h-36 bg-gradient-to-br from-[#7BBBFF]/20 to-[#B8A9FF]/20 rounded-full blur-2xl pointer-events-none" />
+          <div>
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-[#7BBBFF] font-extrabold uppercase tracking-wider block">
+                Active Opportunities
               </span>
-              <span className="text-[10px] font-mono font-bold bg-white/10 text-[#7BBBFF] px-2.5 py-0.5 rounded-full border border-white/10">
-                TTC Calibrated
+              <span className="p-1.5 rounded-xl bg-white/10 text-[#7BBBFF]">
+                <Sparkles className="w-4 h-4 text-[#7BBBFF]" />
               </span>
             </div>
-
-            <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 mt-1">
-              <span className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white font-mono">
+            <div className="flex items-baseline gap-2 mt-3">
+              <span className="text-3xl sm:text-4xl font-extrabold text-white font-mono">
                 {stats.total}
               </span>
-              <span className="text-sm font-semibold text-[#F2FDFF]/80">
-                Active opportunities aligned with TTC advisory domains
-              </span>
+              <span className="text-xs text-[#F2FDFF]/70 font-semibold">Tenders Aligned</span>
             </div>
           </div>
 
-          <div className="relative z-10 pt-4 mt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs">
-            <div className="flex items-center gap-2 text-[#F2FDFF]/70">
-              <span className="w-2 h-2 rounded-full bg-[#7BBBFF] animate-pulse" />
-              <span>Cross-referenced against 174 verified TTC past project credentials</span>
-            </div>
-
-            <motion.button
-              whileTap={{ scale: 0.95 }}
+          <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-[#F2FDFF]/80">
+            <span className="font-semibold text-[11px]">TTC Advisory Domains</span>
+            <button
               onClick={handleRescoreAll}
-              className="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-[#F2FDFF] font-semibold text-[11px] flex items-center gap-1.5 transition-all duration-200 border border-white/10 cursor-pointer"
-              title="Recalculate win probabilities for all opportunities"
+              className="hover:text-white flex items-center gap-1 text-[11px] text-[#7BBBFF] cursor-pointer"
+              title="Recalculate win probabilities across TTC credentials"
             >
-              <RefreshCw className="w-3 h-3 text-[#7BBBFF]" />
-              <span>Re-score Opportunities</span>
-            </motion.button>
+              <RefreshCw className="w-3 h-3" />
+              <span>Re-score</span>
+            </button>
           </div>
         </motion.div>
 
@@ -339,7 +384,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
         </motion.div>
 
-        {/* Small Metric Bento Card: Prime High Win Targets */}
+        {/* Metric Card: Bid Outcomes & Track Record */}
         <motion.div
           whileHover={{ y: -2 }}
           transition={{ duration: 0.2 }}
@@ -348,7 +393,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div>
             <div className="flex items-center justify-between">
               <span className="text-xs text-[#050F2A] font-extrabold uppercase tracking-wider block">
-                High Win Probability
+                Bid Outcomes &amp; Wins
               </span>
               <span className="p-1.5 rounded-xl bg-[#B8A9FF]/30 text-[#050F2A]">
                 <Award className="w-4 h-4 text-[#050F2A]" />
@@ -356,16 +401,16 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
             <div className="flex items-baseline gap-2 mt-3">
               <span className="text-3xl sm:text-4xl font-extrabold text-[#050F2A] font-mono">
-                {stats.prime}
+                {stats.won}
               </span>
-              <span className="text-xs text-[#050F2A]/70 font-semibold">Score &ge; 75</span>
+              <span className="text-xs text-[#050F2A]/70 font-semibold">Won Contracts</span>
             </div>
           </div>
 
           <div className="mt-4 pt-3 border-t border-[#7BBBFF]/15 flex items-center justify-between text-xs text-[#050F2A]">
-            <span className="font-semibold text-[11px]">Past Wins Track:</span>
+            <span className="font-semibold text-[11px]">Qualified Win Targets:</span>
             <span className="font-mono font-extrabold bg-white px-2 py-0.5 rounded-full border border-[#7BBBFF]/20 shadow-xs">
-              {stats.won} Won
+              {stats.prime} High Fit
             </span>
           </div>
         </motion.div>
@@ -378,24 +423,32 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {/* Upper search & primary actions */}
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
           
-          {/* Search Input with Keyboard Shortcut Hint */}
+          {/* Enhanced Search Input with Quick Clear and Match Badge */}
           <div className="relative flex-1">
-            <Search className="w-4 h-4 text-[#7BBBFF] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#7BBBFF] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
+              id="tender-search-input"
               type="text"
-              placeholder="Search by tender title, client, sector, location, or RFP ID..."
+              placeholder="Search tenders by title, client name, tender ID, sector, location, or scope..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-16 py-2.5 text-xs sm:text-sm bg-[#F2FDFF] border border-[#7BBBFF]/25 rounded-full text-[#050F2A] placeholder-[#050F2A]/40 focus:outline-none focus:border-[#7BBBFF] focus:bg-white focus:ring-2 focus:ring-[#7BBBFF]/20 transition-all"
+              className="w-full pl-10 pr-24 py-2.5 text-xs sm:text-sm bg-[#F2FDFF] border border-[#7BBBFF]/25 rounded-full text-[#050F2A] placeholder-[#050F2A]/45 focus:outline-none focus:border-[#7BBBFF] focus:bg-white focus:ring-2 focus:ring-[#7BBBFF]/20 transition-all font-medium"
             />
-            {searchTerm && (
-              <button
-                onClick={() => setSearchTerm('')}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-[#050F2A]/40 hover:text-[#050F2A] font-bold"
-              >
-                Clear
-              </button>
-            )}
+            <div className="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="text-xs text-[#050F2A]/50 hover:text-[#050F2A] p-1 rounded-full hover:bg-gray-200/60 transition-colors cursor-pointer"
+                  title="Clear search"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+              <span className="text-[10px] font-mono font-bold bg-[#7BBBFF]/15 text-[#050F2A] px-2 py-0.5 rounded-full border border-[#7BBBFF]/20 shrink-0">
+                {filteredRfps.length} found
+              </span>
+            </div>
           </div>
 
           {/* Quick Action Buttons */}
@@ -532,27 +585,72 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </button>
         </div>
 
-        {/* Detailed Dropdowns and Sorting */}
+        {/* Detailed Dropdowns: Client Name, Status, Practice Area, Type, Budget, and Sorting */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-gray-100 text-xs">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-[#050F2A]/60 font-bold flex items-center gap-1 mr-1">
-              <Filter className="w-3.5 h-3.5 text-[#7BBBFF]" /> Practice Filter:
+          <div className="flex flex-wrap items-center gap-2.5">
+            <span className="text-[#050F2A]/60 font-bold flex items-center gap-1 mr-0.5">
+              <SlidersHorizontal className="w-3.5 h-3.5 text-[#7BBBFF]" /> Filters:
             </span>
 
-            {/* Category Select */}
-            <select
-              value={selectedCategory}
-              onChange={e => setSelectedCategory(e.target.value)}
-              className="bg-[#F2FDFF] border border-[#7BBBFF]/25 text-[#050F2A] font-medium rounded-full px-3 py-1.5 focus:outline-none focus:border-[#7BBBFF] cursor-pointer"
-            >
-              <option value="all">All Practice Areas</option>
-              {categories.map((c, i) => (
-                <option key={i} value={c}>{c}</option>
-              ))}
-            </select>
+            {/* Filter Dropdown: Client Name */}
+            <div className="flex items-center gap-1.5 bg-[#F2FDFF] border border-[#7BBBFF]/25 rounded-full px-2.5 py-1">
+              <Building className="w-3.5 h-3.5 text-[#7BBBFF] shrink-0" />
+              <select
+                id="filter-client-dropdown"
+                value={selectedClient}
+                onChange={e => setSelectedClient(e.target.value)}
+                className="bg-transparent text-[#050F2A] font-medium text-xs focus:outline-none cursor-pointer max-w-[170px] truncate"
+                title="Filter by Client or Funder Organization"
+              >
+                <option value="all">All Clients ({clients.length})</option>
+                {clients.map((c, i) => (
+                  <option key={i} value={c}>
+                    {c} ({clientCounts[c] || 0})
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Filter Dropdown: Tender Status */}
+            <div className="flex items-center gap-1.5 bg-[#F2FDFF] border border-[#7BBBFF]/25 rounded-full px-2.5 py-1">
+              <CheckCircle className="w-3.5 h-3.5 text-[#7BBBFF] shrink-0" />
+              <select
+                id="filter-status-dropdown"
+                value={selectedStatus}
+                onChange={e => setSelectedStatus(e.target.value)}
+                className="bg-transparent text-[#050F2A] font-medium text-xs focus:outline-none cursor-pointer"
+                title="Filter by Tender Status"
+              >
+                <option value="all">All Statuses ({rfps.length})</option>
+                <option value="open">Active / Open ({statusCounts.open})</option>
+                <option value="shortlisted">Shortlisted for Bidding ({statusCounts.shortlisted})</option>
+                <option value="closed">Submission Closed ({statusCounts.closed})</option>
+                <option value="won">Outcome: Won ({statusCounts.won})</option>
+                <option value="lost">Outcome: Lost ({statusCounts.lost})</option>
+                <option value="pending">Outcome: Pending ({statusCounts.pending})</option>
+              </select>
+            </div>
+
+            {/* Filter Dropdown: Practice Area (Category) */}
+            <div className="flex items-center gap-1.5 bg-[#F2FDFF] border border-[#7BBBFF]/25 rounded-full px-2.5 py-1">
+              <Filter className="w-3.5 h-3.5 text-[#7BBBFF] shrink-0" />
+              <select
+                id="filter-practice-dropdown"
+                value={selectedCategory}
+                onChange={e => setSelectedCategory(e.target.value)}
+                className="bg-transparent text-[#050F2A] font-medium text-xs focus:outline-none cursor-pointer max-w-[160px] truncate"
+                title="Filter by Advisory Practice Area"
+              >
+                <option value="all">All Practice Areas ({categories.length})</option>
+                {categories.map((c, i) => (
+                  <option key={i} value={c}>{c}</option>
+                ))}
+              </select>
+            </div>
 
             {/* Eligibility Type Select */}
             <select
+              id="filter-type-dropdown"
               value={selectedType}
               onChange={e => setSelectedType(e.target.value)}
               className="bg-[#F2FDFF] border border-[#7BBBFF]/25 text-[#050F2A] font-medium rounded-full px-3 py-1.5 focus:outline-none focus:border-[#7BBBFF] cursor-pointer"
@@ -565,6 +663,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
             {/* Budget Range Select */}
             <select
+              id="filter-budget-dropdown"
               value={selectedBudget}
               onChange={e => setSelectedBudget(e.target.value)}
               className="bg-[#F2FDFF] border border-[#7BBBFF]/25 text-[#050F2A] font-medium rounded-full px-3 py-1.5 focus:outline-none focus:border-[#7BBBFF] cursor-pointer"
@@ -579,20 +678,136 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div className="flex items-center gap-2">
             <span className="text-[#050F2A]/60 font-medium">Sort:</span>
             <select
+              id="dashboard-sort-dropdown"
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
               className="bg-[#F2FDFF] border border-[#7BBBFF]/25 text-[#050F2A] font-medium rounded-full px-3 py-1.5 focus:outline-none focus:border-[#7BBBFF] cursor-pointer"
             >
+              <option value="recent">Most Recent</option>
               <option value="score">Highest Match Score</option>
               <option value="deadline">Nearest Deadline</option>
-              <option value="title">Alphabetical</option>
+              <option value="title">Alphabetical (Title A-Z)</option>
+              <option value="client">Client Name (A-Z)</option>
             </select>
 
-            <span className="text-[#050F2A]/50 ml-2 font-mono text-[11px] font-semibold">
+            <span className="text-[#050F2A]/50 ml-2 font-mono text-[11px] font-semibold shrink-0">
               Showing {filteredRfps.length} of {rfps.length}
             </span>
           </div>
         </div>
+
+        {/* Active Filter Chips & One-Click Clear Bar */}
+        {hasActiveFilters && (
+          <div className="flex flex-wrap items-center gap-2 pt-2.5 border-t border-gray-100 text-xs">
+            <span className="text-[#050F2A]/60 font-bold text-[11px] shrink-0">Active Filters:</span>
+            
+            {searchTerm.trim() && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#050F2A] text-white text-[11px] font-medium">
+                Search: &ldquo;{searchTerm}&rdquo;
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="hover:text-[#7BBBFF] p-0.5 cursor-pointer"
+                  title="Remove search filter"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
+
+            {selectedClient !== 'all' && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#7BBBFF]/20 text-[#050F2A] border border-[#7BBBFF]/30 text-[11px] font-bold">
+                Client: {selectedClient}
+                <button
+                  type="button"
+                  onClick={() => setSelectedClient('all')}
+                  className="hover:text-red-600 p-0.5 cursor-pointer"
+                  title="Remove client filter"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
+
+            {selectedStatus !== 'all' && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#B8A9FF]/25 text-[#050F2A] border border-[#B8A9FF]/40 text-[11px] font-bold">
+                Status: {selectedStatus === 'open' ? 'Active / Open' : selectedStatus === 'closed' ? 'Submission Closed' : selectedStatus}
+                <button
+                  type="button"
+                  onClick={() => setSelectedStatus('all')}
+                  className="hover:text-red-600 p-0.5 cursor-pointer"
+                  title="Remove status filter"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
+
+            {selectedCategory !== 'all' && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#F2FDFF] text-[#050F2A] border border-[#7BBBFF]/25 text-[11px] font-bold">
+                Practice: {selectedCategory}
+                <button
+                  type="button"
+                  onClick={() => setSelectedCategory('all')}
+                  className="hover:text-red-600 p-0.5 cursor-pointer"
+                  title="Remove practice filter"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
+
+            {selectedType !== 'all' && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#F2FDFF] text-[#050F2A] border border-[#7BBBFF]/25 text-[11px] font-bold">
+                Type: {selectedType}
+                <button
+                  type="button"
+                  onClick={() => setSelectedType('all')}
+                  className="hover:text-red-600 p-0.5 cursor-pointer"
+                  title="Remove type filter"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
+
+            {selectedBudget !== 'all' && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#F2FDFF] text-[#050F2A] border border-[#7BBBFF]/25 text-[11px] font-bold">
+                Budget: {selectedBudget}
+                <button
+                  type="button"
+                  onClick={() => setSelectedBudget('all')}
+                  className="hover:text-red-600 p-0.5 cursor-pointer"
+                  title="Remove budget filter"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
+
+            {quickFilter !== 'all' && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#050F2A]/10 text-[#050F2A] border border-[#050F2A]/20 text-[11px] font-bold">
+                View: {quickFilter}
+                <button
+                  type="button"
+                  onClick={() => setQuickFilter('all')}
+                  className="hover:text-red-600 p-0.5 cursor-pointer"
+                  title="Remove quick view"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
+            )}
+
+            <button
+              type="button"
+              onClick={handleClearAllFilters}
+              className="text-[11px] text-[#050F2A] font-extrabold hover:text-red-600 ml-1 underline cursor-pointer"
+            >
+              Reset All Filters
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Main Content: Table or Cards with Motion */}
@@ -606,16 +821,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <div className="rounded-[28px] bg-white border border-[#7BBBFF]/20 p-16 text-center shadow-xs">
           <AlertTriangle className="w-10 h-10 mx-auto mb-3 text-[#B8A9FF]" />
           <p className="font-extrabold text-[#050F2A] text-base">No matching tenders found</p>
-          <p className="text-xs text-[#050F2A]/60 mt-1">Try resetting the quick filters or search terms</p>
+          <p className="text-xs text-[#050F2A]/60 mt-1">Try resetting the client, status, or search filters</p>
           <button
-            onClick={() => {
-              setQuickFilter('all');
-              setSearchTerm('');
-              setSelectedCategory('all');
-              setSelectedBudget('all');
-              setSelectedType('all');
-            }}
-            className="mt-3 px-4 py-1.5 bg-[#050F2A] text-white text-xs font-bold rounded-full cursor-pointer"
+            onClick={handleClearAllFilters}
+            className="mt-3 px-4 py-1.5 bg-[#050F2A] text-white text-xs font-bold rounded-full cursor-pointer hover:bg-[#030818] transition-colors"
           >
             Reset All Filters
           </button>
@@ -652,18 +861,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                       {rfp.rfp_type || 'Agency'}
                     </span>
 
-                    {daysRemaining !== null && (
-                      <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded-full flex items-center gap-1 ${
-                        daysRemaining <= 5
-                          ? 'bg-red-50 text-red-700 border border-red-200'
-                          : daysRemaining <= 10
-                          ? 'bg-amber-50 text-amber-800 border border-amber-200'
-                          : 'bg-[#F2FDFF] text-[#050F2A]/70 border border-[#7BBBFF]/20'
-                      }`}>
-                        <Clock className="w-3 h-3" />
-                        {daysRemaining > 0 ? `${daysRemaining}d left` : 'Closed'}
-                      </span>
-                    )}
+                    <RfpDeadlineCountdown rfp={rfp} mode="badge" />
                   </div>
 
                   {/* Title */}
@@ -685,6 +883,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                       <span className="truncate">{rfp.location}</span>
                     </div>
                   </div>
+
+                  {/* Dedicated Deadline Countdown & Calendar Integration */}
+                  <RfpDeadlineCountdown rfp={rfp} mode="card-widget" className="mb-3" />
 
                   {/* Practice Area & Assigned Consultant Lead */}
                   <div className="space-y-2 mb-4">
@@ -817,17 +1018,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                         <div className="flex items-center gap-1 font-semibold text-[#050F2A]">
                           <Clock className="w-3.5 h-3.5 text-[#7BBBFF]" /> {rfp.deadline}
                         </div>
-                        {daysRemaining !== null && (
-                          <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded-full mt-1 ${
-                            daysRemaining <= 5
-                              ? 'bg-red-50 text-red-700 border border-red-200'
-                              : daysRemaining <= 10
-                              ? 'bg-amber-50 text-amber-800 border border-amber-200'
-                              : 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                          }`}>
-                            {daysRemaining > 0 ? `${daysRemaining} days left` : 'Expired'}
-                          </span>
-                        )}
+                        <div className="mt-1">
+                          <RfpDeadlineCountdown rfp={rfp} mode="badge" />
+                        </div>
                         <div className="text-[#050F2A]/60 font-medium mt-1">
                           Est: {rfp.estimated_cost || `${rfp.budget_range} Budget`}
                         </div>
