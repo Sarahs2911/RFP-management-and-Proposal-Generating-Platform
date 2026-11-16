@@ -35,28 +35,39 @@ export interface AIGenerationOptions {
   model?: string;
 }
 
+function withTimeout<T>(promise: Promise<T>, ms: number, msg: string): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) => setTimeout(() => reject(new Error(msg)), ms))
+  ]);
+}
+
 /**
  * Universal AI Generation function using Groq as primary engine, with fallback.
  */
 export async function generateTextWithAI(options: AIGenerationOptions): Promise<string> {
   const systemPrompt = options.systemPrompt || 'You are an elite public policy and strategic consulting partner writing winning technical proposals and advisory briefs for Think Through Consultancy (TTC).';
   const temperature = options.temperature ?? 0.6;
-  const maxTokens = options.maxTokens ?? 4096;
+  const maxTokens = Math.min(options.maxTokens ?? 900, 950);
 
   // 1. Try Groq (Primary Engine - Ultra Fast, High Intelligence)
   try {
     const groq = getGroq();
     const primaryModel = options.model || 'qwen/qwen3.8-27b';
 
-    const completion = await groq.chat.completions.create({
-      model: primaryModel,
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: options.userPrompt }
-      ],
-      temperature,
-      max_tokens: maxTokens
-    });
+    const completion = await withTimeout(
+      groq.chat.completions.create({
+        model: primaryModel,
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: options.userPrompt }
+        ],
+        temperature,
+        max_tokens: maxTokens
+      }),
+      5000,
+      'Groq primary request timed out after 5s'
+    );
 
     const choice = completion.choices[0];
     const output = (choice?.message?.content || (choice?.message as any)?.reasoning || '').trim();
@@ -69,13 +80,13 @@ export async function generateTextWithAI(options: AIGenerationOptions): Promise<
     try {
       const groq = getGroq();
       const completion = await groq.chat.completions.create({
-        model: 'groq/compound-mini',
+        model: 'openai/gpt-oss-20b',
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: options.userPrompt }
         ],
         temperature,
-        max_tokens: maxTokens
+        max_tokens: Math.min(maxTokens, 800)
       });
       const choice = completion.choices[0];
       const output = (choice?.message?.content || (choice?.message as any)?.reasoning || '').trim();

@@ -39,9 +39,10 @@ export async function runEightStageProposalPipeline(input: GenerateProposalInput
   compliance_matrix?: ComplianceMatrixItem[];
   evidence_sources?: ProposalEvidence[];
   validation?: ProposalValidation;
+  deep_thinking_analysis?: any;
 }> {
   const stages: ProposalPipelineStage[] = [
-    { stageNumber: 1, name: 'Ingestion & Context Synthesis', status: 'completed', summary: 'Parsed RFP parameters, client profile, and corporate credentials from verified knowledge base.' },
+    { stageNumber: 1, name: 'Deep Thinking & Stated/Unstated Intent Synthesis', status: 'completed', summary: 'Parsed RFP parameters, unstated client priorities, regional execution bottlenecks, and corporate credentials from verified knowledge base.' },
     { stageNumber: 2, name: 'ToR Requirement Extraction', status: 'completed', summary: 'Deconstructed scope of work, technical mandate, and key deliverables into classified requirements.' },
     { stageNumber: 3, name: 'Solution Architecture & Methodology', status: 'completed', summary: 'Formulated tailored methodological approach grounded in the 6E Approach, CAM, MAVEN, and MEL frameworks.' },
     { stageNumber: 4, name: 'Outline & Narrative Structuring', status: 'completed', summary: 'Mapped 11-section technical narrative conforming to client tender norms with strict traceability.' },
@@ -73,7 +74,8 @@ export async function runEightStageProposalPipeline(input: GenerateProposalInput
       requirements: result.proposal.requirements,
       compliance_matrix: result.proposal.compliance_matrix,
       evidence_sources: result.proposal.evidence_sources,
-      validation: result.proposal.validation
+      validation: result.proposal.validation,
+      deep_thinking_analysis: result.proposal.deep_thinking_analysis
     };
   } catch (err) {
     console.warn('[Proposal Engine] Intelligent pipeline error, falling back:', err);

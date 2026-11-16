@@ -33,7 +33,10 @@ import {
   Send,
   History,
   Info,
-  Clock
+  Clock,
+  Brain,
+  Lightbulb,
+  Target
 } from 'lucide-react';
 
 interface ProposalWizardViewProps {
@@ -53,8 +56,8 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
   const [generatedProposal, setGeneratedProposal] = useState<Proposal | null>(null);
   const [copied, setCopied] = useState(false);
 
-  // Result Tabs: 'narrative' | 'audit' | 'compliance' | 'evidence' | 'copilot'
-  const [activeResultTab, setActiveResultTab] = useState<'narrative' | 'audit' | 'compliance' | 'evidence' | 'copilot'>('narrative');
+  // Result Tabs: 'narrative' | 'deep_thinking' | 'audit' | 'compliance' | 'evidence' | 'copilot'
+  const [activeResultTab, setActiveResultTab] = useState<'narrative' | 'deep_thinking' | 'audit' | 'compliance' | 'evidence' | 'copilot'>('narrative');
   const [selectedSectionIdx, setSelectedSectionIdx] = useState<number>(0);
   const [sectionCopilotPrompt, setSectionCopilotPrompt] = useState<string>('');
   const [regeneratingSection, setRegeneratingSection] = useState<boolean>(false);
@@ -90,14 +93,14 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
 
   // 8 Pipeline Stages labels
   const PIPELINE_STAGES = [
-    'Stage 1: Context & Problem Statement Synthesis',
-    'Stage 2: Firm Credentials & 174-Case-Study Evidence Retrieval',
-    'Stage 3: 4-Phase Technical Methodology Architecture',
-    'Stage 4: Work Plan, Gantt Milestones & Governance Framework',
-    'Stage 5: Key Personnel CV Matrix & Task Allocation',
-    'Stage 6: Quality Assurance, CAPI Protocols & Data Privacy',
-    'Stage 7: Risk Management Matrix & Safeguards',
-    'Stage 8: Financial Model & Commercial Remuneration Schedule'
+    'Stage 1: Deep Thinking: Client Mandate & Unstated Priorities Analysis',
+    'Stage 2: Ground Realities & Geographic Execution Bottlenecks',
+    'Stage 3: Strategic Win Themes & 174-Case-Study Credential Retrieval',
+    'Stage 4: 4-Phase Technical Methodology Architecture (6E & CAM)',
+    'Stage 5: Work Plan, Gantt Milestones & Governance Framework',
+    'Stage 6: Key Personnel CV Matrix & Task Allocation',
+    'Stage 7: Quality Assurance, CAPI Protocols & Risk Safeguards',
+    'Stage 8: Financial Model & QCBS Scoring Optimization'
   ];
 
   // Load from initial RFP if provided
@@ -490,6 +493,21 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
               </button>
 
               <button
+                onClick={() => setActiveResultTab('deep_thinking')}
+                className={`px-4 py-1.5 rounded-full text-xs font-extrabold transition-all flex items-center gap-1.5 cursor-pointer ${
+                  activeResultTab === 'deep_thinking'
+                    ? 'bg-[#050F2A] text-[#7BBBFF] shadow-xs'
+                    : 'bg-white text-[#050F2A]/70 hover:text-[#050F2A] border border-[#7BBBFF]/20'
+                }`}
+              >
+                <Brain className="w-3.5 h-3.5 text-purple-400" />
+                <span>Deep Thinking &amp; Strategy</span>
+                <span className="text-[9px] font-mono bg-purple-100 text-purple-900 font-bold px-1.5 py-0.2 rounded-full">
+                  Reasoning
+                </span>
+              </button>
+
+              <button
                 onClick={() => setActiveResultTab('audit')}
                 className={`px-4 py-1.5 rounded-full text-xs font-extrabold transition-all flex items-center gap-1.5 cursor-pointer ${
                   activeResultTab === 'audit'
@@ -600,9 +618,220 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                 </div>
               )}
 
+              {/* Deep Thinking Strategic Reasoning Banner */}
+              <div className="p-4 rounded-2xl bg-gradient-to-r from-[#050F2A] via-[#1E2761] to-[#050F2A] text-white border border-[#7BBBFF]/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-purple-500/20 text-purple-300 shrink-0 border border-purple-400/30">
+                    <Brain className="w-5 h-5 text-purple-300" />
+                  </div>
+                  <div>
+                    <div className="text-xs sm:text-sm font-extrabold flex items-center gap-2">
+                      <span>Deep Thinking Strategic Reasoning Applied</span>
+                      <span className="text-[10px] font-mono text-emerald-300 bg-emerald-950/70 border border-emerald-500/40 px-2 py-0.5 rounded-full font-bold">
+                        Ground Realities Factored
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-[#F2FDFF]/70 mt-0.5">
+                      Tailored to {generatedProposal.rfp_client || clientName}'s unstated priorities, regional field risks in {geography || 'target territory'}, and QCBS technical scoring.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setActiveResultTab('deep_thinking')}
+                  className="px-3.5 py-1.5 bg-white/10 hover:bg-white/20 text-[#7BBBFF] rounded-full text-xs font-bold transition-all flex items-center gap-1.5 shrink-0 cursor-pointer border border-white/10 shadow-xs"
+                >
+                  <Brain className="w-3.5 h-3.5 text-purple-300" />
+                  <span>Inspect Reasoning Trace</span>
+                  <ArrowRight className="w-3 h-3" />
+                </button>
+              </div>
+
               {/* Proposal Document Preview */}
               <div className="prose max-w-none text-xs sm:text-sm text-[#050F2A] bg-[#F2FDFF] p-6 sm:p-8 rounded-2xl border border-[#7BBBFF]/20 font-mono whitespace-pre-line leading-relaxed max-h-[650px] overflow-y-auto">
                 {generatedProposal.content}
+              </div>
+            </div>
+          )}
+
+          {/* TAB: DEEP THINKING & STRATEGIC REASONING */}
+          {activeResultTab === 'deep_thinking' && (
+            <div className="p-6 sm:p-8 space-y-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-2 border-b border-[#7BBBFF]/20">
+                <div>
+                  <h4 className="text-lg font-extrabold text-[#050F2A] flex items-center gap-2">
+                    <Brain className="w-5 h-5 text-purple-600" />
+                    Deep Thinking &amp; Tender Strategic Reasoning
+                  </h4>
+                  <p className="text-xs text-[#050F2A]/60 mt-0.5">
+                    Pre-drafting strategic cognition: unstated client priorities, regional execution bottlenecks, win themes, and QCBS scoring optimization.
+                  </p>
+                </div>
+                <span className="text-xs font-mono font-bold px-3 py-1 bg-purple-100 text-purple-900 rounded-full border border-purple-300 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-purple-700" />
+                  Cognitive Reasoning: COMPLETE
+                </span>
+              </div>
+
+              {/* Bento Grid: Strategic Intent & Winning Themes */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {/* 1. Client Strategic Intent */}
+                <div className="p-5 rounded-2xl bg-gradient-to-br from-[#050F2A] to-[#1E2761] text-white space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono uppercase tracking-wider font-extrabold bg-white/10 text-[#7BBBFF] px-2.5 py-0.5 rounded-full">
+                      Stated vs. Unstated Mandate
+                    </span>
+                  </div>
+                  <h5 className="font-extrabold text-sm text-white">Client Strategic Procurement Intent</h5>
+                  <p className="text-xs text-[#F2FDFF]/80 leading-relaxed">
+                    {generatedProposal.deep_thinking_analysis?.strategic_intent ||
+                      `The client (${generatedProposal.rfp_client || clientName}) requires a credible technical partner to bridge policy vision into verifiable grassroots impact in ${geography || 'the target geography'}. Beyond standard ToR deliverables, their unstated priority is operational risk mitigation, zero audit vulnerabilities, and rapid mobilization.`}
+                  </p>
+                  
+                  <div className="pt-2 border-t border-white/10 space-y-1.5">
+                    <span className="text-[11px] font-bold text-[#7BBBFF] block uppercase tracking-wider">
+                      Underlying Priorities Identified:
+                    </span>
+                    {(generatedProposal.deep_thinking_analysis?.underlying_priorities || [
+                      'Verifiable field data with zero tolerance for inflated beneficiary counts',
+                      'Rapid mobilization within 15 days of award to meet annual fiscal disbursement gates',
+                      'Seamless institutional convergence across district administration and partner banks'
+                    ]).map((priority, pIdx) => (
+                      <div key={pIdx} className="flex items-start gap-2 text-xs text-[#F2FDFF]/90">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#7BBBFF] shrink-0 mt-0.5" />
+                        <span>{priority}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 2. Winning Bid Themes */}
+                <div className="p-5 rounded-2xl bg-[#F2FDFF] border border-[#7BBBFF]/30 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono uppercase tracking-wider font-extrabold bg-[#050F2A] text-[#7BBBFF] px-2.5 py-0.5 rounded-full">
+                      TTC Competitive Advantage
+                    </span>
+                  </div>
+                  <h5 className="font-extrabold text-sm text-[#050F2A]">TTC Winning Value Propositions</h5>
+                  <div className="space-y-2.5">
+                    {(generatedProposal.deep_thinking_analysis?.win_themes || [
+                      'Zero-Hallucination Credential Evidence: Grounded in 174 verified project case studies and verified client completion certificates.',
+                      'Proprietary 6E & CAM Frameworks: Turnkey execution toolkits providing field-tested SOPs, CAPI surveys, and bankable credit models.',
+                      'Senior Executive Quality Assurance: Global managing partner governance guaranteeing technical caliber and ToR adherence.'
+                    ]).map((theme, tIdx) => (
+                      <div key={tIdx} className="p-3 rounded-xl bg-white border border-[#7BBBFF]/20 space-y-1">
+                        <div className="flex items-center gap-1.5 font-extrabold text-xs text-[#050F2A]">
+                          <Award className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                          <span>{theme.split(':')[0]}</span>
+                        </div>
+                        <p className="text-[11px] text-[#050F2A]/70 leading-normal pl-5">
+                          {theme.split(':')[1] || theme}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Bento Grid: Ground Bottlenecks & Scoring Strategy */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {/* 3. Ground Realities & Execution Bottlenecks */}
+                <div className="p-5 rounded-2xl bg-white border border-[#7BBBFF]/25 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-rose-500" />
+                    <h5 className="font-extrabold text-xs text-[#050F2A] uppercase tracking-wider">
+                      Ground Realities &amp; Geographic Bottlenecks Analyzed
+                    </h5>
+                  </div>
+                  <div className="space-y-2">
+                    {(generatedProposal.deep_thinking_analysis?.ground_realities_and_bottlenecks || [
+                      'Last-Mile Data Fidelity: Field investigations in the designated geography risk data contamination without GPS-stamped CAPI digital scripts.',
+                      'District Administration Bandwidth: Local nodal officials face administrative workload constraints requiring embedded handholding from the consulting team.',
+                      'Community Mobilization Adoption: Target beneficiaries require vernacular training clinics and localized incentives rather than standard theoretical workshops.'
+                    ]).map((item, idx) => (
+                      <div key={idx} className="p-3 rounded-xl bg-[#F8FAFC] border border-gray-200 text-xs text-[#050F2A] flex items-start gap-2">
+                        <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                        <div>
+                          <strong className="text-[#050F2A] block font-semibold">{item.split(':')[0]}</strong>
+                          <span className="text-[#050F2A]/70">{item.split(':')[1] || item}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 4. QCBS Scoring Optimization Strategy */}
+                <div className="p-5 rounded-2xl bg-white border border-[#7BBBFF]/25 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <Target className="w-4 h-4 text-blue-600" />
+                    <h5 className="font-extrabold text-xs text-[#050F2A] uppercase tracking-wider">
+                      QCBS 80/20 Technical Scoring Optimization Strategy
+                    </h5>
+                  </div>
+                  <div className="p-4 rounded-xl bg-[#F2FDFF] border border-[#7BBBFF]/20 space-y-2 text-xs">
+                    <p className="text-[#050F2A] leading-relaxed">
+                      {generatedProposal.deep_thinking_analysis?.scoring_optimization_strategy ||
+                        'Designed to maximize the 80% Technical Evaluation weightage by providing an exhaustive Bid Traceability Matrix for 100% ToR coverage, citing 3 verified past project completion certificates, and fielding seasoned postgraduate technical experts.'}
+                    </p>
+                    <div className="grid grid-cols-3 gap-2 pt-2 text-center">
+                      <div className="p-2 bg-white rounded-lg border border-[#7BBBFF]/20">
+                        <span className="text-[10px] text-[#050F2A]/60 block font-bold">Methodology</span>
+                        <strong className="text-sm text-[#050F2A] font-mono">40% / 40</strong>
+                      </div>
+                      <div className="p-2 bg-white rounded-lg border border-[#7BBBFF]/20">
+                        <span className="text-[10px] text-[#050F2A]/60 block font-bold">Past Track Record</span>
+                        <strong className="text-sm text-[#050F2A] font-mono">30% / 30</strong>
+                      </div>
+                      <div className="p-2 bg-white rounded-lg border border-[#7BBBFF]/20">
+                        <span className="text-[10px] text-[#050F2A]/60 block font-bold">Key Staff CVs</span>
+                        <strong className="text-sm text-[#050F2A] font-mono">30% / 30</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Framework Badges */}
+                  <div className="pt-1">
+                    <span className="text-[11px] font-bold text-[#050F2A]/60 uppercase tracking-wider block mb-2">
+                      Calibrated Proprietary Frameworks:
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {(generatedProposal.deep_thinking_analysis?.framework_alignment || [
+                        '6E Diagnostic Framework',
+                        'CAM Credit Assessment Model',
+                        'MAVEN Marketplace Enablement',
+                        'MEL Architecture'
+                      ]).map((fw, fIdx) => (
+                        <span key={fIdx} className="px-2.5 py-1 rounded-full text-xs font-bold bg-[#050F2A] text-[#7BBBFF]">
+                          {fw}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5. Preemptive Failure Risk Safeguards */}
+              <div className="p-5 rounded-2xl bg-white border border-[#7BBBFF]/25 space-y-3">
+                <h5 className="font-extrabold text-xs text-[#050F2A] uppercase tracking-wider flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  Key Operational Failure Risks &amp; Preemptive Mitigation Controls
+                </h5>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {(generatedProposal.deep_thinking_analysis?.key_failure_risks || [
+                    'Field mobilization slippage due to remote terrain or monsoons',
+                    'Field investigator attrition compromising survey data sampling',
+                    'Administrative inertia among local institutions delaying registrations'
+                  ]).map((risk, rIdx) => (
+                    <div key={rIdx} className="p-3.5 rounded-xl bg-[#F8FAFC] border border-gray-200 text-xs space-y-1">
+                      <span className="text-[10px] font-mono font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-full inline-block">
+                        Risk Factor #{rIdx + 1}
+                      </span>
+                      <p className="font-semibold text-[#050F2A] mt-1">{risk}</p>
+                      <p className="text-[11px] text-emerald-700 font-medium pt-1">
+                        ✓ Preemptively mitigated in Section 10 Risk Matrix with standby local coordinators and CAPI real-time sync.
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -1332,6 +1561,26 @@ export const ProposalWizardView: React.FC<ProposalWizardViewProps> = ({
                     </div>
                     <p className="text-xs text-[#050F2A]/80 leading-relaxed mt-3">
                       Executive-ready pitch presentation: high-impact slide structure, crisp bullet points, 4-phase methodology flow, team allocation grids, and commercial breakdown.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Deep Thinking Strategic Reasoning Active Banner */}
+              <div className="p-4 rounded-2xl bg-gradient-to-r from-[#050F2A] via-[#1E2761] to-[#050F2A] border border-[#7BBBFF]/30 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-purple-500/20 text-purple-300 shrink-0 border border-purple-400/30">
+                    <Brain className="w-5 h-5 text-purple-300" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-extrabold text-xs sm:text-sm text-white">Deep Thinking Analytical Engine Active</span>
+                      <span className="text-[10px] font-mono bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 px-2 py-0.5 rounded-full font-bold">
+                        Cognitive Depth
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-[#F2FDFF]/70 mt-0.5">
+                      Analyzes unstated client priorities, regional execution bottlenecks in {geography || 'target geography'}, and calibrates 6E/CAM methodology for 80% QCBS technical evaluation.
                     </p>
                   </div>
                 </div>

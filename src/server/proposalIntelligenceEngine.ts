@@ -248,6 +248,7 @@ export async function generateIntelligentProposal(
       compliance_matrix: complianceMatrix,
       evidence_sources: evidenceSources,
       validation,
+      deep_thinking_analysis: rfpAnalysis.deep_thinking_analysis,
       status: 'under_review',
       approval_status: 'pending'
     },
@@ -305,15 +306,31 @@ Led by a dedicated multidisciplinary governance team under **Parul Soni** (Co-Fo
 }
 
 async function draftProblemStatement(rfp: StructuredRfpAnalysis): Promise<string> {
-  return `### 2.1 The Strategic Problem Statement
-The initiative envisioned by **${rfp.client.name}** addresses critical structural bottlenecks in the **${rfp.client.sector}** sector across **${rfp.client.geography}**. Based on our contextual diagnostic of the operational landscape:
-
-1. **Last-Mile Mobilization and Capacity Asymmetries**: Grassroots community institutions, micro-enterprises, and target beneficiaries often face acute information gaps, lack of formal statutory registration (such as Udyam, PAN, GST), and fragmented operational governance.
+  const dt = rfp.deep_thinking_analysis;
+  const bottlenecks = dt?.ground_realities_and_bottlenecks?.length
+    ? dt.ground_realities_and_bottlenecks.map((b, idx) => `${idx + 1}. **${b.split(':')[0]}**: ${b.split(':')[1] || b}`).join('\n')
+    : `1. **Last-Mile Mobilization and Capacity Asymmetries**: Grassroots community institutions, micro-enterprises, and target beneficiaries often face acute information gaps, lack of formal statutory registration (such as Udyam, PAN, GST), and fragmented operational governance.
 2. **Institutional Coordination and Convergence Bottlenecks**: Multi-stakeholder development initiatives require seamless horizontal convergence between line departments, commercial banking institutions, and local implementing entities to ensure services reach the intended beneficiaries.
-3. **Data Verifiability and Real-Time Governance Gaps**: Traditional monitoring systems struggle to provide transparent, tamper-proof tracking of beneficiary progression, resulting in reporting delays and suboptimal resource allocation.
+3. **Data Verifiability and Real-Time Governance Gaps**: Traditional monitoring systems struggle to provide transparent, tamper-proof tracking of beneficiary progression, resulting in reporting delays and suboptimal resource allocation.`;
 
-### 2.2 Alignment with Client Priorities
-${rfp.client.name} requires an implementation architecture that moves beyond isolated transactional activities to build durable community institutions and measurable economic returns. Our proposed approach directly aligns with the strategic targets outlined in the ToR.`;
+  const unstatedPriorities = dt?.underlying_priorities?.length
+    ? dt.underlying_priorities.map(p => `- ${p}`).join('\n')
+    : `- Verifiable on-ground milestones with zero tolerance for inflated or unverifiable beneficiary metrics
+- Rapid mobilization within 15 days of contract award given pending fiscal year disbursement deadlines
+- Seamless inter-departmental convergence between district administration, banks, and community bodies`;
+
+  return `### 2.1 The Strategic Problem Statement & Contextual Diagnosis
+The initiative envisioned by **${rfp.client.name}** addresses critical structural bottlenecks in the **${rfp.client.sector}** sector across **${rfp.client.geography}**. Based on our deep contextual diagnostic of the operational landscape:
+
+${bottlenecks}
+
+### 2.2 Client Underlying Strategic Imperatives
+Beyond routine administrative execution, our analysis identifies core strategic imperatives that **${rfp.client.name}** requires from the selected technical partner:
+
+${unstatedPriorities}
+
+### 2.3 Strategic Alignment with Client Mandate
+**${rfp.client.name}** requires an implementation architecture that moves beyond isolated transactional activities to build durable community institutions, transparent digital monitoring, and measurable economic returns. Our proposed approach directly aligns with the strategic targets outlined in the ToR.`;
 }
 
 async function draftScopeAlignment(rfp: StructuredRfpAnalysis): Promise<string> {

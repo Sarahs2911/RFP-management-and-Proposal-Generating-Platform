@@ -132,6 +132,19 @@ export interface Proposal {
   status?: 'draft' | 'under_review' | 'approved' | 'submitted';
   approval_status?: 'pending' | 'approved' | 'changes_requested';
   revisions?: ProposalRevision[];
+  deep_thinking_analysis?: DeepThinkingAnalysis;
+}
+
+export interface DeepThinkingAnalysis {
+  strategic_intent: string;
+  underlying_priorities: string[];
+  ground_realities_and_bottlenecks: string[];
+  key_failure_risks: string[];
+  win_themes: string[];
+  recommended_methodology: string;
+  scoring_optimization_strategy: string;
+  framework_alignment: string[];
+  reasoning_trace?: string;
 }
 
 export interface RFPRequirement {
@@ -163,6 +176,7 @@ export interface StructuredRfpAnalysis {
   preferredRequirements: string[];
   evaluationCriteria: string[];
   extractedRequirements: RFPRequirement[];
+  deep_thinking_analysis?: DeepThinkingAnalysis;
 }
 
 export interface ProposalEvidence {

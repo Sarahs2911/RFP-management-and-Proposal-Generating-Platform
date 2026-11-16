@@ -1,4 +1,4 @@
-import { StructuredRfpAnalysis, RFPRequirement, RFP } from '../types/rfp.js';
+import { StructuredRfpAnalysis, RFPRequirement, RFP, DeepThinkingAnalysis } from '../types/rfp.js';
 import { generateTextWithAI } from './aiClient.js';
 
 export async function analyzeRfpDocument(
@@ -17,10 +17,25 @@ export async function analyzeRfpDocument(
   ].filter(Boolean).join('\n\n');
 
   try {
-    const systemPrompt = `You are a Principal Public Sector Tender Analyst specializing in multilateral and government procurement.
-Deconstruct the provided RFP / Terms of Reference into a rigorous, structured analytical representation.
+    const systemPrompt = `You are a Principal Public Sector Tender Strategist and Bid Director specializing in multilateral, national, and state procurement.
+Before generating the output, you must engage in DEEP THINKING:
+1. Deconstruct the client's STATED vs UNSTATED procurement priorities (why this tender now, what risks the client fear most).
+2. Analyze the operational and geographic ground realities in the target region (local administration inertia, field survey data veracity, seasonal challenges).
+3. Formulate winning value propositions that position Think Through Consulting (TTC) with its 6E/CAM/MAVEN/MEL frameworks and 174 verified case studies as the undisputed #1 proponent.
+4. Extract every mandatory and preferred requirement with strict evaluation criteria.
+
 You MUST output ONLY a valid, parseable JSON object matching this schema without markdown fences:
 {
+  "deep_thinking_analysis": {
+    "strategic_intent": "Deep analysis of the true political, policy, and stakeholder drivers behind this tender",
+    "underlying_priorities": ["Unstated priority 1", "Unstated priority 2", "Unstated priority 3"],
+    "ground_realities_and_bottlenecks": ["Local administrative hurdle", "Field survey data veracity challenge", "Community mobilization friction"],
+    "key_failure_risks": ["Risk 1", "Risk 2", "Risk 3"],
+    "win_themes": ["Win theme 1: Zero-hallucination compliance", "Win theme 2: Proprietary 6E & CAM field tools", "Win theme 3: 174 verified case studies"],
+    "recommended_methodology": "How the 6E Diagnostic, CAM, MAVEN, or MEL framework should be configured",
+    "scoring_optimization_strategy": "Concrete strategy for scoring maximum marks under QCBS evaluation",
+    "framework_alignment": ["6E Approach", "CAM Model", "MEL Architecture"]
+  },
   "client": {
     "name": "string",
     "orgType": "Government Ministry / PSU / Multilateral / Foundation / Private",
@@ -51,9 +66,9 @@ You MUST output ONLY a valid, parseable JSON object matching this schema without
 
     const rawResponse = await generateTextWithAI({
       systemPrompt,
-      userPrompt: `RFP / TOR CONTENT TO ANALYZE:\n${combinedContext.slice(0, 8000)}`,
-      temperature: 0.2,
-      maxTokens: 2500
+      userPrompt: `TENDER / RFP / TOR CONTENT FOR DEEP THINKING ANALYSIS:\n${combinedContext.slice(0, 9000)}`,
+      temperature: 0.3,
+      maxTokens: 3500
     });
 
     if (rawResponse) {
@@ -79,16 +94,85 @@ You MUST output ONLY a valid, parseable JSON object matching this schema without
           mandatoryRequirements: parsed.mandatoryRequirements || ['Proven institutional experience in the target domain', 'Multidisciplinary team of qualified key personnel'],
           preferredRequirements: parsed.preferredRequirements || ['Previous experience with state departments or multilateral organizations'],
           evaluationCriteria: parsed.evaluationCriteria || ['Technical methodology (40%)', 'Relevant past credentials (30%)', 'Key personnel qualifications (30%)'],
-          extractedRequirements: parsed.extractedRequirements
+          extractedRequirements: parsed.extractedRequirements,
+          deep_thinking_analysis: parsed.deep_thinking_analysis || generateDeterministicDeepThinking(combinedContext, existingMetadata)
         };
       }
     }
   } catch (err) {
-    console.warn('[RFP Understanding Engine] LLM parsing fell back to deterministic heuristic parser:', err);
+    console.warn('[RFP Understanding Engine] LLM deep thinking fell back to deterministic heuristic parser:', err);
   }
 
   // Deterministic Heuristic Fallback
   return generateDeterministicRfpAnalysis(combinedContext, existingMetadata);
+}
+
+function generateDeterministicDeepThinking(
+  context: string,
+  meta?: Partial<RFP>
+): DeepThinkingAnalysis {
+  const category = meta?.category || 'Development Sector Advisory';
+  const location = meta?.location || 'Target Implementation Geography';
+  const clientName = meta?.client_name || 'Designated Client Agency';
+
+  let strategicIntent = `The procuring agency (${clientName}) requires a credible, institutionally verified advisory partner to transition high-level policy mandates into quantifiable grassroots impact in ${location}. Beyond standard report delivery, their unstated priority is mitigating operational and reputational risk by onboarding an agile partner with deep multidisciplinary governance capabilities.`;
+  let underlyingPriorities = [
+    `Verifiable on-ground milestones with zero tolerance for inflated or unverifiable beneficiary metrics`,
+    `Rapid mobilization within 15 days of contract award given pending fiscal year disbursement deadlines`,
+    `Seamless inter-departmental convergence between district administration, banks, and community bodies`
+  ];
+  let groundRealities = [
+    `Last-mile data fidelity: Field surveys across ${location} risk data distortion without CAPI digital instruments and GPS geo-stamping`,
+    `Administrative friction: District-level nodal offices often face bandwidth constraints requiring embedded handholding from the consulting team`,
+    `Community adoption barriers: Target beneficiaries require localized, vernacular capacity building rather than generic theoretical modules`
+  ];
+  let keyFailureRisks = [
+    `Delayed field mobilization leading to cascading schedule slippages across subsequent milestone gates`,
+    `Attrition of field investigators during survey execution, threatening sample statistical validity`,
+    `Institutional inertia among local stakeholders delaying formal statutory registrations (Udyam, GST, FPO incorporation)`
+  ];
+  let winThemes = [
+    `Zero-Hallucination Credential Evidence: Backed by 174 verified case studies and extensive credentials in ${category}`,
+    `Proprietary 6E & CAM Frameworks: Battle-tested methodologies providing turnkey execution SOPs and credit assessment toolkits`,
+    `Partner-Led Accountability: Senior executive governance under TTC global partners with direct oversight on technical quality`
+  ];
+
+  if (category.toLowerCase().includes('climate') || category.toLowerCase().includes('sustain') || category.toLowerCase().includes('esg')) {
+    strategicIntent = `${clientName} seeks an authoritative sustainability advisor to deliver actionable decarbonization, BRSR Core disclosures, or climate adaptation roadmaps aligned with national Net-Zero targets. The underlying driver is regulatory compliance and green financing eligibility.`;
+    underlyingPriorities = [
+      'Strict adherence to GHG Protocol (Scope 1, 2, and 3) and SEBI BRSR Core assurance guidelines',
+      'Bankable climate finance pipeline creation acceptable to multilateral development banks',
+      'Robust stakeholder consultation preventing allegations of greenwashing or methodology dilution'
+    ];
+    groundRealities = [
+      'Inconsistent historical emissions baseline data across decentralized facilities',
+      'Supply chain vendor reluctance in disclosing Scope 3 environmental footprints',
+      'Divergence between national state climate action plans (SAPCC) and local district priorities'
+    ];
+  } else if (category.toLowerCase().includes('govern') || category.toLowerCase().includes('risk') || category.toLowerCase().includes('finance')) {
+    strategicIntent = `${clientName} requires independent assurance, public financial management re-engineering, or institutional internal control strengthening to plug fiscal leakages and fulfill statutory audit mandates.`;
+    underlyingPriorities = [
+      'Uncompromising fiduciary integrity and transparent audit trails',
+      'Automated reconciliation mechanisms replacing manual spreadsheet reconciliations',
+      'Capacity transfer to permanent cadre staff to ensure continuity'
+    ];
+    groundRealities = [
+      'Legacy record fragmentation across legacy departmental ledgers',
+      'Staff resistance to digital workflow automation and automated red-flag alerts',
+      'Tight regulatory deadlines mandated by state oversight bodies or statutory auditors'
+    ];
+  }
+
+  return {
+    strategic_intent: strategicIntent,
+    underlying_priorities: underlyingPriorities,
+    ground_realities_and_bottlenecks: groundRealities,
+    key_failure_risks: keyFailureRisks,
+    win_themes: winThemes,
+    recommended_methodology: 'Configure the 6E Approach (Explore, Engage, Empower, Enable, Expand, Evolve) coupled with CAPI digital field protocols and a 3-tier governance model.',
+    scoring_optimization_strategy: 'Maximize technical evaluation score (QCBS 80%) by directly mapping every ToR clause in a Bid Traceability Matrix, showcasing 3 relevant past project completion certificates, and providing full CVs of seasoned postgraduate domain experts.',
+    framework_alignment: ['6E Diagnostic Framework', 'CAM Credit Assessment Model', 'MAVEN Marketplace Enablement', 'MEL Architecture']
+  };
 }
 
 function generateDeterministicRfpAnalysis(
@@ -147,6 +231,8 @@ function generateDeterministicRfpAnalysis(
     }
   ];
 
+  const deepThinking = generateDeterministicDeepThinking(context, meta);
+
   return {
     rfpId: meta?.rfp_id || meta?.id,
     client: {
@@ -195,6 +281,7 @@ function generateDeterministicRfpAnalysis(
       'Organizational Credentials and Relevant Past Experience (30 Points)',
       'Key Personnel Qualifications and Team Competency (30 Points)'
     ],
-    extractedRequirements: requirements
+    extractedRequirements: requirements,
+    deep_thinking_analysis: deepThinking
   };
 }

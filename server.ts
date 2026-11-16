@@ -731,6 +731,7 @@ app.post('/api/proposal/generate', async (req, res) => {
       compliance_matrix: result.compliance_matrix,
       evidence_sources: result.evidence_sources,
       validation: result.validation,
+      deep_thinking_analysis: result.deep_thinking_analysis,
       status: 'under_review',
       approval_status: 'pending'
     });
@@ -785,6 +786,7 @@ app.post('/api/proposal/generate-for-rfp', async (req, res) => {
       compliance_matrix: result.compliance_matrix,
       evidence_sources: result.evidence_sources,
       validation: result.validation,
+      deep_thinking_analysis: result.deep_thinking_analysis,
       status: 'under_review',
       approval_status: 'pending'
     });
@@ -1000,7 +1002,18 @@ app.get('/api/proposal/:id/export', async (req, res) => {
       return res.send(pptxBuffer);
     }
 
-    const docxBuffer = await generateProposalDocx(p.title, p.content, p.rfp_client);
+    const docxBuffer = await generateProposalDocx(p.title, p.content, p.rfp_client, {
+      rfpId: p.rfp_id,
+      category: p.category,
+      geography: p.answers?.geography,
+      budget: p.answers?.budget,
+      duration: p.answers?.duration,
+      submissionDate: p.created_at ? new Date(p.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : undefined,
+      sections: p.sections,
+      complianceMatrix: p.compliance_matrix,
+      evidenceSources: p.evidence_sources,
+      validation: p.validation
+    });
     const safeFilename = p.title.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 40);
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
     res.setHeader('Content-Disposition', `attachment; filename="${safeFilename}.docx"`);
